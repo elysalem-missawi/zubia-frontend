@@ -5,8 +5,18 @@ import NewsCard from "@/components/NewsCard";
 import CtaSection from "@/components/CtaSection";
 import Link from "next/link";
 import { ArrowRight, Heart, Users, Newspaper } from "lucide-react";
+import { fetchFromStrapi } from "@/lib/strapi";
 
-export default function Home() {
+export default async function Home() {
+  // جلب المشاريع والأخبار بالتوازي من Strapi
+  const [projectsRes, newsRes] = await Promise.all([
+    fetchFromStrapi("projects"),
+    fetchFromStrapi("articles"), // عدّلها إلى "news-posts" إذا اعتمدت ذلك الاسم في Strapi
+  ]);
+
+  const projects = projectsRes?.data || [];
+  const newsList = newsRes?.data || [];
+
   return (
     <div className="flex min-h-screen flex-col bg-slate-50">
       <Header />
@@ -62,8 +72,55 @@ export default function Home() {
                 <p className="mt-2 text-slate-600 leading-relaxed">Talleres, eventos culturales y jornadas divulgativas abiertas a toda la ciudadanía.</p>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* CTA Section Component */}
+        {/* Projects Preview Section */}
+        {projects.length > 0 && (
+          <section className="py-12 bg-white border-t border-slate-200">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-end mb-8">
+                <div>
+                  <h2 className="text-3xl font-bold text-slate-900">Proyectos Destacados</h2>
+                  <p className="text-slate-600 mt-2">Iniciativas para fortalecer nuestra comunidad</p>
+                </div>
+                <Link href="/proyectos" className="text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-1">
+                  Ver todos <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {projects.slice(0, 3).map((item: any) => {
+                  const data = item.attributes || item;
+                  return <ProjectCard key={item.id} project={data} />;
+                })}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* News Preview Section */}
+        {newsList.length > 0 && (
+          <section className="py-12 bg-slate-50 border-t border-slate-200">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-end mb-8">
+                <div>
+                  <h2 className="text-3xl font-bold text-slate-900">Últimas Noticias</h2>
+                  <p className="text-slate-600 mt-2">Novedades y actividades recientes</p>
+                </div>
+              </div>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {newsList.slice(0, 3).map((item: any) => {
+                  const data = item.attributes || item;
+                  return <NewsCard key={item.id} news={data} />;
+                })}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* CTA Section */}
+        <section className="py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <CtaSection />
           </div>
         </section>
