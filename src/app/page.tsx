@@ -7,15 +7,30 @@ import Link from "next/link";
 import { ArrowRight, Heart, Users, Newspaper } from "lucide-react";
 import { fetchFromStrapi } from "@/lib/strapi";
 
-export default async function Home() {
-  // جلب المشاريع والأخبار بالتوازي من Strapi
-  const [projectsRes, newsRes] = await Promise.all([
-    fetchFromStrapi("projects"),
-    fetchFromStrapi("articles"), // عدّلها إلى "news-posts" إذا اعتمدت ذلك الاسم في Strapi
-  ]);
+// تعريف أنواع البيانات لتفادي أخطاء TypeScript
+interface StrapiItem {
+  id: number | string;
+  documentId?: string;
+  attributes?: Record<string, any>;
+  [key: string]: any;
+}
 
-  const projects = projectsRes?.data || [];
-  const newsList = newsRes?.data || [];
+export default async function Home() {
+  // جلب البيانات بشكل آمن لمنع انهيار الصفحة في حال وجود خطأ في الـ API
+  let projects: StrapiItem[] = [];
+  let newsList: StrapiItem[] = [];
+
+  try {
+    const [projectsRes, newsRes] = await Promise.all([
+      fetchFromStrapi("projects"),
+      fetchFromStrapi("articles"),
+    ]);
+
+    projects = projectsRes?.data || [];
+    newsList = newsRes?.data || [];
+  } catch (error) {
+    console.error("Error loading home page data:", error);
+  }
 
   return (
     <div className="flex min-h-screen flex-col bg-slate-50">
@@ -89,9 +104,10 @@ export default async function Home() {
                 </Link>
               </div>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {projects.slice(0, 3).map((item: any) => {
+                {projects.slice(0, 3).map((item, index) => {
                   const data = item.attributes || item;
-                  return <ProjectCard key={item.id} project={data} />;
+                  const itemKey = item.id || item.documentId || index;
+                  return <ProjectCard key={itemKey} project={data} />;
                 })}
               </div>
             </div>
@@ -109,9 +125,10 @@ export default async function Home() {
                 </div>
               </div>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {newsList.slice(0, 3).map((item: any) => {
+                {newsList.slice(0, 3).map((item, index) => {
                   const data = item.attributes || item;
-                  return <NewsCard key={item.id} news={data} />;
+                  const itemKey = item.id || item.documentId || index;
+                  return <NewsCard key={itemKey} news={data} />;
                 })}
               </div>
             </div>

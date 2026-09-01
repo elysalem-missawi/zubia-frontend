@@ -1,18 +1,19 @@
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'https://zubia-backend.onrender.com';
 
 export async function fetchFromStrapi(endpoint: string) {
   try {
-    const response = await fetch(`${STRAPI_URL}/api/${endpoint}`, {
+    const res = await fetch(`${STRAPI_URL}/api/${endpoint}`, {
       next: { revalidate: 60 },
     });
 
-    if (!response.ok) {
-      throw new Error(`Failed to fetch: ${response.statusText}`);
+    if (!res.ok) {
+      console.error(`Build/Fetch error on [${endpoint}]: ${res.status}`);
+      return { data: [] };
     }
 
-    return await response.json();
+    return await res.json();
   } catch (error) {
-    console.error('Strapi Fetch Error:', error);
-    return null;
+    console.error(`Failed to reach Strapi on [${endpoint}]:`, error);
+    return { data: [] };
   }
 }

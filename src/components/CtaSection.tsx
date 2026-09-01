@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { HeartHandshake } from "lucide-react";
 
+
 export default function CtaSection() {
   return (
     <section className="my-12 rounded-3xl bg-emerald-600 px-6 py-12 text-white sm:px-12 sm:py-16">

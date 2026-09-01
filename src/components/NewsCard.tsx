@@ -1,14 +1,24 @@
 import Link from "next/link";
 import { Calendar } from "lucide-react";
 
-interface NewsProps {
-  id: string | number;
-  title: string;
-  excerpt: string;
-  date: string;
+export interface NewsProps {
+  id?: string | number;
+  title?: string;
+  excerpt?: string;
+  date?: string;
+  news?: any;
+  [key: string]: any;
 }
 
-export default function NewsCard({ id, title, excerpt, date }: NewsProps) {
+export default function NewsCard(props: NewsProps) {
+  // دمج الخواص سواء مررت كـ news={...} أو مباشرة كـ props
+  const data = props.news || props;
+
+  const id = data.id || data.documentId || 1;
+  const title = data.title || data.titulo || "Sin título";
+  const excerpt = data.excerpt || data.summary || data.contenido || data.descripcion || "";
+  const date = data.date || data.fecha || data.publishedAt || "Reciente";
+
   return (
     <article className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-emerald-500">
       <div>
