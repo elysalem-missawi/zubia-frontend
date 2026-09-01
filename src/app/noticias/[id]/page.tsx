@@ -10,18 +10,17 @@ interface ArticlePageProps {
 }
 
 export default async function ArticleDetailPage({ params }: ArticlePageProps) {
-  const { id } = await params;
+  const resolvedParams = await params;
+  const articleId = resolvedParams.id;
   let article: any = null;
 
   try {
-    // جلب تفاصيل المقالة المفردة من Strapi
-    const response = await fetchFromStrapi(`articles/${id}`);
+    const response = await fetchFromStrapi(`articles/${articleId}`);
     article = response?.data || null;
   } catch (error) {
-    console.error("Error fetching article:", error);
+    console.error("Error fetching article detail:", error);
   }
 
-  // إذا لم يتم العثور على المقالة، إظهار صفحة 404 المخصصة
   if (!article) {
     notFound();
   }
@@ -50,7 +49,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
             </div>
           )}
           <h1 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">{title}</h1>
-          
+
           <div className="mt-8 border-t border-slate-100 pt-8 text-slate-700 leading-relaxed whitespace-pre-line">
             {content}
           </div>
