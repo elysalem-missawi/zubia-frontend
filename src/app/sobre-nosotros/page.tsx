@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Users, Target, Heart, Award } from "lucide-react";
+import { Target, Heart } from "lucide-react";
 
 export default function SobreNosotros() {
   return (
