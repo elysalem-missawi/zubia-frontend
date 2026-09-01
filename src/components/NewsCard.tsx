@@ -12,10 +12,11 @@ export interface NewsProps {
 }
 
 export default function NewsCard(props: NewsProps) {
+  // دمج الخواص سواء مرت كـ news={...} أو مباشرة كـ props
   const data = props.news || props;
 
-  // إعطاء الأولوية لـ documentId متوافقاً مع Strapi v5
-  const id = data.documentId || data.id || 1;
+  // إعطاء الأولوية لـ documentId ليتوافق مع Vercel و Strapi v5
+  const articleId = data.documentId || data.id;
   const title = data.title || data.titulo || "Sin título";
   const excerpt = data.excerpt || data.summary || data.contenido || data.descripcion || "";
   const date = data.publishedAt || data.date || data.fecha || "Reciente";
@@ -31,9 +32,13 @@ export default function NewsCard(props: NewsProps) {
         <p className="mt-2 text-sm leading-relaxed text-slate-600 line-clamp-3">{excerpt}</p>
       </div>
       <div className="mt-6">
-        <Link href={`/noticias/${id}`} className="text-sm font-bold text-emerald-600 hover:underline">
-          Leer noticia completa →
-        </Link>
+        {articleId ? (
+          <Link href={`/noticias/${articleId}`} className="text-sm font-bold text-emerald-600 hover:underline">
+            Leer noticia completa →
+          </Link>
+        ) : (
+          <span className="text-sm font-bold text-slate-400">Leer noticia completa →</span>
+        )}
       </div>
     </article>
   );

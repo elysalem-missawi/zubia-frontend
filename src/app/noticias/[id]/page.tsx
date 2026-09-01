@@ -5,6 +5,9 @@ import Link from "next/link";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 interface ArticlePageProps {
   params: Promise<{ id: string }>;
 }
@@ -15,19 +18,27 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
   let article: any = null;
 
   try {
+    // جلب المقالة باستخدام الـ documentId الخاص بـ Strapi v5
     const response = await fetchFromStrapi(`articles/${articleId}`);
-    article = response?.data || null;
+    article = response?.data || response || null;
   } catch (error) {
     console.error("Error fetching article detail:", error);
   }
 
-  if (!article) {
+  // إذا لم يعثر على المقالة أو لم تكن البيانات موجودة
+  if (!article || (typeof article === "object" && Object.keys(article).length === 0)) {
     notFound();
   }
 
+  // دعمStrapi v4 و Strapi v5
   const data = article.attributes || article;
   const title = data.title || data.titulo || "Sin título";
-  const content = data.content || data.contenido || data.description || "Sin contenido disponible.";
+  const content =
+    data.content ||
+    data.contenido ||
+    data.description ||
+    data.descripcion ||
+    "Sin contenido disponible.";
   const date = data.publishedAt || data.createdAt || data.date || "";
 
   return (
@@ -45,10 +56,16 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
           {date && (
             <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-4">
               <Calendar className="h-4 w-4" />
-              <time>{new Date(date).toLocaleDateString()}</time>
+              <time>
+                {typeof date === "string" && date.includes("T")
+                  ? date.split("T")[0]
+                  : new Date(date).toLocaleDateString()}
+              </time>
             </div>
           )}
-          <h1 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">{title}</h1>
+          <h1 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+            {title}
+          </h1>
 
           <div className="mt-8 border-t border-slate-100 pt-8 text-slate-700 leading-relaxed whitespace-pre-line">
             {content}
