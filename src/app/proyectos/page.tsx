@@ -1,51 +1,40 @@
 import { fetchFromStrapi } from '@/lib/strapi';
+import ProjectCard from '@/components/ProjectCard';
 
 export default async function ProyectosPage() {
-  // جلب البيانات من مسار 'projects' في Strapi
-  const response = await fetchFromStrapi('projects');
-  const projects = response?.data || [];
+  let projects: any[] = [];
+
+  try {
+    const response = await fetchFromStrapi('projects');
+    // دعم Strapi v4 (response.data) و Strapi v5
+    projects = Array.isArray(response?.data) ? response.data : (Array.isArray(response) ? response : []);
+  } catch (error) {
+    console.error('Failed to fetch projects:', error);
+  }
 
   return (
-    <main className="max-w-5xl mx-auto px-4 py-12" dir="rtl">
-      <header className="mb-8 border-b pb-4">
-        <h1 className="text-3xl font-bold text-gray-900">المشاريع (Projects)</h1>
-        <p className="text-gray-600 mt-2">قائمة المشاريع المسترجعة مباشرة من خادم Strapi.</p>
+    <main className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <header className="mb-8 border-b border-slate-200 pb-4">
+        <h1 className="text-3xl font-bold text-slate-900">Proyectos</h1>
+        <p className="text-slate-600 mt-2">Iniciativas y programas comunitarios</p>
       </header>
 
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((item: any) => {
-            // التعامل مع هيكلية البيانات لـ Strapi v4 / v5
-            const attrs = item.attributes || item;
+          {projects.map((item, index) => {
+            // استخراج البيانات سواء كانت محتواة في attributes أم لا
+            const projectData = item.attributes ? { id: item.id, ...item.attributes } : item;
+            const itemKey = item.documentId || item.id || index;
 
-            return (
-              <article
-                key={item.id}
-                className="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow bg-white flex flex-col justify-between"
-              >
-                <div>
-                  <h2 className="text-xl font-bold text-gray-800 mb-2">
-                    {attrs.title || 'بدون عنوان'}
-                  </h2>
-                  <p className="text-gray-600 text-sm line-clamp-3">
-                    {attrs.description || 'لا يوجد وصف للمشروع.'}
-                  </p>
-                </div>
-                {attrs.slug && (
-                  <div className="mt-4 pt-4 border-t border-gray-100">
-                    <span className="text-xs font-mono text-indigo-600 bg-indigo-50 px-2 py-1 rounded">
-                      /{attrs.slug}
-                    </span>
-                  </div>
-                )}
-              </article>
-            );
+            return <ProjectCard key={itemKey} project={projectData} {...projectData} />;
           })}
         </div>
       ) : (
-        <div className="text-center py-16 bg-gray-50 rounded-xl border border-dashed border-gray-300">
-          <p className="text-gray-500 text-lg">لا توجد مشاريع مضافة حالياً.</p>
-          <p className="text-sm text-gray-400 mt-1">تأكد من إضافة عناصر في Content Manager والضغط على Publish.</p>
+        <div className="text-center py-16 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
+          <p className="text-slate-600 text-lg font-medium">No hay proyectos disponibles actualmente.</p>
+          <p className="text-sm text-slate-400 mt-1">
+            تأكد من وجود عناصر مضافة ومفعلة (Published) في Strapi محلياً.
+          </p>
         </div>
       )}
     </main>
