@@ -18,19 +18,30 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
   let article: any = null;
 
   try {
-    // جلب المقالة باستخدام الـ documentId الخاص بـ Strapi v5
-    const response = await fetchFromStrapi(`articles/${articleId}`);
-    article = response?.data || response || null;
+    // 1. محاولة جلب الخبر عبر الفلترة بالـ documentId أو id لجدول news-posts
+    const responseNews = await fetchFromStrapi(`news-posts?filters[documentId][$eq]=${articleId}`);
+    const newsData = responseNews?.data || [];
+    
+    if (Array.isArray(newsData) && newsData.length > 0) {
+      article = newsData[0];
+    } else {
+      // 2. إذا لم يعثر عليه، نحاول الفلترة في جدول articles
+      const responseArticles = await fetchFromStrapi(`articles?filters[documentId][$eq]=${articleId}`);
+      const articlesData = responseArticles?.data || [];
+      if (Array.isArray(articlesData) && articlesData.length > 0) {
+        article = articlesData[0];
+      }
+    }
   } catch (error) {
     console.error("Error fetching article detail:", error);
   }
 
-  // إذا لم يعثر على المقالة أو لم تكن البيانات موجودة
+  // 3. توجيه لصفحة Not Found إذا لم يتم العثور على أي مقالة
   if (!article || (typeof article === "object" && Object.keys(article).length === 0)) {
     notFound();
   }
 
-  // دعمStrapi v4 و Strapi v5
+  // استخراج البيانات لدعم Strapi v4 و v5
   const data = article.attributes || article;
   const title = data.title || data.titulo || "Sin título";
   const content =

@@ -3,7 +3,6 @@ import ProjectCard from "@/components/ProjectCard";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-// إجبار Next.js على الصيرورة الديناميكية لتجنب انتهاء وقت البناء (Timeout) على Vercel
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
@@ -12,7 +11,6 @@ export default async function ProyectosPage() {
 
   try {
     const response = await fetchFromStrapi("projects");
-    // دعم كلا الإصدارين Strapi v4 و v5
     projects = Array.isArray(response?.data)
       ? response.data
       : Array.isArray(response)
@@ -54,9 +52,6 @@ export default async function ProyectosPage() {
           <div className="text-center py-16 bg-white rounded-2xl border border-dashed border-slate-300 shadow-sm">
             <p className="text-slate-600 text-lg font-medium">
               No hay proyectos disponibles actualmente.
-            </p>
-            <p className="text-sm text-slate-400 mt-1">
-              تأكد من إضافة عناصر في جدول Project داخل Strapi والضغط على Publish.
             </p>
           </div>
         )}
