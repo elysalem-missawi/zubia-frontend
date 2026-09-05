@@ -3,12 +3,15 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import {
   HeartHandshake,
   Menu,
   Sparkles,
   X,
-  ArrowRight,
+  UserPlus,
+  LogIn,
+  User,
 } from "lucide-react";
 
 const navItems = [
@@ -23,6 +26,33 @@ export default function Header() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  // دالة التحقق من وجود التوكن
+  const checkAuth = () => {
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("zubia_jwt");
+      setIsAuthenticated(!!token);
+    }
+  };
+
+  // التحقق عند تحميل المكون وعند تغيير المسار (Pathname)
+  useEffect(() => {
+    checkAuth();
+  }, [pathname]);
+
+  // الاستماع للأحداث المخصصة
+  useEffect(() => {
+    checkAuth();
+
+    window.addEventListener("zubia-auth-change", checkAuth);
+    window.addEventListener("storage", checkAuth);
+
+    return () => {
+      window.removeEventListener("zubia-auth-change", checkAuth);
+      window.removeEventListener("storage", checkAuth);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,6 +94,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+
         {/* Logo */}
         <Link
           href="/"
@@ -121,20 +152,39 @@ export default function Header() {
           })}
         </nav>
 
-        {/* Actions */}
-        <div className="flex items-center gap-2">
-          {/* Donate button */}
-          <Link
-            href="/donar"
-            className="group hidden items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 sm:inline-flex"
-          >
-            <HeartHandshake className="h-4 w-4" />
-            Donar
+        {/* Desktop account actions */}
+        <div className="hidden items-center gap-2 md:flex">
+          {isAuthenticated ? (
+            <Link
+              href="/mi-cuenta"
+              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+            >
+              <User className="h-4 w-4" />
+              Mi cuenta
+            </Link>
+          ) : (
+            <>
+              <Link
+                href="/login"
+                className="flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+              >
+                <LogIn className="h-4 w-4" />
+                Iniciar sesión
+              </Link>
 
-            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-          </Link>
+              <Link
+                href="/registro"
+                className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+              >
+                <UserPlus className="h-4 w-4" />
+                Crear una cuenta
+              </Link>
+            </>
+          )}
+        </div>
 
-          {/* Mobile menu button */}
+        {/* Mobile menu button */}
+        <div className="flex items-center">
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
@@ -184,15 +234,39 @@ export default function Header() {
               );
             })}
 
-            <Link
-              href="/donar"
-              onClick={() => setIsOpen(false)}
-              className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-            >
-              <HeartHandshake className="h-5 w-5" />
-              Donar ahora
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            {/* Account buttons */}
+            <div className="mt-3 grid gap-2 border-t border-slate-200 pt-4">
+              {isAuthenticated ? (
+                <Link
+                  href="/mi-cuenta"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+                >
+                  <User className="h-5 w-5" />
+                  Mi cuenta
+                </Link>
+              ) : (
+                <>
+                  <Link
+                    href="/login"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 py-3.5 text-base font-semibold text-slate-700 transition-colors hover:border-emerald-500 hover:text-emerald-700"
+                  >
+                    <LogIn className="h-5 w-5" />
+                    Iniciar sesión
+                  </Link>
+
+                  <Link
+                    href="/registro"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+                  >
+                    <UserPlus className="h-5 w-5" />
+                    Crear una cuenta
+                  </Link>
+                </>
+              )}
+            </div>
           </nav>
         </div>
       )}
