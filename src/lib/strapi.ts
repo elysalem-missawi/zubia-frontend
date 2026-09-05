@@ -13,7 +13,11 @@ export async function fetchFromStrapi(endpoint: string) {
 
   const url = `${baseUrl}/api/${cleanEndpoint}`;
 
-  console.log("Fetching Strapi:", url);
+  console.log("=================================");
+  console.log("STRAPI REQUEST:", url);
+  console.log("NODE_ENV:", process.env.NODE_ENV);
+  console.log("STRAPI_URL:", STRAPI_URL);
+  console.log("=================================");
 
   try {
     const res = await fetch(url, {
@@ -24,28 +28,32 @@ export async function fetchFromStrapi(endpoint: string) {
       cache: "no-store"
     });
 
+    console.log("STRAPI STATUS:", res.status);
+
     if (!res.ok) {
-      const errorText = await res.text();
+      const text = await res.text();
 
-      console.error(
-        `Strapi error ${res.status}: ${url}`,
-        errorText
+      console.error("STRAPI ERROR:", text);
+
+      throw new Error(
+        `Strapi returned ${res.status}: ${text}`
       );
-
-      return { data: [] };
     }
 
     const json = await res.json();
 
     console.log(
-      "Strapi data:",
-      Array.isArray(json?.data) ? json.data.length : 0
+      "STRAPI DATA COUNT:",
+      Array.isArray(json?.data)
+        ? json.data.length
+        : "NOT ARRAY"
     );
 
     return json;
   } catch (error) {
-    console.error(`Failed to reach Strapi: ${url}`, error);
+    console.error("STRAPI FETCH FAILED:", error);
 
-    return { data: [] };
+    // مهم: لا نخفي الخطأ أثناء التشخيص
+    throw error;
   }
 }
