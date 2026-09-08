@@ -1,4 +1,4 @@
-import { Calendar } from "lucide-react";
+import { ArrowRight, CalendarDays, Newspaper } from "lucide-react";
 import { Link } from "@/i18n/routing";
 
 export interface NewsProps {
@@ -8,14 +8,40 @@ export interface NewsProps {
   excerpt?: string;
   date?: string;
   news?: any;
+  image?: any;
   [key: string]: any;
 }
 
+function getImageUrl(data: any) {
+  const image =
+    data.image ||
+    data.cover ||
+    data.featuredImage ||
+    data.imagen ||
+    data.portada;
+
+  if (!image) return null;
+
+  const url =
+    image?.url ||
+    image?.data?.attributes?.url ||
+    image?.data?.url ||
+    image?.formats?.large?.url ||
+    image?.formats?.medium?.url ||
+    image?.formats?.small?.url;
+
+  if (!url) return null;
+
+  if (url.startsWith("http")) {
+    return url;
+  }
+
+  return `https://zubia-backend.onrender.com${url}`;
+}
+
 export default function NewsCard(props: NewsProps) {
-  // دمج الخواص سواء مرت كـ news={...} أو مباشرة كـ props
   const data = props.news || props;
 
-  // إعطاء الأولوية لـ documentId ليتوافق مع Strapi v5
   const articleId = data.documentId || data.id;
 
   const title =
@@ -26,60 +52,98 @@ export default function NewsCard(props: NewsProps) {
   const excerpt =
     data.excerpt ||
     data.summary ||
-    data.contenido ||
+    data.description ||
     data.descripcion ||
+    data.contenido ||
     "";
 
   const date =
     data.publishedAt ||
     data.date ||
     data.fecha ||
-    "Reciente";
+    "";
+
+  const imageUrl = getImageUrl(data);
 
   const formattedDate =
     typeof date === "string" && date.includes("T")
-      ? date.split("T")[0]
-      : date;
+      ? new Date(date).toLocaleDateString("es-ES", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        })
+      : date || "Reciente";
 
   return (
     <article
-      className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 text-right shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-500 hover:shadow-md"
       dir="auto"
+      className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl"
     >
-      <div>
-        <div className="flex items-center justify-end gap-2 text-xs font-semibold text-slate-500">
-          <time dateTime={typeof date === "string" ? date : undefined}>
-            {formattedDate}
-          </time>
+      {/* Image */}
+      <div className="relative h-52 overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-slate-100">
+        {imageUrl ? (
+          <img
+            src={imageUrl}
+            alt={title}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center">
+            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100">
+              <Newspaper className="h-8 w-8 text-emerald-600" />
+            </div>
+          </div>
+        )}
 
-          <Calendar className="h-3.5 w-3.5" />
+        {/* Image overlay */}
+        <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-slate-950/20 to-transparent" />
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-1 flex-col p-6 sm:p-7">
+
+        {/* Meta */}
+        <div className="flex items-center justify-between gap-3">
+          <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
+            Noticias
+          </span>
+
+          <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
+            <CalendarDays className="h-4 w-4" />
+            <time dateTime={typeof date === "string" ? date : undefined}>
+              {formattedDate}
+            </time>
+          </div>
         </div>
 
-        <h3 className="mt-3 line-clamp-2 text-right text-lg font-bold text-slate-900">
+        {/* Title */}
+        <h3 className="mt-5 line-clamp-2 text-xl font-extrabold leading-tight text-slate-950">
           {title}
         </h3>
 
+        {/* Description */}
         {excerpt && (
-          <p className="mt-2 line-clamp-3 text-right text-sm leading-relaxed text-slate-600">
+          <p className="mt-4 line-clamp-3 text-sm leading-7 text-slate-600">
             {excerpt}
           </p>
         )}
-      </div>
 
-      <div className="mt-6 text-right">
-        {articleId ? (
-          <Link
-            href={`/noticias/${articleId}`}
-            className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 transition hover:text-emerald-700 hover:underline"
-          >
-            <span>Leer noticia completa</span>
-            <span aria-hidden="true">←</span>
-          </Link>
-        ) : (
-          <span className="text-sm font-bold text-slate-400">
-            Leer noticia completa ←
-          </span>
-        )}
+        {/* Link */}
+        <div className="mt-auto pt-6">
+          {articleId ? (
+            <Link
+              href={`/noticias/${articleId}`}
+              className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 transition-colors hover:text-emerald-700"
+            >
+              Leer más
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          ) : (
+            <span className="text-sm font-bold text-slate-400">
+              Leer más
+            </span>
+          )}
+        </div>
       </div>
     </article>
   );

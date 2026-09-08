@@ -2,8 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import NewsCard from "@/components/NewsCard";
-import CtaSection from "@/components/CtaSection";
 import Hero from "@/components/Hero";
+import CollaborationSection from "@/components/CollaborationSection";
 
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
@@ -372,58 +372,8 @@ export default async function Home() {
         {/* =====================================================
             COMMUNITY CTA
         ====================================================== */}
-        <section className="bg-white py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-            <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 to-teal-700 px-6 py-14 text-center text-white shadow-2xl sm:px-12">
-
-              <div className="mx-auto max-w-3xl">
-
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15">
-                  <Heart className="h-7 w-7" />
-                </div>
-
-                <h2 className="mt-6 text-3xl font-black sm:text-4xl">
-                  {t("communityCta.title")}
-                </h2>
-
-                <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-emerald-50">
-                  {t("communityCta.description")}
-                </p>
-
-                <div className="mt-8 flex flex-wrap justify-center gap-4">
-
-                  <Link
-                    href="/contacto"
-                    className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 font-bold text-emerald-700 shadow-lg transition hover:bg-emerald-50"
-                  >
-                    {t("communityCta.contact")}
-
-                    <ArrowRight className="h-5 w-5" />
-                  </Link>
-
-                  <Link
-                    href="/proyectos"
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3.5 font-bold text-white transition hover:bg-white/20"
-                  >
-                    {t("communityCta.projects")}
-                  </Link>
-
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* =====================================================
-            EXISTING CTA
-        ====================================================== */}
-        <section className="bg-slate-50 py-12">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <CtaSection />
-          </div>
-        </section>
+         <CollaborationSection />
+        
 
       </main>
 
