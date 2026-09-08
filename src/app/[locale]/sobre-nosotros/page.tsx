@@ -253,10 +253,9 @@ export default async function SobreNosotros() {
 
               {/* Transparencia */}
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7 text-center transition hover:-translate-y-1 hover:bg-white hover:shadow-lg">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 p-7 text-center transition hover:-translate-y-1 hover:bg-white hover:shadow-lg">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
                   <ShieldCheck className="h-6 w-6" />
                 </div>
-
                 <h3 className="mt-5 font-bold text-slate-900">
                   {t("principles.transparency.title")}
                 </h3>
@@ -264,59 +263,6 @@ export default async function SobreNosotros() {
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
                   {t("principles.transparency.description")}
                 </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* =====================================================
-            IMPACT
-        ====================================================== */}
-        <section className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-2xl">
-              <div className="px-6 py-14 sm:px-12 sm:py-16">
-                <div className="mx-auto max-w-3xl text-center">
-                  <span className="text-sm font-bold uppercase tracking-widest text-emerald-100">
-                    {t("commitment.eyebrow")}
-                  </span>
-
-                  <h2 className="mt-3 text-3xl font-black sm:text-4xl">
-                    {t("commitment.title")}
-                  </h2>
-
-                  <p className="mt-4 leading-relaxed text-emerald-50">
-                    {t("commitment.description")}
-                  </p>
-                </div>
-
-                <div className="mx-auto mt-12 grid max-w-4xl gap-px overflow-hidden rounded-2xl bg-white/20 sm:grid-cols-3">
-                  <div className="bg-emerald-700/60 p-8 text-center backdrop-blur">
-                    <p className="text-4xl font-black">+100</p>
-
-                    <p className="mt-2 text-sm text-emerald-100">
-                      {t("commitment.stats.people")}
-                    </p>
-                  </div>
-
-                  <div className="bg-emerald-700/60 p-8 text-center backdrop-blur">
-                    <p className="text-3xl font-black">
-                      {t("commitment.stats.multilingualValue")}
-                    </p>
-
-                    <p className="mt-2 text-sm text-emerald-100">
-                      {t("commitment.stats.multilingualLabel")}
-                    </p>
-                  </div>
-
-                  <div className="bg-emerald-700/60 p-8 text-center backdrop-blur">
-                    <p className="text-4xl font-black">100%</p>
-
-                    <p className="mt-2 text-sm text-emerald-100">
-                      {t("commitment.stats.commitment")}
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import NewsCard from "@/components/NewsCard";
 import { fetchFromStrapi } from "@/lib/strapi";
 import { getTranslations } from "next-intl/server";
-import { ArrowRight, CalendarDays, Newspaper, Sparkles } from "lucide-react";
+import { CalendarDays, Newspaper, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/routing";
 
 export const dynamic = "force-dynamic";
@@ -175,37 +175,7 @@ export default async function Noticias() {
             </div>
           )}
         </section>
-
-        {/* CTA */}
-        <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-3xl bg-emerald-700 px-6 py-12 sm:px-10 lg:px-14">
-            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
-
-            <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-              <div className="max-w-2xl">
-                <p className="text-sm font-bold uppercase tracking-wider text-emerald-200">
-                  {t("cta.eyebrow")}
-                </p>
-
-                <h2 className="mt-2 text-3xl font-black text-white sm:text-4xl">
-                  {t("cta.title")}
-                </h2>
-
-                <p className="mt-4 leading-7 text-emerald-50">
-                  {t("cta.description")}
-                </p>
-              </div>
-
-              <Link
-                href="/contacto"
-                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-bold text-emerald-700 shadow-sm transition hover:bg-emerald-50"
-              >
-                {t("cta.button")}
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </section>
+ 
       </main>
 
       <Footer />

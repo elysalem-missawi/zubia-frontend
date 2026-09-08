@@ -185,7 +185,207 @@
     "contactButton": "Jarri gurekin harremanetan"
   }
 },
-
+"ProjectsPage": {
+  "hero": {
+    "badge": "Eragina sortzen duten ekimenak",
+    "title": "Gure",
+    "titleHighlight": "proiektuak",
+    "description": "Inklusioa, parte-hartzea eta kulturarteko bizikidetza sustatzera bideratutako ekimen eta komunitate-programak."
+  },
+  "intro": {
+    "people": {
+      "title": "Pertsonak",
+      "description": "Pertsonak eta haien beharrak gure ekimenen erdigunean jartzen ditugu."
+    },
+    "community": {
+      "title": "Komunitatea",
+      "description": "Pertsona eta kultura ezberdinen arteko topaketa, parte-hartze eta laguntza guneak sortzen ditugu."
+    },
+    "inclusion": {
+      "title": "Inklusioa",
+      "description": "Gizarte irekiago, parte-hartzaileago eta inklusiboagoa eraikitzeko lan egiten dugu."
+    }
+  },
+  "projects": {
+    "eyebrow": "Ekimenak",
+    "title": "Zubia Socialen proiektuak",
+    "description": "Ezagutu komunitatearekin batera garatzen ditugun ekimenak.",
+    "countSingular": "proiektu erabilgarri",
+    "countPlural": "proiektu erabilgarri"
+  },
+  "empty": {
+    "title": "Une honetan ez dago proiekturik erabilgarri",
+    "description": "Ekimen berriak prestatzen ari gara. Itzuli laster gure jarduerak eta proiektuak ezagutzeko."
+  },
+  "cta": {
+    "title": "Parte hartu nahi duzu?",
+    "description": "Inklusioa pertsona guztion artean eraikitzen da. Ezagutu gure lana edo jarri gurekin harremanetan nola lagun dezakezun jakiteko.",
+    "contactButton": "Jarri gurekin harremanetan",
+    "aboutButton": "Guri buruz"
+  }
+},
+"ContactPage": {
+  "hero": {
+    "badge": "Hemen gaude laguntzeko",
+    "title": "Jarri gurekin",
+    "titleHighlight": "harremanetan",
+    "description": "Galderarik duzu, orientazioa behar duzu edo Zubia Socialekin lankidetzan aritu nahi duzu? Idatzi iezaguzu."
+  },
+  "info": {
+    "title": "Entzuteko gaude",
+    "description": "Jarri gurekin harremanetan zure zalantzak argitzeko, gure proiektuak ezagutzeko edo elkartearekin lankidetzan aritzeko moduak aztertzeko.",
+    "emailLabel": "Helbide elektronikoa",
+    "locationLabel": "Kokapena",
+    "attentionLabel": "Arreta",
+    "attentionDescription": "Zure mezuari ahalik eta lasterren erantzungo diogu.",
+    "association": "Asociación Zubia Social Euskadi"
+  },
+  "form": {
+    "eyebrow": "Idatzi iezaguzu",
+    "title": "Bidali mezu bat",
+    "description": "Bete formularioa eta azaldu nola lagun zaitzakegun.",
+    "nameLabel": "Izen-abizenak",
+    "namePlaceholder": "Zure izena",
+    "emailLabel": "Helbide elektronikoa",
+    "emailPlaceholder": "zure@email.com",
+    "subjectLabel": "Gaia",
+    "subjectPlaceholder": "Nola lagun zaitzakegu?",
+    "messageLabel": "Mezua",
+    "messagePlaceholder": "Idatzi zure mezua hemen...",
+    "privacy": "Ematen diguzun informazioa zure kontsultari erantzuteko soilik erabiliko dugu.",
+    "submit": "Bidali mezua"
+  },
+  "success": {
+    "title": "Eskerrik asko idazteagatik!",
+    "description": "Zure mezua jaso dugu. Ahalik eta lasterren jarriko gara zurekin harremanetan.",
+    "button": "Bidali beste mezu bat"
+  },
+  "bottom": {
+    "title": "Gure lana ezagutu nahi duzu?",
+    "description": "Ezagutu gure proiektuak eta inklusioa eta bizikidetza sustatzeko garatzen ditugun ekimenak.",
+    "button": "Ikusi gure proiektuak"
+  }
+},
+"ArticlePage": {
+  "hero": {
+    "back": "Itzuli albisteetara",
+    "category": "Albisteak eta Ekitaldiak"
+  },
+  "article": {
+    "backToNews": "Ikusi albiste guztiak"
+  },
+  "cta": {
+    "title": "Gure lanari buruz gehiago jakin nahi duzu?",
+    "description": "Ezagutu gure proiektuak eta komunitatearekin batera garatzen ditugun ekimenak.",
+    "projects": "Ikusi proiektuak",
+    "contact": "Jarri gurekin harremanetan"
+  },
+  "fallback": {
+    "title": "Izenbururik gabe",
+    "content": "Ez dago edukirik eskuragarri."
+  }
+},
+"AccountPage": {
+  "hero": {
+    "title": "Nire kontua",
+    "welcome": "Ongi etorri,"
+  },
+  "accountData": {
+    "title": "Zure kontuaren datuak",
+    "username": "Erabiltzaile-izena",
+    "email": "Posta elektronikoa"
+  },
+  "actions": {
+    "projects": "Ikusi proiektuak",
+    "logout": "Saioa itxi"
+  },
+  "community": {
+    "title": "Eskerrik asko gure komunitateko kide izateagatik.",
+    "description": "Zure kontutik Zubia Social Euskadiren hurrengo funtzionalitateetara sartzeko aukera izango duzu."
+  },
+  "fallback": {
+    "user": "erabiltzailea",
+    "unavailable": "Ez dago eskuragarri"
+  }
+},
+"LoginPage": {
+  "hero": {
+    "title": "Saioa hasi",
+    "description": "Sartu zure kontura."
+  },
+  "form": {
+    "email": "Posta elektronikoa",
+    "emailPlaceholder": "zure@email.com",
+    "password": "Pasahitza",
+    "passwordPlaceholder": "Zure pasahitza",
+    "loading": "Saioa hasten...",
+    "submit": "Saioa hasi"
+  },
+  "errors": {
+    "required": "Mesedez, bete eremu guztiak.",
+    "invalidCredentials": "Posta elektronikoa edo pasahitza ez dira zuzenak.",
+    "unexpected": "Ustekabeko errore bat gertatu da."
+  },
+  "register": {
+    "question": "Ez duzu konturik?",
+    "button": "Kontu bat sortu"
+  }
+},
+"RegisterPage": {
+  "hero": {
+    "title": "Kontu bat sortu",
+    "description": "Bat egin gure komunitatearekin."
+  },
+  "form": {
+    "username": "Erabiltzaile-izena",
+    "usernamePlaceholder": "Zure izena",
+    "email": "Posta elektronikoa",
+    "emailPlaceholder": "zure@email.com",
+    "password": "Pasahitza",
+    "passwordPlaceholder": "Gutxienez 6 karaktere",
+    "confirmPassword": "Berretsi pasahitza",
+    "confirmPasswordPlaceholder": "Errepikatu zure pasahitza",
+    "loading": "Kontua sortzen...",
+    "submit": "Kontua sortu"
+  },
+  "errors": {
+    "required": "Mesedez, bete eremu guztiak.",
+    "passwordMismatch": "Pasahitzak ez datoz bat.",
+    "passwordLength": "Pasahitzak gutxienez 6 karaktere izan behar ditu.",
+    "registrationFailed": "Ezin izan da kontua sortu.",
+    "unexpected": "Ustekabeko errore bat gertatu da."
+  },
+  "success": "Kontua behar bezala sortu da!",
+  "login": {
+    "question": "Dagoeneko baduzu konturik?",
+    "button": "Saioa hasi"
+  }
+},
+"CollaborationSection": {
+  "eyebrow": "Parte-hartzea",
+  "title": "Elkarrekin komunitatea eraikitzen dugu",
+  "description": "Ezagutu gure lana, parte hartu gure jardueretan eta ezagutu komunitatearekin batera garatzen ditugun ekimenak.",
+  "activities": {
+    "title": "Parte hartu gure jardueretan",
+    "description": "Ezagutu inklusioa eta kulturarteko bizikidetza sustatzeko garatzen ditugun jarduerak eta ekimenak.",
+    "link": "Ezagutu gure jarduerak"
+  },
+  "volunteer": {
+    "title": "Egin zaitez boluntario",
+    "description": "Boluntario gisa parte hartu nahi baduzu, jar zaitez gurekin harremanetan parte hartzeko aukerak ezagutzeko.",
+    "link": "Informazio gehiago"
+  },
+  "collaboration": {
+    "title": "Elkarlanean aritu gurekin",
+    "description": "Erakundeek, instituzioek eta antolakundeek gurekin harremanetan jar daitezke Zubia Socialen lana ezagutzeko.",
+    "link": "Jarri gurekin harremanetan"
+  },
+  "projects": {
+    "title": "Ezagutu gure proiektuak",
+    "description": "Ezagutu komunitatearekin batera garatzen ditugun ekimenak eta proiektuak.",
+    "link": "Ikusi proiektuak"
+  }
+},
   "Footer": {
     "description": "Euskadin laguntza, inklusioa eta kulturarteko bizikidetza sustatzeko konpromisoa duen elkarte soziokulturala.",
     "association": {

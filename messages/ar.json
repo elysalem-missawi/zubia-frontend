@@ -179,6 +179,232 @@
     "contactButton": "تواصل معنا"
   }
 },
+"ProjectsPage": {
+  "hero": {
+    "badge": "مبادرات تصنع أثرًا",
+    "title": "مشاريعنا",
+    "titleHighlight": "ومبادراتنا",
+    "description": "مبادرات وبرامج مجتمعية تهدف إلى تعزيز الاندماج والمشاركة والتعايش بين الثقافات."
+  },
+  "intro": {
+    "people": {
+      "title": "الأشخاص",
+      "description": "نضع الأشخاص واحتياجاتهم في صميم مبادراتنا."
+    },
+    "community": {
+      "title": "المجتمع",
+      "description": "ننشئ مساحات للقاء والمشاركة والدعم بين الأشخاص والثقافات المختلفة."
+    },
+    "inclusion": {
+      "title": "الاندماج",
+      "description": "نعمل على بناء مجتمع أكثر انفتاحًا ومشاركةً وشمولًا."
+    }
+  },
+  "projects": {
+    "eyebrow": "المبادرات",
+    "title": "مشاريع Zubia Social",
+    "description": "تعرّف على المبادرات التي نطوّرها بالتعاون مع المجتمع.",
+    "countSingular": "مشروع متاح",
+    "countPlural": "مشاريع متاحة"
+  },
+  "empty": {
+    "title": "لا توجد مشاريع متاحة حاليًا",
+    "description": "نعمل على إعداد مبادرات جديدة. عد لزيارتنا قريبًا للتعرّف على أنشطتنا ومشاريعنا."
+  },
+  "cta": {
+    "title": "هل تريد أن تكون جزءًا منا؟",
+    "description": "يُبنى الاندماج بمشاركة الجميع. تعرّف على عملنا أو تواصل معنا لمعرفة كيفية التعاون.",
+    "contactButton": "تواصل معنا",
+    "aboutButton": "من نحن"
+  }
+},
+"ContactPage": {
+  "hero": {
+    "badge": "نحن هنا لمساعدتك",
+    "title": "تواصل",
+    "titleHighlight": "معنا",
+    "description": "هل لديك سؤال، أو تحتاج إلى توجيه، أو ترغب في التعاون مع Zubia Social؟ اكتب لنا."
+  },
+  "info": {
+    "title": "نحن هنا للاستماع إليك",
+    "description": "يمكنك التواصل معنا للإجابة عن استفساراتك، والتعرف على مشاريعنا، أو استكشاف طرق التعاون مع الجمعية.",
+    "emailLabel": "البريد الإلكتروني",
+    "locationLabel": "الموقع",
+    "attentionLabel": "الاستجابة",
+    "attentionDescription": "سنرد على رسالتك في أقرب وقت ممكن.",
+    "association": "Asociación Zubia Social Euskadi"
+  },
+  "form": {
+    "eyebrow": "اكتب لنا",
+    "title": "أرسل لنا رسالة",
+    "description": "املأ النموذج وأخبرنا كيف يمكننا مساعدتك.",
+    "nameLabel": "الاسم الكامل",
+    "namePlaceholder": "اسمك",
+    "emailLabel": "البريد الإلكتروني",
+    "emailPlaceholder": "your@email.com",
+    "subjectLabel": "الموضوع",
+    "subjectPlaceholder": "كيف يمكننا مساعدتك؟",
+    "messageLabel": "الرسالة",
+    "messagePlaceholder": "اكتب رسالتك هنا...",
+    "privacy": "سنستخدم المعلومات التي تقدمها لنا فقط للرد على استفسارك.",
+    "submit": "إرسال الرسالة"
+  },
+  "success": {
+    "title": "شكرًا لتواصلك معنا!",
+    "description": "لقد تلقينا رسالتك. سنتواصل معك في أقرب وقت ممكن.",
+    "button": "إرسال رسالة أخرى"
+  },
+  "bottom": {
+    "title": "هل تريد التعرف على عملنا؟",
+    "description": "تعرّف على مشاريعنا والمبادرات التي نطورها لتعزيز الاندماج والتعايش.",
+    "button": "شاهد مشاريعنا"
+  }
+},
+"ArticlePage": {
+  "hero": {
+    "back": "العودة إلى الأخبار",
+    "category": "الأخبار والفعاليات"
+  },
+  "article": {
+    "backToNews": "عرض جميع الأخبار"
+  },
+  "cta": {
+    "title": "هل تريد معرفة المزيد عن عملنا؟",
+    "description": "تعرّف على مشاريعنا والمبادرات التي نطوّرها مع المجتمع.",
+    "projects": "عرض المشاريع",
+    "contact": "تواصل معنا"
+  },
+  "fallback": {
+    "title": "بدون عنوان",
+    "content": "لا يوجد محتوى متاح."
+  }
+},
+"AccountPage": {
+  "hero": {
+    "title": "حسابي",
+    "welcome": "مرحبًا،"
+  },
+  "accountData": {
+    "title": "بيانات حسابك",
+    "username": "اسم المستخدم",
+    "email": "البريد الإلكتروني"
+  },
+  "actions": {
+    "projects": "عرض المشاريع",
+    "logout": "تسجيل الخروج"
+  },
+  "community": {
+    "title": "شكرًا لكونك جزءًا من مجتمعنا.",
+    "description": "من خلال حسابك ستتمكن من الوصول إلى الوظائف القادمة في Zubia Social Euskadi."
+  },
+  "fallback": {
+    "user": "المستخدم",
+    "unavailable": "غير متوفر"
+  }
+},
+"LoginPage": {
+  "hero": {
+    "title": "تسجيل الدخول",
+    "description": "ادخل إلى حسابك."
+  },
+  "form": {
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "your@email.com",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "كلمة المرور الخاصة بك",
+    "loading": "جارٍ تسجيل الدخول...",
+    "submit": "تسجيل الدخول"
+  },
+  "errors": {
+    "required": "يرجى إكمال جميع الحقول.",
+    "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+    "unexpected": "حدث خطأ غير متوقع."
+  },
+  "register": {
+    "question": "ليس لديك حساب؟",
+    "button": "إنشاء حساب"
+  }
+},
+"RegisterPage": {
+  "hero": {
+    "title": "إنشاء حساب",
+    "description": "انضم إلى مجتمعنا."
+  },
+  "form": {
+    "username": "اسم المستخدم",
+    "usernamePlaceholder": "اسمك",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "your@email.com",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "6 أحرف على الأقل",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "confirmPasswordPlaceholder": "أعد إدخال كلمة المرور",
+    "loading": "جارٍ إنشاء الحساب...",
+    "submit": "إنشاء حساب"
+  },
+  "errors": {
+    "required": "يرجى إكمال جميع الحقول.",
+    "passwordMismatch": "كلمتا المرور غير متطابقتين.",
+    "passwordLength": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل.",
+    "registrationFailed": "تعذر إنشاء الحساب.",
+    "unexpected": "حدث خطأ غير متوقع."
+  },
+  "success": "تم إنشاء الحساب بنجاح!",
+  "login": {
+    "question": "هل لديك حساب بالفعل؟",
+    "button": "تسجيل الدخول"
+  }
+},
+"CollaborationSection": {
+  "eyebrow": "Participación",
+  "title": "Juntos construimos comunidad",
+  "description": "Conoce nuestro trabajo, participa en nuestras actividades y descubre las iniciativas que desarrollamos junto a la comunidad.",
+  "activities": {
+    "title": "Participa en nuestras actividades",
+    "description": "Conoce las actividades e iniciativas que desarrollamos para favorecer la inclusión y la convivencia intercultural.",
+    "link": "Conoce nuestras actividades"
+  },
+  "volunteer": {
+    "title": "Hazte voluntario/a",
+    "description": "Si quieres participar de forma voluntaria, ponte en contacto con nosotros para conocer las posibilidades de participación.",
+    "link": "Más información"
+  },
+  "collaboration": {
+    "title": "Colabora con nosotros",
+    "description": "Entidades, instituciones y organizaciones pueden ponerse en contacto con Zubia Social para conocer nuestro trabajo.",
+    "link": "Contacta con nosotros"
+  },
+  "projects": {
+    "title": "Conoce nuestros proyectos",
+    "description": "Descubre las iniciativas y proyectos que desarrollamos junto a la comunidad.",
+    "link": "Ver proyectos"
+  }
+},
+"CollaborationSection": {
+  "eyebrow": "المشاركة",
+  "title": "نبني المجتمع معًا",
+  "description": "تعرّف على عملنا، وشارك في أنشطتنا، واكتشف المبادرات التي نطوّرها مع المجتمع.",
+  "activities": {
+    "title": "شارك في أنشطتنا",
+    "description": "تعرّف على الأنشطة والمبادرات التي نطوّرها لتعزيز الاندماج والتعايش بين الثقافات.",
+    "link": "تعرّف على أنشطتنا"
+  },
+  "volunteer": {
+    "title": "تطوّع معنا",
+    "description": "إذا كنت ترغب في المشاركة كمتطوع، تواصل معنا لمعرفة فرص المشاركة المتاحة.",
+    "link": "مزيد من المعلومات"
+  },
+  "collaboration": {
+    "title": "تعاون معنا",
+    "description": "يمكن للمؤسسات والهيئات والمنظمات التواصل مع Zubia Social للتعرّف على عملنا.",
+    "link": "تواصل معنا"
+  },
+  "projects": {
+    "title": "تعرّف على مشاريعنا",
+    "description": "اكتشف المبادرات والمشاريع التي نطوّرها مع المجتمع.",
+    "link": "عرض المشاريع"
+  }
+},
   "Footer": {
     "description": "جمعية اجتماعية وثقافية ملتزمة بالدعم والاندماج والتعايش بين الثقافات في إقليم الباسك.",
     "association": {

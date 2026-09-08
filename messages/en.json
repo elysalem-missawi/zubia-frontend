@@ -185,6 +185,168 @@
     "contactButton": "Contact us"
   }
 },
+"ContactPage": {
+  "hero": {
+    "badge": "We are here to help",
+    "title": "Contact",
+    "titleHighlight": "us",
+    "description": "Do you have a question, need guidance, or want to collaborate with Zubia Social? Write to us."
+  },
+  "info": {
+    "title": "We are here to listen",
+    "description": "You can contact us to answer your questions, learn about our projects, or explore ways to collaborate with the association.",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "attentionLabel": "Support",
+    "attentionDescription": "We will respond to your message as soon as possible.",
+    "association": "Asociación Zubia Social Euskadi"
+  },
+  "form": {
+    "eyebrow": "Write to us",
+    "title": "Send us a message",
+    "description": "Complete the form and tell us how we can help you.",
+    "nameLabel": "Full name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "How can we help you?",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "privacy": "We will use the information you provide only to respond to your enquiry.",
+    "submit": "Send message"
+  },
+  "success": {
+    "title": "Thank you for contacting us!",
+    "description": "We have received your message. We will get back to you as soon as possible.",
+    "button": "Send another message"
+  },
+  "bottom": {
+    "title": "Would you like to learn about our work?",
+    "description": "Discover our projects and the initiatives we develop to promote inclusion and coexistence.",
+    "button": "View our projects"
+  }
+},
+"ArticlePage": {
+  "hero": {
+    "back": "Back to News",
+    "category": "News and Events"
+  },
+  "article": {
+    "backToNews": "View all news"
+  },
+  "cta": {
+    "title": "Would you like to learn more about our work?",
+    "description": "Discover our projects and the initiatives we develop together with the community.",
+    "projects": "View projects",
+    "contact": "Contact us"
+  },
+  "fallback": {
+    "title": "Untitled",
+    "content": "No content available."
+  }
+},
+"AccountPage": {
+  "hero": {
+    "title": "My account",
+    "welcome": "Welcome,"
+  },
+  "accountData": {
+    "title": "Your account details",
+    "username": "Username",
+    "email": "Email address"
+  },
+  "actions": {
+    "projects": "View projects",
+    "logout": "Log out"
+  },
+  "community": {
+    "title": "Thank you for being part of our community.",
+    "description": "From your account, you will be able to access upcoming Zubia Social Euskadi features."
+  },
+  "fallback": {
+    "user": "user",
+    "unavailable": "Not available"
+  }
+},
+"LoginPage": {
+  "hero": {
+    "title": "Log in",
+    "description": "Access your account."
+  },
+  "form": {
+    "email": "Email address",
+    "emailPlaceholder": "your@email.com",
+    "password": "Password",
+    "passwordPlaceholder": "Your password",
+    "loading": "Logging in...",
+    "submit": "Log in"
+  },
+  "errors": {
+    "required": "Please complete all fields.",
+    "invalidCredentials": "The email or password is incorrect.",
+    "unexpected": "An unexpected error occurred."
+  },
+  "register": {
+    "question": "Don't have an account?",
+    "button": "Create an account"
+  }
+},
+"RegisterPage": {
+  "hero": {
+    "title": "Create an account",
+    "description": "Join our community."
+  },
+  "form": {
+    "username": "Username",
+    "usernamePlaceholder": "Your name",
+    "email": "Email address",
+    "emailPlaceholder": "your@email.com",
+    "password": "Password",
+    "passwordPlaceholder": "Minimum 6 characters",
+    "confirmPassword": "Confirm password",
+    "confirmPasswordPlaceholder": "Repeat your password",
+    "loading": "Creating account...",
+    "submit": "Create account"
+  },
+  "errors": {
+    "required": "Please complete all fields.",
+    "passwordMismatch": "The passwords do not match.",
+    "passwordLength": "The password must be at least 6 characters long.",
+    "registrationFailed": "The account could not be created.",
+    "unexpected": "An unexpected error occurred."
+  },
+  "success": "Account created successfully!",
+  "login": {
+    "question": "Already have an account?",
+    "button": "Log in"
+  }
+},
+"CollaborationSection": {
+  "eyebrow": "Participation",
+  "title": "Together we build community",
+  "description": "Learn about our work, take part in our activities and discover the initiatives we develop together with the community.",
+  "activities": {
+    "title": "Take part in our activities",
+    "description": "Discover the activities and initiatives we develop to promote inclusion and intercultural coexistence.",
+    "link": "Discover our activities"
+  },
+  "volunteer": {
+    "title": "Become a volunteer",
+    "description": "If you would like to volunteer, contact us to learn about the available ways to participate.",
+    "link": "More information"
+  },
+  "collaboration": {
+    "title": "Collaborate with us",
+    "description": "Organizations, institutions and entities can contact Zubia Social to learn more about our work.",
+    "link": "Contact us"
+  },
+  "projects": {
+    "title": "Discover our projects",
+    "description": "Discover the initiatives and projects we develop together with the community.",
+    "link": "View projects"
+  }
+},
   "Footer": {
     "description": "A sociocultural association committed to support, inclusion and intercultural coexistence in the Basque Country.",
 

@@ -1,10 +1,12 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function RegistroPage() {
   const router = useRouter();
+  const t = useTranslations("RegisterPage");
 
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
@@ -21,19 +23,19 @@ export default function RegistroPage() {
     setError("");
     setSuccess("");
 
-    // التحقق من البيانات
+    // Validación de datos
     if (!nombre || !email || !password || !confirmPassword) {
-      setError("Por favor, completa todos los campos.");
+      setError(t("errors.required"));
       return;
     }
 
     if (password !== confirmPassword) {
-      setError("Las contraseñas no coinciden.");
+      setError(t("errors.passwordMismatch"));
       return;
     }
 
     if (password.length < 6) {
-      setError("La contraseña debe tener al menos 6 caracteres.");
+      setError(t("errors.passwordLength"));
       return;
     }
 
@@ -41,8 +43,7 @@ export default function RegistroPage() {
       setLoading(true);
 
       const baseUrl =
-        process.env.NEXT_PUBLIC_STRAPI_URL ||
-        "http://localhost:1337";
+        process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
 
       const response = await fetch(
         `${baseUrl.replace(/\/$/, "")}/api/auth/local/register`,
@@ -53,8 +54,8 @@ export default function RegistroPage() {
           },
           body: JSON.stringify({
             username: nombre,
-            email: email,
-            password: password,
+            email,
+            password,
           }),
         }
       );
@@ -63,33 +64,28 @@ export default function RegistroPage() {
 
       if (!response.ok) {
         throw new Error(
-          data?.error?.message ||
-            "No se ha podido crear la cuenta."
+          data?.error?.message || t("errors.registrationFailed")
         );
       }
 
-      // حفظ الجلسة في LocalStorage
+      // Guardar sesión
       localStorage.setItem("zubia_jwt", data.jwt);
-      localStorage.setItem(
-        "zubia_user",
-        JSON.stringify(data.user)
-      );
+      localStorage.setItem("zubia_user", JSON.stringify(data.user));
 
-      // إشعار التطبيق بتحديث الجلسة
+      // Notificar al resto de la aplicación
+      window.dispatchEvent(new Event("zubia-auth-change"));
       window.dispatchEvent(new Event("storage"));
 
-      setSuccess("¡Cuenta creada correctamente!");
+      setSuccess(t("success"));
 
-      // التوجيه إلى صفحة الحساب
+      // Redirigir a la página de cuenta
       setTimeout(() => {
         router.push("/mi-cuenta");
         router.refresh();
       }, 800);
     } catch (err) {
       setError(
-        err instanceof Error
-          ? err.message
-          : "Ha ocurrido un error inesperado."
+        err instanceof Error ? err.message : t("errors.unexpected")
       );
     } finally {
       setLoading(false);
@@ -99,7 +95,6 @@ export default function RegistroPage() {
   return (
     <main className="min-h-screen bg-slate-950 px-6 py-20 text-white">
       <div className="mx-auto max-w-xl">
-
         {/* Título */}
         <div className="mb-10 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-emerald-400">
@@ -107,26 +102,24 @@ export default function RegistroPage() {
           </p>
 
           <h1 className="text-4xl font-bold">
-            Crear una cuenta
+            {t("hero.title")}
           </h1>
 
           <p className="mt-4 text-slate-400">
-            Únete a nuestra comunidad.
+            {t("hero.description")}
           </p>
         </div>
 
         {/* Formulario */}
         <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-2xl sm:p-8">
-
           <form onSubmit={handleSubmit} className="space-y-6">
-
             {/* Nombre */}
             <div>
               <label
                 htmlFor="nombre"
                 className="mb-2 block text-sm font-medium"
               >
-                Nombre de usuario
+                {t("form.username")}
               </label>
 
               <input
@@ -134,9 +127,9 @@ export default function RegistroPage() {
                 type="text"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
-                placeholder="Tu nombre"
+                placeholder={t("form.usernamePlaceholder")}
                 autoComplete="username"
-                className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none focus:border-emerald-500"
+                className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-emerald-500"
               />
             </div>
 
@@ -146,7 +139,7 @@ export default function RegistroPage() {
                 htmlFor="email"
                 className="mb-2 block text-sm font-medium"
               >
-                Correo electrónico
+                {t("form.email")}
               </label>
 
               <input
@@ -154,9 +147,9 @@ export default function RegistroPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="tu@email.com"
+                placeholder={t("form.emailPlaceholder")}
                 autoComplete="email"
-                className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none focus:border-emerald-500"
+                className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-emerald-500"
               />
             </div>
 
@@ -166,7 +159,7 @@ export default function RegistroPage() {
                 htmlFor="password"
                 className="mb-2 block text-sm font-medium"
               >
-                Contraseña
+                {t("form.password")}
               </label>
 
               <input
@@ -174,9 +167,9 @@ export default function RegistroPage() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Mínimo 6 caracteres"
+                placeholder={t("form.passwordPlaceholder")}
                 autoComplete="new-password"
-                className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none focus:border-emerald-500"
+                className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-emerald-500"
               />
             </div>
 
@@ -186,19 +179,17 @@ export default function RegistroPage() {
                 htmlFor="confirmPassword"
                 className="mb-2 block text-sm font-medium"
               >
-                Confirmar contraseña
+                {t("form.confirmPassword")}
               </label>
 
               <input
                 id="confirmPassword"
                 type="password"
                 value={confirmPassword}
-                onChange={(e) =>
-                  setConfirmPassword(e.target.value)
-                }
-                placeholder="Repite tu contraseña"
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder={t("form.confirmPasswordPlaceholder")}
                 autoComplete="new-password"
-                className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none focus:border-emerald-500"
+                className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-emerald-500"
               />
             </div>
 
@@ -223,23 +214,23 @@ export default function RegistroPage() {
               className="w-full rounded-xl bg-emerald-600 px-5 py-3.5 font-semibold transition hover:bg-emerald-500 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {loading
-                ? "Creando cuenta..."
-                : "Crear cuenta"}
+                ? t("form.loading")
+                : t("form.submit")}
             </button>
           </form>
 
           {/* Login */}
           <div className="mt-8 border-t border-slate-800 pt-6 text-center">
             <p className="text-sm text-slate-400">
-              ¿Ya tienes una cuenta?
+              {t("login.question")}
             </p>
 
-            <a
+            <Link
               href="/login"
-              className="mt-2 inline-block font-semibold text-emerald-400 hover:text-emerald-300"
+              className="mt-2 inline-block font-semibold text-emerald-400 transition hover:text-emerald-300"
             >
-              Iniciar sesión
-            </a>
+              {t("login.button")}
+            </Link>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { fetchFromStrapi } from "@/lib/strapi";
 import { Link } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 import { ArrowLeft, Calendar, Newspaper } from "lucide-react";
 import { notFound } from "next/navigation";
 
@@ -18,7 +19,9 @@ interface ArticlePageProps {
 export default async function ArticleDetailPage({
   params,
 }: ArticlePageProps) {
-  const { id: articleId } = await params;
+  const { locale, id: articleId } = await params;
+
+  const t = await getTranslations("ArticlePage");
 
   let article: any = null;
 
@@ -45,17 +48,14 @@ export default async function ArticleDetailPage({
 
   const data = article.attributes || article;
 
-  const title =
-    data.title ||
-    data.titulo ||
-    "Sin título";
+  const title = data.title || data.titulo || t("fallback.title");
 
   const content =
     data.content ||
     data.contenido ||
     data.description ||
     data.descripcion ||
-    "Sin contenido disponible.";
+    t("fallback.content");
 
   const date =
     data.publishedAt ||
@@ -63,13 +63,13 @@ export default async function ArticleDetailPage({
     data.date ||
     "";
 
-  const formattedDate = date
-    ? new Date(date).toLocaleDateString("es-ES", {
-        day: "2-digit",
-        month: "long",
-        year: "numeric",
-      })
-    : "";
+ const formattedDate = date
+  ? new Date(date).toLocaleDateString(locale, {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    })
+  : "";
 
   return (
     <div className="flex min-h-screen flex-col bg-slate-50">
@@ -86,12 +86,12 @@ export default async function ArticleDetailPage({
               className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-white/10 hover:text-emerald-300"
             >
               <ArrowLeft className="h-4 w-4" />
-              Volver a Noticias
+              {t("hero.back")}
             </Link>
 
             <div className="flex items-center gap-2 text-sm font-semibold text-emerald-400">
               <Newspaper className="h-4 w-4" />
-              Noticias y Eventos
+              {t("hero.category")}
             </div>
 
             <h1 className="mt-5 max-w-4xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -127,46 +127,12 @@ export default async function ArticleDetailPage({
                 className="inline-flex items-center gap-2 font-bold text-emerald-600 transition hover:text-emerald-700"
               >
                 <ArrowLeft className="h-5 w-5" />
-                Ver todas las noticias
+                {t("article.backToNews")}
               </Link>
             </div>
           </article>
         </section>
-
-        {/* CTA */}
-        <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-3xl bg-emerald-700 px-6 py-10 sm:px-10 lg:px-12">
-            <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
-
-            <div className="relative">
-              <h2 className="text-2xl font-black text-white sm:text-3xl">
-                ¿Quieres conocer más sobre nuestro trabajo?
-              </h2>
-
-              <p className="mt-3 max-w-2xl leading-7 text-emerald-50">
-                Descubre nuestros proyectos y las iniciativas que desarrollamos
-                junto a la comunidad.
-              </p>
-
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/proyectos"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 font-bold text-emerald-700 transition hover:bg-emerald-50"
-                >
-                  Ver proyectos
-                  <ArrowLeft className="h-4 w-4 rotate-180" />
-                </Link>
-
-                <Link
-                  href="/contacto"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/30 px-5 py-3 font-bold text-white transition hover:bg-white/10"
-                >
-                  Contacta con nosotros
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+ 
       </main>
 
       <Footer />
