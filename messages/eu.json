@@ -1,0 +1,102 @@
+{
+  "Navigation": {
+    "about": "Nor gara",
+    "projects": "Proiektuak",
+    "news": "Albisteak",
+    "contact": "Kontaktua",
+    "login": "Saioa hasi",
+    "register": "Kontua sortu",
+    "myAccount": "Nire kontua"
+  },
+
+  "Hero": {
+    "title": "Zubiak eraikitzen ditugu,",
+    "titleHighlight": "ez oztopoak.",
+    "description": "Euskadiko migratzaileei laguntzen diegu, inklusioa, autonomia eta elkartasunean oinarritutako kulturarteko bizikidetza sustatuz.",
+    "projectsButton": "Ezagutu gure proiektuak",
+    "contactButton": "Jarri gurekin harremanetan",
+    "missionLabel": "Gure misioa",
+    "mission": "Pertsona guztiek hazteko aukerak dituzten komunitatea."
+  },
+
+  "Home": {
+    "values": {
+      "eyebrow": "Gure balioak",
+      "title": "Pertsonak, komunitatea eta aukerak",
+      "description": "Pertsona eta komunitatearekin batera lan egiten dugu gizarte irekiago eta inklusiboago bat eraikitzeko.",
+      "accompaniment": {
+        "title": "Laguntza",
+        "description": "Orientazio eta informazio sozial eta kulturala eskaintzen dugu integrazioa eta autonomia errazteko."
+      },
+      "community": {
+        "title": "Komunitatea",
+        "description": "Laguntza sareak eta partekatzeko, parte hartzeko eta komunitatearen parte sentitzeko guneak sortzen ditugu."
+      },
+      "activities": {
+        "title": "Jarduerak",
+        "description": "Tailerrak, kultur topaketak eta herritar guztientzako jarduera irekiak."
+      }
+    },
+
+    "about": {
+      "eyebrow": "Nor gara",
+      "title": "Gizarte inklusibo baterako zubiak eraikitzen",
+      "description": "Vitoria-Gasteizen sortutako irabazi-asmorik gabeko elkartea gara, oztopoak gainditzeko eta kulturarteko bizikidetza sustatzeko helburuarekin.",
+      "description2": "Komunitateak pertsonen bizitza eraldatzeko duen ahalmenean sinesten dugu, Euskadin bide berri bat hasten duten pertsonei tresnak, laguntza eta aukerak eskainiz.",
+      "empowerment": "Gizarte ahalduntzea",
+      "personalSupport": "Laguntza pertsonala",
+      "history": "Ezagutu gure historia",
+      "impact": "Gure eragina",
+      "impactTitle": "Elkarrekin gehiago lortzen dugu",
+      "years": "Eragin urteak",
+      "people": "Artatutako pertsonak",
+      "volunteers": "Boluntario aktiboak",
+      "projectsCompleted": "Egindako proiektuak"
+    },
+
+    "projects": {
+      "eyebrow": "Gure lana",
+      "title": "Eragina sortzen duten proiektuak",
+      "description": "Autonomia, parte-hartzea eta bizikidetza indartzeko diseinatutako ekimenak.",
+      "viewAll": "Guztiak ikusi"
+    },
+
+    "news": {
+      "eyebrow": "Azken berriak",
+      "title": "Azken albisteak",
+      "description": "Ezagutu gure azken jarduerak eta berriak.",
+      "viewAll": "Guztiak ikusi"
+    },
+
+    "communityCta": {
+      "title": "Zu ere gure parte izan zaitezke",
+      "description": "Gizarte inklusiboa guztion artean eraikitzen da. Ezagutu gure lana, lagundu gurekin edo jarri gurekin harremanetan.",
+      "contact": "Jarri gurekin harremanetan",
+      "projects": "Ezagutu gure proiektuak"
+    }
+  },
+
+  "Footer": {
+    "description": "Euskadin laguntza, inklusioa eta kulturarteko bizikidetza sustatzeko konpromisoa duen elkarte soziokulturala.",
+    "association": {
+      "title": "Elkartea",
+      "about": "Guri buruz",
+      "projects": "Proiektuak",
+      "news": "Albisteak",
+      "contact": "Harremana"
+    },
+    "information": {
+      "title": "Informazioa",
+      "privacy": "Pribatutasun politika",
+      "legal": "Lege-oharra",
+      "cookies": "Cookie politika"
+    },
+    "contact": {
+      "title": "Harremana",
+      "location": "Vitoria-Gasteiz, Euskadi",
+      "phone": "Harremanetarako telefonoa"
+    },
+    "copyright": "© 2026 Zubia Social. Eskubide guztiak erreserbatuta.",
+    "rights": "Asociación Zubia Social Euskadi"
+  }
+}

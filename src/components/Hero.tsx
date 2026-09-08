@@ -1,7 +1,10 @@
-import Link from "next/link";
 import { ArrowRight, Heart } from "lucide-react";
+import { Link } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 
-export default function Hero() {
+export default async function Hero() {
+  const t = await getTranslations("Hero");
+
   return (
     <section className="relative overflow-hidden bg-slate-950 text-white">
       {/* Decorative background */}
@@ -19,16 +22,15 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              Construimos
+              {t("title")}
+
               <span className="block text-emerald-400">
-                puentes, no barreras.
+                {t("titleHighlight")}
               </span>
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300 sm:text-xl">
-              Acompañamos a personas migrantes en Euskadi,
-              promoviendo la inclusión, la autonomía y una
-              convivencia intercultural basada en la solidaridad.
+              {t("description")}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -36,7 +38,7 @@ export default function Hero() {
                 href="/proyectos"
                 className="group inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-6 py-3.5 font-bold text-white shadow-lg shadow-emerald-900/30 transition hover:bg-emerald-400"
               >
-                Conoce nuestros proyectos
+                {t("projectsButton")}
 
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
@@ -45,7 +47,7 @@ export default function Hero() {
                 href="/contacto"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 font-bold text-white backdrop-blur transition hover:bg-white/10"
               >
-                Contacta con nosotros
+                {t("contactButton")}
               </Link>
             </div>
           </div>
@@ -53,11 +55,9 @@ export default function Hero() {
           {/* Hero visual */}
           <div className="relative hidden lg:block">
             <div className="relative mx-auto max-w-md">
-
               <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-emerald-400/20 to-teal-500/5 blur-2xl" />
 
               <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-emerald-500/20 via-slate-800 to-slate-900 p-8 shadow-2xl">
-
                 <div className="flex h-72 flex-col justify-between">
 
                   <div className="flex items-center justify-between">
@@ -72,12 +72,11 @@ export default function Hero() {
 
                   <div>
                     <p className="text-sm font-medium text-emerald-300">
-                      Nuestra misión
+                      {t("missionLabel")}
                     </p>
 
                     <p className="mt-2 text-2xl font-bold leading-snug">
-                      Una comunidad donde todas las personas tengan
-                      oportunidades para crecer.
+                      {t("mission")}
                     </p>
                   </div>
 
@@ -89,7 +88,6 @@ export default function Hero() {
 
                 </div>
               </div>
-
             </div>
           </div>
 

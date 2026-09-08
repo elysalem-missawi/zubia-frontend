@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { fetchFromStrapi } from "@/lib/strapi";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowLeft, Calendar, Newspaper } from "lucide-react";
 import { notFound } from "next/navigation";
 
@@ -9,44 +9,33 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 interface ArticlePageProps {
-  params: Promise<{ id: string }>;
+  params: Promise<{
+    locale: string;
+    id: string;
+  }>;
 }
 
 export default async function ArticleDetailPage({
   params,
 }: ArticlePageProps) {
-  const resolvedParams = await params;
-  const articleId = resolvedParams.id;
+  const { id: articleId } = await params;
 
   let article: any = null;
 
   try {
-    // 1. Intentar buscar primero en news-posts
-    const responseNews = await fetchFromStrapi(
-      `news-posts?filters[documentId][$eq]=${encodeURIComponent(articleId)}`
+    const response = await fetchFromStrapi(
+      `articles?filters[documentId][$eq]=${encodeURIComponent(articleId)}`
     );
 
-    const newsData = responseNews?.data || [];
+    const articlesData = response?.data || [];
 
-    if (Array.isArray(newsData) && newsData.length > 0) {
-      article = newsData[0];
-    } else {
-      // 2. Si no se encuentra, buscar en articles
-      const responseArticles = await fetchFromStrapi(
-        `articles?filters[documentId][$eq]=${encodeURIComponent(articleId)}`
-      );
-
-      const articlesData = responseArticles?.data || [];
-
-      if (Array.isArray(articlesData) && articlesData.length > 0) {
-        article = articlesData[0];
-      }
+    if (Array.isArray(articlesData) && articlesData.length > 0) {
+      article = articlesData[0];
     }
   } catch (error) {
     console.error("Error fetching article detail:", error);
   }
 
-  // 3. Si no existe el artículo, mostrar 404
   if (
     !article ||
     (typeof article === "object" && Object.keys(article).length === 0)
@@ -54,7 +43,6 @@ export default async function ArticleDetailPage({
     notFound();
   }
 
-  // Soporte para Strapi v4 y v5
   const data = article.attributes || article;
 
   const title =
@@ -92,7 +80,7 @@ export default async function ArticleDetailPage({
         <section className="relative overflow-hidden bg-slate-950">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.18),transparent_35%)]" />
 
-          <div className="relative mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8 lg:py-18">
+          <div className="relative mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
             <Link
               href="/noticias"
               className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-white/10 hover:text-emerald-300"
@@ -133,7 +121,6 @@ export default async function ArticleDetailPage({
               </div>
             </div>
 
-            {/* Bottom navigation */}
             <div className="border-t border-slate-100 bg-slate-50 px-6 py-6 sm:px-8 lg:px-12">
               <Link
                 href="/noticias"

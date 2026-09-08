@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Asociación Zubia Social Euskadi",
-  description: "Asociación Sociocultural de Apoyo a las Personas Migrantes en Vitoria-Gasteiz",
+  description:
+    "Asociación Sociocultural de Apoyo a las Personas Migrantes en Vitoria-Gasteiz",
 };
 
 export default function RootLayout({
@@ -25,11 +26,12 @@ export default function RootLayout({
   return (
     <html
       lang="es"
+      dir="ltr"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body 
-        suppressHydrationWarning 
+      <body
+        suppressHydrationWarning
         className="min-h-full flex flex-col bg-slate-50 text-slate-900"
       >
         {children}

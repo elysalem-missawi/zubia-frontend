@@ -1,0 +1,101 @@
+{
+  "Navigation": {
+    "about": "Quiénes somos",
+    "projects": "Proyectos",
+    "news": "Noticias",
+    "contact": "Contacto",
+    "login": "Iniciar sesión",
+    "register": "Crear una cuenta",
+    "myAccount": "Mi cuenta"
+  },
+
+  "Hero": {
+    "title": "Construimos",
+    "titleHighlight": "puentes, no barreras.",
+    "description": "Acompañamos a personas migrantes en Euskadi, promoviendo la inclusión, la autonomía y una convivencia intercultural basada en la solidaridad.",
+    "projectsButton": "Conoce nuestros proyectos",
+    "contactButton": "Contacta con nosotros",
+    "missionLabel": "Nuestra misión",
+    "mission": "Una comunidad donde todas las personas tengan oportunidades para crecer."
+  },
+
+  "Home": {
+    "values": {
+      "eyebrow": "Nuestros valores",
+      "title": "Personas, comunidad y oportunidades",
+      "description": "Trabajamos junto a las personas y la comunidad para construir una sociedad más abierta e inclusiva.",
+      "accompaniment": {
+        "title": "Acompañamiento",
+        "description": "Orientación e información social y cultural para facilitar la integración y la autonomía."
+      },
+      "community": {
+        "title": "Comunidad",
+        "description": "Creamos redes de apoyo y espacios donde compartir, participar y sentirse parte de la comunidad."
+      },
+      "activities": {
+        "title": "Actividades",
+        "description": "Talleres, encuentros culturales y actividades abiertas para toda la ciudadanía."
+      }
+    },
+
+    "about": {
+      "eyebrow": "Quiénes somos",
+      "title": "Construyendo puentes hacia una sociedad inclusiva",
+      "description": "Somos una asociación sin ánimo de lucro fundada en Vitoria-Gasteiz con el propósito de derribar barreras y fomentar la convivencia intercultural.",
+      "description2": "Creemos en el poder de la comunidad para transformar vidas, ofreciendo herramientas, acompañamiento y oportunidades a quienes comienzan un nuevo camino en Euskadi.",
+      "empowerment": "Empoderamiento social",
+      "personalSupport": "Acompañamiento personal",
+      "history": "Conoce nuestra historia",
+      "impact": "Nuestro impacto",
+      "impactTitle": "Juntos conseguimos más",
+      "years": "Años de impacto",
+      "people": "Personas atendidas",
+      "volunteers": "Voluntarios activos",
+      "projectsCompleted": "Proyectos realizados"
+    },
+
+    "projects": {
+      "eyebrow": "Nuestro trabajo",
+      "title": "Proyectos que generan impacto",
+      "description": "Iniciativas pensadas para fortalecer la autonomía, la participación y la convivencia.",
+      "viewAll": "Ver todos"
+    },
+
+    "news": {
+      "eyebrow": "Actualidad",
+      "title": "Últimas noticias",
+      "description": "Descubre nuestras últimas actividades y novedades.",
+      "viewAll": "Ver todas"
+    },
+
+    "communityCta": {
+      "title": "Tú también puedes formar parte",
+      "description": "Una sociedad inclusiva se construye entre todas las personas. Conoce nuestro trabajo, colabora con nosotros o simplemente ponte en contacto.",
+      "contact": "Contacta con nosotros",
+      "projects": "Conoce nuestros proyectos"
+    }
+  },
+  "Footer": {
+    "description": "Euskadin laguntza, inklusioa eta kulturarteko bizikidetza sustatzeko konpromisoa duen elkarte soziokulturala.",
+    "association": {
+      "title": "Elkartea",
+      "about": "Guri buruz",
+      "projects": "Proiektuak",
+      "news": "Albisteak",
+      "contact": "Harremana"
+    },
+    "information": {
+      "title": "Informazioa",
+      "privacy": "Pribatutasun politika",
+      "legal": "Lege-oharra",
+      "cookies": "Cookie politika"
+    },
+    "contact": {
+      "title": "Harremana",
+      "location": "Vitoria-Gasteiz, Euskadi",
+      "phone": "Harremanetarako telefonoa"
+    },
+    "copyright": "© 2026 Zubia Social. Eskubide guztiak erreserbatuta.",
+    "rights": "Asociación Zubia Social Euskadi"
+  }
+}

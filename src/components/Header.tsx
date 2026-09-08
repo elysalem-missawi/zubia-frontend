@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/routing";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 import {
   HeartHandshake,
@@ -14,19 +15,21 @@ import {
   User,
 } from "lucide-react";
 
-const navItems = [
-  { href: "/sobre-nosotros", label: "Sobre Nosotros" },
-  { href: "/proyectos", label: "Proyectos" },
-  { href: "/noticias", label: "Noticias" },
-  { href: "/contacto", label: "Contacto" },
-];
-
 export default function Header() {
   const pathname = usePathname();
+  const t = useTranslations("Navigation");
 
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  // عناصر القائمة مع الترجمة الديناميكية
+  const navItems = [
+    { href: "/sobre-nosotros", label: t("about") },
+    { href: "/proyectos", label: t("projects") },
+    { href: "/noticias", label: t("news") },
+    { href: "/contacto", label: t("contact") },
+  ];
 
   // دالة التحقق من وجود التوكن
   const checkAuth = () => {
@@ -152,15 +155,17 @@ export default function Header() {
           })}
         </nav>
 
-        {/* Desktop account actions */}
-        <div className="hidden items-center gap-2 md:flex">
+        {/* Desktop account actions & Language Switcher */}
+        <div className="hidden items-center gap-3 md:flex">
+          <LanguageSwitcher />
+
           {isAuthenticated ? (
             <Link
               href="/mi-cuenta"
               className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
             >
               <User className="h-4 w-4" />
-              Mi cuenta
+              {t("myAccount")}
             </Link>
           ) : (
             <>
@@ -169,7 +174,7 @@ export default function Header() {
                 className="flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
               >
                 <LogIn className="h-4 w-4" />
-                Iniciar sesión
+                {t("login")}
               </Link>
 
               <Link
@@ -177,21 +182,22 @@ export default function Header() {
                 className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
               >
                 <UserPlus className="h-4 w-4" />
-                Crear una cuenta
+                {t("register")}
               </Link>
             </>
           )}
         </div>
 
         {/* Mobile menu button */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitcher />
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
             aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
-            className="rounded-xl p-2.5 text-slate-700 transition-colors hover:bg-emerald-50 hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 md:hidden"
+            className="rounded-xl p-2.5 text-slate-700 transition-colors hover:bg-emerald-50 hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
           >
             {isOpen ? (
               <X className="h-6 w-6" />
@@ -243,7 +249,7 @@ export default function Header() {
                   className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
                 >
                   <User className="h-5 w-5" />
-                  Mi cuenta
+                  {t("myAccount")}
                 </Link>
               ) : (
                 <>
@@ -253,7 +259,7 @@ export default function Header() {
                     className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 py-3.5 text-base font-semibold text-slate-700 transition-colors hover:border-emerald-500 hover:text-emerald-700"
                   >
                     <LogIn className="h-5 w-5" />
-                    Iniciar sesión
+                    {t("login")}
                   </Link>
 
                   <Link
@@ -262,7 +268,7 @@ export default function Header() {
                     className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
                   >
                     <UserPlus className="h-5 w-5" />
-                    Crear una cuenta
+                    {t("register")}
                   </Link>
                 </>
               )}

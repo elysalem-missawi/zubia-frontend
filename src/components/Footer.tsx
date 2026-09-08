@@ -1,270 +1,176 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { HeartHandshake, Mail, MapPin, Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
-import {
-  HeartHandshake,
-  Menu,
-  Sparkles,
-  X,
-  UserPlus,
-  LogIn,
-  User,
-} from "lucide-react";
-
-const navItems = [
-  { href: "/sobre-nosotros", label: "Sobre Nosotros" },
-  { href: "/proyectos", label: "Proyectos" },
-  { href: "/noticias", label: "Noticias" },
-  { href: "/contacto", label: "Contacto" },
-];
-
-export default function Header() {
-  const pathname = usePathname();
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  // Detectar si el usuario está autenticado
-  useEffect(() => {
-    const checkAuth = () => {
-      const token = localStorage.getItem("zubia_jwt");
-      setIsLoggedIn(Boolean(token));
-    };
-
-    checkAuth();
-
-    // Detectar cambios de autenticación dentro de la misma pestaña
-    window.addEventListener("zubia-auth-change", checkAuth);
-
-    // Detectar cambios desde otra pestaña
-    window.addEventListener("storage", checkAuth);
-
-    return () => {
-      window.removeEventListener("zubia-auth-change", checkAuth);
-      window.removeEventListener("storage", checkAuth);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
-    if (!isOpen) {
-      document.body.style.overflow = "";
-      return;
-    }
-
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
+export default function Footer() {
+  const t = useTranslations("Footer");
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "border-b border-slate-200/80 bg-white/90 shadow-lg shadow-slate-900/5 backdrop-blur-xl"
-          : "border-b border-slate-200/60 bg-white/80 backdrop-blur-lg"
-      }`}
-    >
-      <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-
-        {/* Logo */}
-        <Link
-          href="/"
-          className="group flex items-center gap-3 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-          aria-label="Zubia Social - Inicio"
-        >
-          <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/20 transition-transform duration-300 group-hover:scale-105">
-            <HeartHandshake className="h-6 w-6" />
-
-            <div className="absolute inset-0 rounded-xl bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-          </div>
-
-          <div className="hidden flex-col sm:flex">
-            <span className="text-xl font-black tracking-tight text-slate-900 transition-colors group-hover:text-emerald-700">
-              Zubia Social
-            </span>
-
-            <span className="flex items-center gap-1 text-[11px] font-semibold text-emerald-600">
-              <Sparkles className="h-3 w-3 text-amber-400" />
-              Euskadi · Vitoria-Gasteiz
-            </span>
-          </div>
-        </Link>
-
-        {/* Desktop navigation */}
-        <nav
-          className="hidden items-center gap-1 md:flex"
-          aria-label="Navegación principal"
-        >
-          {navItems.map((item) => {
-            const isActive =
-              pathname === item.href ||
-              pathname.startsWith(`${item.href}/`);
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-current={isActive ? "page" : undefined}
-                className={`group relative rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 ${
-                  isActive
-                    ? "bg-emerald-50 text-emerald-700"
-                    : "text-slate-700 hover:bg-emerald-50/70 hover:text-emerald-700"
-                }`}
-              >
-                {item.label}
-
-                <span
-                  className={`absolute bottom-1.5 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 transition-all duration-200 ${
-                    isActive ? "w-1/2" : "w-0 group-hover:w-1/2"
-                  }`}
-                />
-              </Link>
-            );
-          })}
-        </nav>
-
-        {/* Desktop account actions */}
-        <div className="hidden items-center gap-2 md:flex">
-          {isLoggedIn ? (
+    <footer className="bg-slate-950 text-slate-300">
+      {/* Main footer */}
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_0.8fr_0.8fr_1fr]">
+          {/* Organization */}
+          <div className="max-w-md">
             <Link
-              href="/mi-cuenta"
-              className="flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-emerald-500 hover:shadow-xl"
+              href="/"
+              className="group inline-flex items-center gap-3"
+              aria-label="Zubia Social - Inicio"
             >
-              <User className="h-4 w-4" />
-              Mi cuenta
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-lg shadow-emerald-900/30 transition-transform duration-300 group-hover:scale-105">
+                <HeartHandshake className="h-6 w-6" />
+              </div>
+
+              <div>
+                <div className="text-xl font-black tracking-tight text-white">
+                  Zubia Social
+                </div>
+
+                <div className="text-xs font-medium text-emerald-400">
+                  Euskadi · Vitoria-Gasteiz
+                </div>
+              </div>
             </Link>
-          ) : (
-            <>
-              <Link
-                href="/login"
-                className="flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-              >
-                <LogIn className="h-4 w-4" />
-                Iniciar sesión
-              </Link>
 
-              <Link
-                href="/registro"
-                className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-              >
-                <UserPlus className="h-4 w-4" />
-                Crear una cuenta
-              </Link>
-            </>
-          )}
-        </div>
+            <p className="mt-6 text-sm leading-7 text-slate-400">
+              {t("description")}
+            </p>
 
-        {/* Mobile menu button */}
-        <div className="flex items-center">
-          <button
-            type="button"
-            onClick={() => setIsOpen((prev) => !prev)}
-            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-            className="rounded-xl p-2.5 text-slate-700 transition-colors hover:bg-emerald-50 hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 md:hidden"
-          >
-            {isOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+            <div className="mt-6 h-px w-20 bg-emerald-500/60" />
+          </div>
+
+          {/* Association */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white">
+              {t("association.title")}
+            </h3>
+
+            <ul className="mt-5 space-y-3 text-sm">
+              <li>
+                <Link
+                  href="/sobre-nosotros"
+                  className="transition-colors hover:text-emerald-400"
+                >
+                  {t("association.about")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/proyectos"
+                  className="transition-colors hover:text-emerald-400"
+                >
+                  {t("association.projects")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/noticias"
+                  className="transition-colors hover:text-emerald-400"
+                >
+                  {t("association.news")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/contacto"
+                  className="transition-colors hover:text-emerald-400"
+                >
+                  {t("association.contact")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Information */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white">
+              {t("information.title")}
+            </h3>
+
+            <ul className="mt-5 space-y-3 text-sm">
+              <li>
+                <Link
+                  href="/politica-privacidad"
+                  className="transition-colors hover:text-emerald-400"
+                >
+                  {t("information.privacy")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/aviso-legal"
+                  className="transition-colors hover:text-emerald-400"
+                >
+                  {t("information.legal")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/politica-cookies"
+                  className="transition-colors hover:text-emerald-400"
+                >
+                  {t("information.cookies")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white">
+              {t("contact.title")}
+            </h3>
+
+            <ul className="mt-5 space-y-4 text-sm">
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+
+                <span>{t("contact.location")}</span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+
+                <a
+                  href="mailto:info@zubiasocial.eus"
+                  className="transition-colors hover:text-emerald-400"
+                >
+                  info@zubiasocial.eus
+                </a>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+
+                <a
+                  href="tel:+34000000000"
+                  className="transition-colors hover:text-emerald-400"
+                >
+                  {t("contact.phone")}
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {isOpen && (
-        <div
-          id="mobile-menu"
-          className="border-t border-slate-200/80 bg-white/95 px-4 pb-5 pt-3 shadow-xl backdrop-blur-xl md:hidden"
-        >
-          <nav
-            className="mx-auto flex max-w-7xl flex-col gap-1"
-            aria-label="Menú móvil"
-          >
-            {navItems.map((item) => {
-              const isActive =
-                pathname === item.href ||
-                pathname.startsWith(`${item.href}/`);
+      {/* Bottom bar */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-xs text-slate-500 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+          <p>{t("copyright")}</p>
 
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`rounded-xl px-4 py-3.5 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
-                    isActive
-                      ? "bg-emerald-50 text-emerald-700"
-                      : "text-slate-700 hover:bg-slate-50 hover:text-emerald-700"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-
-            {/* Account buttons */}
-            <div className="mt-3 grid gap-2 border-t border-slate-200 pt-4">
-              {isLoggedIn ? (
-                <Link
-                  href="/mi-cuenta"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center gap-2 rounded-xl bg-emerald-600 py-3.5 text-base font-bold text-white transition hover:bg-emerald-500"
-                >
-                  <User className="h-5 w-5" />
-                  Mi cuenta
-                </Link>
-              ) : (
-                <>
-                  <Link
-                    href="/login"
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 py-3.5 text-base font-semibold text-slate-700 transition-colors hover:border-emerald-500 hover:text-emerald-700"
-                  >
-                    <LogIn className="h-5 w-5" />
-                    Iniciar sesión
-                  </Link>
-
-                  <Link
-                    href="/registro"
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-                  >
-                    <UserPlus className="h-5 w-5" />
-                    Crear una cuenta
-                  </Link>
-                </>
-              )}
-            </div>
-          </nav>
+          <p className="text-slate-600">
+            {t("rights")}
+          </p>
         </div>
-      )}
-    </header>
+      </div>
+    </footer>
   );
 }

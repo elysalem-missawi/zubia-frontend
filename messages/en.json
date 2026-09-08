@@ -1,0 +1,106 @@
+{
+  "Navigation": {
+    "about": "About us",
+    "projects": "Projects",
+    "news": "News",
+    "contact": "Contact",
+    "login": "Log in",
+    "register": "Create an account",
+    "myAccount": "My account"
+  },
+
+  "Hero": {
+    "title": "We build",
+    "titleHighlight": "bridges, not barriers.",
+    "description": "We support migrants in the Basque Country, promoting inclusion, independence and intercultural coexistence based on solidarity.",
+    "projectsButton": "Discover our projects",
+    "contactButton": "Contact us",
+    "missionLabel": "Our mission",
+    "mission": "A community where everyone has opportunities to grow."
+  },
+
+  "Home": {
+    "values": {
+      "eyebrow": "Our values",
+      "title": "People, community and opportunities",
+      "description": "We work alongside people and the community to build a more open and inclusive society.",
+      "accompaniment": {
+        "title": "Support",
+        "description": "Social and cultural guidance and information to support integration and independence."
+      },
+      "community": {
+        "title": "Community",
+        "description": "We create support networks and spaces to share, participate and feel part of the community."
+      },
+      "activities": {
+        "title": "Activities",
+        "description": "Workshops, cultural gatherings and activities open to everyone in the community."
+      }
+    },
+
+    "about": {
+      "eyebrow": "About us",
+      "title": "Building bridges towards an inclusive society",
+      "description": "We are a non-profit association founded in Vitoria-Gasteiz with the aim of breaking down barriers and promoting intercultural coexistence.",
+      "description2": "We believe in the power of community to transform lives by providing tools, support and opportunities to people who are beginning a new journey in the Basque Country.",
+      "empowerment": "Social empowerment",
+      "personalSupport": "Personal support",
+      "history": "Discover our history",
+      "impact": "Our impact",
+      "impactTitle": "Together we achieve more",
+      "years": "Years of impact",
+      "people": "People supported",
+      "volunteers": "Active volunteers",
+      "projectsCompleted": "Projects completed"
+    },
+
+    "projects": {
+      "eyebrow": "Our work",
+      "title": "Projects that create impact",
+      "description": "Initiatives designed to strengthen independence, participation and coexistence.",
+      "viewAll": "View all"
+    },
+
+    "news": {
+      "eyebrow": "Latest updates",
+      "title": "Latest news",
+      "description": "Discover our latest activities and updates.",
+      "viewAll": "View all"
+    },
+
+    "communityCta": {
+      "title": "You can also be part of our community",
+      "description": "An inclusive society is built by everyone. Discover our work, collaborate with us or get in touch.",
+      "contact": "Contact us",
+      "projects": "Discover our projects"
+    }
+  },
+
+  "Footer": {
+    "description": "A sociocultural association committed to support, inclusion and intercultural coexistence in the Basque Country.",
+
+    "association": {
+      "title": "The association",
+      "about": "About us",
+      "projects": "Projects",
+      "news": "News",
+      "contact": "Contact"
+    },
+
+    "information": {
+      "title": "Information",
+      "privacy": "Privacy policy",
+      "legal": "Legal notice",
+      "cookies": "Cookie policy"
+    },
+
+    "contact": {
+      "title": "Contact",
+      "location": "Vitoria-Gasteiz, Basque Country",
+      "phone": "Contact phone"
+    },
+
+    "copyright": "© 2026 Zubia Social. All rights reserved.",
+    "rights": "Asociación Zubia Social Euskadi"
+  }
+}
