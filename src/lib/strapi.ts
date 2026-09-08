@@ -23,9 +23,9 @@ export async function fetchFromStrapi(endpoint: string) {
     const res = await fetch(url, {
       method: "GET",
       headers: {
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      cache: "no-store"
+      cache: "no-store",
     });
 
     console.log("STRAPI STATUS:", res.status);
@@ -53,7 +53,7 @@ export async function fetchFromStrapi(endpoint: string) {
   } catch (error) {
     console.error("STRAPI FETCH FAILED:", error);
 
-    // مهم: لا نخفي الخطأ أثناء التشخيص
+    // لا نخفي الخطأ أثناء التشخيص
     throw error;
   }
 }

@@ -20,7 +20,9 @@ function getImageUrl(data: any) {
     data.imagen ||
     data.portada;
 
-  if (!image) return null;
+  if (!image) {
+    return null;
+  }
 
   const url =
     image?.url ||
@@ -30,13 +32,23 @@ function getImageUrl(data: any) {
     image?.formats?.medium?.url ||
     image?.formats?.small?.url;
 
-  if (!url) return null;
+  if (!url) {
+    return null;
+  }
 
+  // إذا كان Strapi يعيد رابطًا كاملًا
   if (url.startsWith("http")) {
     return url;
   }
 
-  return `https://zubia-backend.onrender.com${url}`;
+  // إذا كان الرابط نسبيًا مثل /uploads/...
+  const baseUrl =
+    process.env.NEXT_PUBLIC_STRAPI_URL ||
+    (process.env.NODE_ENV === "development"
+      ? "http://localhost:1337"
+      : "https://zubia-backend.onrender.com");
+
+  return `${baseUrl.replace(/\/+$/, "")}${url}`;
 }
 
 export default function NewsCard(props: NewsProps) {
@@ -110,6 +122,7 @@ export default function NewsCard(props: NewsProps) {
 
           <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
             <CalendarDays className="h-4 w-4" />
+
             <time dateTime={typeof date === "string" ? date : undefined}>
               {formattedDate}
             </time>
@@ -136,6 +149,7 @@ export default function NewsCard(props: NewsProps) {
               className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 transition-colors hover:text-emerald-700"
             >
               Leer más
+
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           ) : (
@@ -144,6 +158,7 @@ export default function NewsCard(props: NewsProps) {
             </span>
           )}
         </div>
+
       </div>
     </article>
   );

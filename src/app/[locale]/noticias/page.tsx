@@ -2,13 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsCard from "@/components/NewsCard";
 import { fetchFromStrapi } from "@/lib/strapi";
-import {
-  ArrowRight,
-  CalendarDays,
-  Newspaper,
-  Sparkles,
-} from "lucide-react";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { ArrowRight, CalendarDays, Newspaper, Sparkles } from "lucide-react";
+import { Link } from "@/i18n/routing";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -21,16 +17,20 @@ export interface StrapiItem {
 }
 
 export default async function Noticias() {
+  const t = await getTranslations("NewsPage");
+
   let newsList: StrapiItem[] = [];
 
   try {
-    const response = await fetchFromStrapi("articles");
+    const response = await fetchFromStrapi("articles?populate=image");
+
+    console.log("NOTICIAS STRAPI RESPONSE:", response);
 
     newsList = Array.isArray(response?.data)
       ? response.data
       : Array.isArray(response)
-      ? response
-      : [];
+        ? response
+        : [];
   } catch (error) {
     console.error("Failed to fetch news:", error);
   }
@@ -43,23 +43,25 @@ export default async function Noticias() {
         {/* Hero */}
         <section className="relative overflow-hidden bg-slate-950">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.18),transparent_35%)]" />
+
           <div className="absolute -left-24 top-20 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
 
           <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
             <div className="max-w-3xl">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm font-semibold text-emerald-300">
                 <Sparkles className="h-4 w-4" />
-                Actualidad de Zubia Social
+                {t("hero.badge")}
               </div>
 
               <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Noticias y{" "}
-                <span className="text-emerald-400">Eventos</span>
+                {t("hero.title")}{" "}
+                <span className="text-emerald-400">
+                  {t("hero.titleHighlight")}
+                </span>
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-                Descubre las últimas novedades, actividades y acontecimientos
-                de Asociación Zubia Social Euskadi.
+                {t("hero.description")}
               </p>
             </div>
           </div>
@@ -74,12 +76,11 @@ export default async function Noticias() {
               </div>
 
               <h2 className="text-lg font-bold text-slate-900">
-                Actualidad
+                {t("intro.current.title")}
               </h2>
 
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                Mantente informado sobre las novedades y acciones de la
-                asociación.
+                {t("intro.current.description")}
               </p>
             </div>
 
@@ -89,12 +90,11 @@ export default async function Noticias() {
               </div>
 
               <h2 className="text-lg font-bold text-slate-900">
-                Eventos
+                {t("intro.events.title")}
               </h2>
 
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                Conoce las actividades y eventos en los que participa Zubia
-                Social.
+                {t("intro.events.description")}
               </p>
             </div>
 
@@ -104,12 +104,11 @@ export default async function Noticias() {
               </div>
 
               <h2 className="text-lg font-bold text-slate-900">
-                Historias
+                {t("intro.stories.title")}
               </h2>
 
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                Compartimos experiencias e historias relacionadas con nuestro
-                trabajo comunitario.
+                {t("intro.stories.description")}
               </p>
             </div>
           </div>
@@ -120,22 +119,24 @@ export default async function Noticias() {
           <div className="mb-8 flex flex-col gap-4 border-b border-slate-200 pb-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-wider text-emerald-600">
-                Últimas publicaciones
+                {t("latest.eyebrow")}
               </p>
 
               <h2 className="mt-2 text-3xl font-black text-slate-900">
-                Noticias de la asociación
+                {t("latest.title")}
               </h2>
 
               <p className="mt-2 text-slate-600">
-                Información y novedades de nuestra actividad.
+                {t("latest.description")}
               </p>
             </div>
 
             {newsList.length > 0 && (
               <div className="inline-flex w-fit items-center rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600">
                 {newsList.length}{" "}
-                {newsList.length === 1 ? "publicación" : "publicaciones"}
+                {newsList.length === 1
+                  ? t("latest.publication")
+                  : t("latest.publications")}
               </div>
             )}
           </div>
@@ -165,14 +166,11 @@ export default async function Noticias() {
               </div>
 
               <h3 className="mt-6 text-xl font-bold text-slate-900">
-                No hay noticias disponibles actualmente.
+                {t("empty.title")}
               </h3>
 
               <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-500">
-                Si acabas de añadir una noticia en Strapi, asegúrate de
-                publicarla y de comprobar que el permiso{" "}
-                <strong>find</strong> de Article está habilitado para el rol
-                Public.
+                {t("empty.description")}
               </p>
             </div>
           )}
@@ -186,16 +184,15 @@ export default async function Noticias() {
             <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div className="max-w-2xl">
                 <p className="text-sm font-bold uppercase tracking-wider text-emerald-200">
-                  ¿Quieres saber más?
+                  {t("cta.eyebrow")}
                 </p>
 
                 <h2 className="mt-2 text-3xl font-black text-white sm:text-4xl">
-                  Forma parte de nuestra comunidad
+                  {t("cta.title")}
                 </h2>
 
                 <p className="mt-4 leading-7 text-emerald-50">
-                  Conoce nuestros proyectos y descubre cómo puedes colaborar
-                  con Zubia Social Euskadi.
+                  {t("cta.description")}
                 </p>
               </div>
 
@@ -203,7 +200,7 @@ export default async function Noticias() {
                 href="/contacto"
                 className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-bold text-emerald-700 shadow-sm transition hover:bg-emerald-50"
               >
-                Contacta con nosotros
+                {t("cta.button")}
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>

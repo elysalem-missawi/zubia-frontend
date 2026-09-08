@@ -39,7 +39,7 @@ export default async function Home() {
   try {
     const [projectsRes, newsRes] = await Promise.all([
       fetchFromStrapi("projects"),
-      fetchFromStrapi("articles"),
+      fetchFromStrapi("articles?populate=image"),
     ]);
 
     projects = Array.isArray(projectsRes?.data)
@@ -190,7 +190,6 @@ export default async function Home() {
                   className="mt-8 inline-flex items-center gap-2 font-bold text-emerald-700 transition hover:text-emerald-800"
                 >
                   {t("about.history")}
-
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -301,6 +300,7 @@ export default async function Home() {
               <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
                 {projects.slice(0, 3).map((item, index) => {
                   const data = item.attributes || item;
+
                   const itemKey =
                     item.documentId || item.id || index;
 
@@ -353,6 +353,7 @@ export default async function Home() {
               <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
                 {newsList.slice(0, 3).map((item, index) => {
                   const data = item.attributes || item;
+
                   const itemKey =
                     item.documentId || item.id || index;
 
@@ -370,10 +371,9 @@ export default async function Home() {
         )}
 
         {/* =====================================================
-            COMMUNITY CTA
+            COMMUNITY / COLLABORATION
         ====================================================== */}
-         <CollaborationSection />
-        
+        <CollaborationSection />
 
       </main>
 

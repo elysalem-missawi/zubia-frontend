@@ -75,6 +75,124 @@
       "projects": "Conoce nuestros proyectos"
     }
   },
+
+  "NewsPage": {
+  "hero": {
+    "badge": "Actualidad de Zubia Social",
+    "title": "Noticias y",
+    "titleHighlight": "Eventos",
+    "description": "Descubre las últimas novedades, actividades y acontecimientos de Asociación Zubia Social Euskadi."
+  },
+  "intro": {
+    "current": {
+      "title": "Actualidad",
+      "description": "Mantente informado sobre las novedades y acciones de la asociación."
+    },
+    "events": {
+      "title": "Eventos",
+      "description": "Conoce las actividades y eventos en los que participa Zubia Social."
+    },
+    "stories": {
+      "title": "Historias",
+      "description": "Compartimos experiencias e historias relacionadas con nuestro trabajo comunitario."
+    }
+  },
+  "latest": {
+    "eyebrow": "Últimas publicaciones",
+    "title": "Noticias de la asociación",
+    "description": "Información y novedades de nuestra actividad.",
+    "publication": "publicación",
+    "publications": "publicaciones"
+  },
+  "empty": {
+    "title": "No hay noticias disponibles actualmente.",
+    "description": "Si acabas de añadir una noticia en Strapi, asegúrate de publicarla y de comprobar que el permiso find de Article está habilitado para el rol Public."
+  },
+  "cta": {
+    "eyebrow": "¿Quieres saber más?",
+    "title": "Forma parte de nuestra comunidad",
+    "description": "Conoce nuestros proyectos y descubre cómo puedes colaborar con Zubia Social Euskadi.",
+    "button": "Contacta con nosotros"
+  }
+},
+
+"AboutPage": {
+  "hero": {
+    "badge": "Zubia Social · Vitoria-Gasteiz",
+    "title": "Sobre",
+    "titleHighlight": "Nosotros",
+    "description": "Asociación Sociocultural de Apoyo a las Personas Migrantes en Vitoria-Gasteiz."
+  },
+
+  "introduction": {
+    "eyebrow": "Quiénes somos",
+    "title": "Construimos puentes hacia una sociedad más inclusiva",
+    "description": "Somos una asociación sociocultural comprometida con el acompañamiento y apoyo a las personas migrantes en Vitoria-Gasteiz y el Territorio Histórico de Álava.",
+    "description2": "Nuestro trabajo busca favorecer la inclusión social, la convivencia intercultural y la igualdad de derechos y oportunidades.",
+    "points": {
+      "inclusion": "Promoción de la inclusión social.",
+      "coexistence": "Fomento de la convivencia intercultural.",
+      "equality": "Igualdad de derechos y oportunidades."
+    },
+    "visionLabel": "Nuestra visión",
+    "vision": "Una comunidad donde todas las personas puedan participar, crecer y sentirse parte."
+  },
+
+  "missionValues": {
+    "eyebrow": "Nuestra esencia",
+    "title": "Misión y valores",
+    "description": "Los principios que orientan nuestra labor y nuestra relación con las personas y la comunidad.",
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Promover la inclusión social, la convivencia intercultural y el acompañamiento integral de las personas migrantes en Vitoria-Gasteiz y el Territorio Histórico de Álava, garantizando la igualdad de derechos y oportunidades."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "description": "Basamos nuestra labor en la solidaridad, la diversidad, la empatía y la transparencia. Trabajamos para crear espacios seguros y comunidades inclusivas libres de discriminación."
+    }
+  },
+
+  "principles": {
+    "eyebrow": "Lo que nos define",
+    "title": "Nuestros principios",
+    "solidarity": {
+      "title": "Solidaridad",
+      "description": "Apoyo y acompañamiento desde la cercanía y el respeto."
+    },
+    "diversity": {
+      "title": "Diversidad",
+      "description": "Valoramos las diferentes culturas, experiencias y perspectivas."
+    },
+    "empathy": {
+      "title": "Empatía",
+      "description": "Escuchamos y acompañamos teniendo en cuenta las necesidades de cada persona."
+    },
+    "transparency": {
+      "title": "Transparencia",
+      "description": "Trabajamos con responsabilidad, claridad y compromiso."
+    }
+  },
+
+  "commitment": {
+    "eyebrow": "Nuestro compromiso",
+    "title": "Compromiso con Vitoria-Gasteiz",
+    "description": "Nuestro trabajo está orientado a generar espacios de apoyo, participación e inclusión para las personas migrantes y para el conjunto de la comunidad.",
+    "stats": {
+      "people": "Personas atendidas",
+      "multilingualValue": "Multilingüe",
+      "multilingualLabel": "Atención accesible",
+      "commitment": "Compromiso social"
+    }
+  },
+
+  "cta": {
+    "title": "Formemos una comunidad más inclusiva",
+    "description": "Conoce nuestros proyectos, descubre nuestras actividades o ponte en contacto con nosotros.",
+    "projectsButton": "Ver nuestros proyectos",
+    "contactButton": "Contacta con nosotros"
+  }
+},
+
   "Footer": {
     "description": "Euskadin laguntza, inklusioa eta kulturarteko bizikidetza sustatzeko konpromisoa duen elkarte soziokulturala.",
     "association": {

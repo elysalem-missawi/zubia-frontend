@@ -75,6 +75,116 @@
       "projects": "Ezagutu gure proiektuak"
     }
   },
+  "NewsPage": {
+  "hero": {
+    "badge": "Zubia Socialen gaurkotasuna",
+    "title": "Albisteak eta",
+    "titleHighlight": "Ekitaldiak",
+    "description": "Ezagutu Zubia Social Euskadiren azken berriak, jarduerak eta ekitaldiak."
+  },
+  "intro": {
+    "current": {
+      "title": "Gaurkotasuna",
+      "description": "Elkartearen berrien eta ekintzen berri izan."
+    },
+    "events": {
+      "title": "Ekitaldiak",
+      "description": "Ezagutu Zubia Socialek parte hartzen duen jarduerak eta ekitaldiak."
+    },
+    "stories": {
+      "title": "Istorioak",
+      "description": "Gure komunitate-lanarekin lotutako esperientziak eta istorioak partekatzen ditugu."
+    }
+  },
+  "latest": {
+    "eyebrow": "Azken argitalpenak",
+    "title": "Elkartearen albisteak",
+    "description": "Gure jarduerari buruzko informazioa eta berriak.",
+    "publication": "argitalpena",
+    "publications": "argitalpen"
+  },
+  "empty": {
+    "title": "Une honetan ez dago albisterik.",
+    "description": "Strapin albiste bat gehitu berri baduzu, ziurtatu argitaratuta dagoela eta Article eduki motaren find baimena Public rolari gaituta dagoela."
+  },
+  "cta": {
+    "eyebrow": "Gehiago jakin nahi duzu?",
+    "title": "Egin bat gure komunitatearekin",
+    "description": "Ezagutu gure proiektuak eta Zubia Social Euskadirekin nola lagun dezakezun.",
+    "button": "Jarri gurekin harremanetan"
+  }
+},
+"AboutPage": {
+  "hero": {
+    "badge": "Zubia Social · Vitoria-Gasteiz",
+    "title": "Guri",
+    "titleHighlight": "buruz",
+    "description": "Vitoria-Gasteizen migratzaileei laguntzeko elkarte soziokulturala."
+  },
+  "introduction": {
+    "eyebrow": "Nor gara",
+    "title": "Zubiak eraikitzen ditugu gizarte inklusiboago baterantz",
+    "description": "Vitoria-Gasteizen eta Arabako Lurralde Historikoan migratzaileei laguntzeko eta lagun egiteko konpromisoa duen elkarte soziokulturala gara.",
+    "description2": "Gure lanaren helburua gizarteratzea, kulturarteko bizikidetza eta eskubide eta aukera berdintasuna sustatzea da.",
+    "points": {
+      "inclusion": "Gizarteratzea sustatzea.",
+      "coexistence": "Kulturarteko bizikidetza bultzatzea.",
+      "equality": "Eskubide eta aukera berdintasuna."
+    },
+    "visionLabel": "Gure ikuspegia",
+    "vision": "Pertsona guztiek parte hartu, hazi eta komunitateko kide senti daitezkeen komunitatea."
+  },
+  "missionValues": {
+    "eyebrow": "Gure esentzia",
+    "title": "Misioa eta balioak",
+    "description": "Gure lana eta pertsonekin eta komunitatearekin dugun harremana gidatzen dituzten printzipioak.",
+    "mission": {
+      "title": "Gure Misioa",
+      "description": "Vitoria-Gasteizen eta Arabako Lurralde Historikoan migratzaileen gizarteratzea, kulturarteko bizikidetza eta laguntza integrala sustatzea, eskubide eta aukera berdintasuna bermatuz."
+    },
+    "values": {
+      "title": "Gure Balioak",
+      "description": "Gure lana elkartasunean, aniztasunean, enpatian eta gardentasunean oinarritzen dugu. Diskriminaziorik gabeko espazio seguruak eta komunitate inklusiboak sortzeko lan egiten dugu."
+    }
+  },
+  "principles": {
+    "eyebrow": "Definitzen gaituztenak",
+    "title": "Gure printzipioak",
+    "solidarity": {
+      "title": "Elkartasuna",
+      "description": "Hurbiltasunetik eta errespetutik abiatutako laguntza eta babesa."
+    },
+    "diversity": {
+      "title": "Aniztasuna",
+      "description": "Kultura, esperientzia eta ikuspegi desberdinak baloratzen ditugu."
+    },
+    "empathy": {
+      "title": "Enpatia",
+      "description": "Pertsona bakoitzaren beharrak kontuan hartuta entzuten eta laguntzen dugu."
+    },
+    "transparency": {
+      "title": "Gardentasuna",
+      "description": "Arduraz, argitasunez eta konpromisoz lan egiten dugu."
+    }
+  },
+  "commitment": {
+    "eyebrow": "Gure konpromisoa",
+    "title": "Vitoria-Gasteizekin dugun konpromisoa",
+    "description": "Gure lana migratzaileentzat eta komunitate osoarentzat laguntza, parte-hartze eta inklusio espazioak sortzera bideratuta dago.",
+    "stats": {
+      "people": "Artatutako pertsonak",
+      "multilingualValue": "Eleanitza",
+      "multilingualLabel": "Arreta irisgarria",
+      "commitment": "Gizarte-konpromisoa"
+    }
+  },
+  "cta": {
+    "title": "Elkarrekin komunitate inklusiboagoa eraiki dezagun",
+    "description": "Ezagutu gure proiektuak, ezagutu gure jarduerak edo jarri gurekin harremanetan.",
+    "projectsButton": "Ikusi gure proiektuak",
+    "contactButton": "Jarri gurekin harremanetan"
+  }
+},
 
   "Footer": {
     "description": "Euskadin laguntza, inklusioa eta kulturarteko bizikidetza sustatzeko konpromisoa duen elkarte soziokulturala.",

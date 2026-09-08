@@ -75,7 +75,116 @@
       "projects": "Discover our projects"
     }
   },
-
+  "NewsPage": {
+  "hero": {
+    "badge": "Zubia Social News",
+    "title": "News and",
+    "titleHighlight": "Events",
+    "description": "Discover the latest news, activities and events from Asociación Zubia Social Euskadi."
+  },
+  "intro": {
+    "current": {
+      "title": "Latest updates",
+      "description": "Stay informed about the association's latest news and activities."
+    },
+    "events": {
+      "title": "Events",
+      "description": "Discover the activities and events in which Zubia Social participates."
+    },
+    "stories": {
+      "title": "Stories",
+      "description": "We share experiences and stories related to our community work."
+    }
+  },
+  "latest": {
+    "eyebrow": "Latest publications",
+    "title": "Association news",
+    "description": "Information and updates about our activities.",
+    "publication": "publication",
+    "publications": "publications"
+  },
+  "empty": {
+    "title": "No news is currently available.",
+    "description": "If you have just added a news article in Strapi, make sure it is published and that the find permission for Article is enabled for the Public role."
+  },
+  "cta": {
+    "eyebrow": "Want to know more?",
+    "title": "Be part of our community",
+    "description": "Discover our projects and find out how you can collaborate with Zubia Social Euskadi.",
+    "button": "Contact us"
+  }
+},
+"AboutPage": {
+  "hero": {
+    "badge": "Zubia Social · Vitoria-Gasteiz",
+    "title": "About",
+    "titleHighlight": "Us",
+    "description": "Sociocultural association supporting migrants in Vitoria-Gasteiz."
+  },
+  "introduction": {
+    "eyebrow": "Who we are",
+    "title": "Building bridges towards a more inclusive society",
+    "description": "We are a sociocultural association committed to supporting and accompanying migrants in Vitoria-Gasteiz and the Historical Territory of Álava.",
+    "description2": "Our work aims to promote social inclusion, intercultural coexistence, and equal rights and opportunities.",
+    "points": {
+      "inclusion": "Promoting social inclusion.",
+      "coexistence": "Fostering intercultural coexistence.",
+      "equality": "Equal rights and opportunities."
+    },
+    "visionLabel": "Our vision",
+    "vision": "A community where everyone can participate, grow and feel that they belong."
+  },
+  "missionValues": {
+    "eyebrow": "Our essence",
+    "title": "Mission and values",
+    "description": "The principles that guide our work and our relationship with people and the community.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To promote social inclusion, intercultural coexistence and comprehensive support for migrants in Vitoria-Gasteiz and the Historical Territory of Álava, ensuring equal rights and opportunities."
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "We base our work on solidarity, diversity, empathy and transparency. We work to create safe spaces and inclusive communities free from discrimination."
+    }
+  },
+  "principles": {
+    "eyebrow": "What defines us",
+    "title": "Our principles",
+    "solidarity": {
+      "title": "Solidarity",
+      "description": "Support and accompaniment based on closeness and respect."
+    },
+    "diversity": {
+      "title": "Diversity",
+      "description": "We value different cultures, experiences and perspectives."
+    },
+    "empathy": {
+      "title": "Empathy",
+      "description": "We listen and provide support while taking each person's needs into account."
+    },
+    "transparency": {
+      "title": "Transparency",
+      "description": "We work with responsibility, clarity and commitment."
+    }
+  },
+  "commitment": {
+    "eyebrow": "Our commitment",
+    "title": "Our commitment to Vitoria-Gasteiz",
+    "description": "Our work is focused on creating spaces of support, participation and inclusion for migrants and the wider community.",
+    "stats": {
+      "people": "People supported",
+      "multilingualValue": "Multilingual",
+      "multilingualLabel": "Accessible support",
+      "commitment": "Social commitment"
+    }
+  },
+  "cta": {
+    "title": "Let's build a more inclusive community",
+    "description": "Discover our projects, explore our activities or get in touch with us.",
+    "projectsButton": "View our projects",
+    "contactButton": "Contact us"
+  }
+},
   "Footer": {
     "description": "A sociocultural association committed to support, inclusion and intercultural coexistence in the Basque Country.",
 
