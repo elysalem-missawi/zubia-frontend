@@ -27,10 +27,12 @@ interface StrapiItem {
   [key: string]: any;
 }
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+interface HomeProps {
+  params: Promise<{ locale: string }>;
+}
 
-export default async function Home() {
+export default async function Home({ params }: HomeProps) {
+  const { locale } = await params;
   const t = await getTranslations("Home");
 
   let projects: StrapiItem[] = [];
@@ -38,17 +40,12 @@ export default async function Home() {
 
   try {
     const [projectsRes, newsRes] = await Promise.all([
-      fetchFromStrapi("projects"),
-      fetchFromStrapi("articles?populate=image"),
+      fetchFromStrapi("projects", locale),
+      fetchFromStrapi("articles?populate=image", locale),
     ]);
 
-    projects = Array.isArray(projectsRes?.data)
-      ? projectsRes.data
-      : [];
-
-    newsList = Array.isArray(newsRes?.data)
-      ? newsRes.data
-      : [];
+    projects = Array.isArray(projectsRes?.data) ? projectsRes.data : [];
+    newsList = Array.isArray(newsRes?.data) ? newsRes.data : [];
   } catch (error) {
     console.error("Error loading home page data:", error);
   }
@@ -58,18 +55,12 @@ export default async function Home() {
       <Header />
 
       <main className="flex-1">
-
-        {/* =====================================================
-            HERO
-        ====================================================== */}
+        {/* HERO */}
         <Hero />
 
-        {/* =====================================================
-            VALUES
-        ====================================================== */}
+        {/* VALUES */}
         <section className="border-b border-slate-200 bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
             <div className="mx-auto max-w-3xl text-center">
               <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-600">
                 {t("values.eyebrow")}
@@ -85,7 +76,6 @@ export default async function Home() {
             </div>
 
             <div className="mt-12 grid gap-6 md:grid-cols-3">
-
               {/* Acompañamiento */}
               <article className="group rounded-3xl border border-slate-200 bg-slate-50 p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:bg-white hover:shadow-xl">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700 transition-colors duration-300 group-hover:bg-emerald-600 group-hover:text-white">
@@ -130,19 +120,14 @@ export default async function Home() {
                   {t("values.activities.description")}
                 </p>
               </article>
-
             </div>
           </div>
         </section>
 
-        {/* =====================================================
-            ABOUT
-        ====================================================== */}
+        {/* ABOUT */}
         <section className="bg-slate-50 py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
             <div className="grid items-center gap-12 lg:grid-cols-2">
-
               {/* Text */}
               <div>
                 <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-600">
@@ -162,7 +147,6 @@ export default async function Home() {
                 </p>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
-
                   <div className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm">
                     <div className="rounded-full bg-emerald-100 p-2 text-emerald-700">
                       <Target className="h-5 w-5" />
@@ -182,7 +166,6 @@ export default async function Home() {
                       {t("about.personalSupport")}
                     </span>
                   </div>
-
                 </div>
 
                 <Link
@@ -197,7 +180,6 @@ export default async function Home() {
               {/* Impact */}
               <div className="overflow-hidden rounded-3xl bg-slate-900 shadow-2xl">
                 <div className="p-8 sm:p-10">
-
                   <p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-400">
                     {t("about.impact")}
                   </p>
@@ -207,14 +189,9 @@ export default async function Home() {
                   </h3>
 
                   <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-white/10">
-
                     <div className="bg-slate-900 p-6 text-center">
                       <Calendar className="mx-auto h-7 w-7 text-emerald-400" />
-
-                      <p className="mt-3 text-3xl font-black text-white">
-                        4+
-                      </p>
-
+                      <p className="mt-3 text-3xl font-black text-white">4+</p>
                       <p className="mt-1 text-sm text-slate-400">
                         {t("about.years")}
                       </p>
@@ -222,11 +199,7 @@ export default async function Home() {
 
                     <div className="bg-slate-900 p-6 text-center">
                       <Users className="mx-auto h-7 w-7 text-emerald-400" />
-
-                      <p className="mt-3 text-3xl font-black text-white">
-                        200+
-                      </p>
-
+                      <p className="mt-3 text-3xl font-black text-white">200+</p>
                       <p className="mt-1 text-sm text-slate-400">
                         {t("about.people")}
                       </p>
@@ -234,11 +207,7 @@ export default async function Home() {
 
                     <div className="bg-slate-900 p-6 text-center">
                       <Heart className="mx-auto h-7 w-7 text-emerald-400" />
-
-                      <p className="mt-3 text-3xl font-black text-white">
-                        30+
-                      </p>
-
+                      <p className="mt-3 text-3xl font-black text-white">30+</p>
                       <p className="mt-1 text-sm text-slate-400">
                         {t("about.volunteers")}
                       </p>
@@ -246,33 +215,23 @@ export default async function Home() {
 
                     <div className="bg-slate-900 p-6 text-center">
                       <Award className="mx-auto h-7 w-7 text-emerald-400" />
-
-                      <p className="mt-3 text-3xl font-black text-white">
-                        12
-                      </p>
-
+                      <p className="mt-3 text-3xl font-black text-white">12</p>
                       <p className="mt-1 text-sm text-slate-400">
                         {t("about.projectsCompleted")}
                       </p>
                     </div>
-
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
 
-        {/* =====================================================
-            PROJECTS
-        ====================================================== */}
+        {/* PROJECTS */}
         {projects.length > 0 && (
           <section className="border-t border-slate-200 bg-white py-20">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
               <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-
                 <div>
                   <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-600">
                     {t("projects.eyebrow")}
@@ -294,38 +253,25 @@ export default async function Home() {
                   {t("projects.viewAll")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-
               </div>
 
               <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
                 {projects.slice(0, 3).map((item, index) => {
                   const data = item.attributes || item;
+                  const itemKey = item.documentId || item.id || index;
 
-                  const itemKey =
-                    item.documentId || item.id || index;
-
-                  return (
-                    <ProjectCard
-                      key={itemKey}
-                      project={data}
-                    />
-                  );
+                  return <ProjectCard key={itemKey} project={data} />;
                 })}
               </div>
-
             </div>
           </section>
         )}
 
-        {/* =====================================================
-            NEWS
-        ====================================================== */}
+        {/* NEWS */}
         {newsList.length > 0 && (
           <section className="border-t border-slate-200 bg-slate-50 py-20">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
               <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-
                 <div>
                   <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-600">
                     {t("news.eyebrow")}
@@ -347,34 +293,22 @@ export default async function Home() {
                   {t("news.viewAll")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-
               </div>
 
               <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
                 {newsList.slice(0, 3).map((item, index) => {
                   const data = item.attributes || item;
+                  const itemKey = item.documentId || item.id || index;
 
-                  const itemKey =
-                    item.documentId || item.id || index;
-
-                  return (
-                    <NewsCard
-                      key={itemKey}
-                      news={data}
-                    />
-                  );
+                  return <NewsCard key={itemKey} news={data} />;
                 })}
               </div>
-
             </div>
           </section>
         )}
 
-        {/* =====================================================
-            COMMUNITY / COLLABORATION
-        ====================================================== */}
+        {/* COMMUNITY / COLLABORATION */}
         <CollaborationSection />
-
       </main>
 
       <Footer />

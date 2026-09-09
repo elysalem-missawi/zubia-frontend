@@ -5,372 +5,401 @@
     "news": "News",
     "contact": "Contact",
     "login": "Log in",
-    "register": "Create an account",
+    "register": "Register",
     "myAccount": "My account"
   },
-
   "Hero": {
-    "title": "We build",
-    "titleHighlight": "bridges, not barriers.",
-    "description": "We support migrants in the Basque Country, promoting inclusion, independence and intercultural coexistence based on solidarity.",
-    "projectsButton": "Discover our projects",
-    "contactButton": "Contact us",
-    "missionLabel": "Our mission",
-    "mission": "A community where everyone has opportunities to grow."
+    "title": "We come together,",
+    "titleHighlight": "to open new horizons.",
+    "description": "We work from the heart of the neighborhoods and the local community in the Basque Country to support essential, everyday needs: paperwork, employment, housing, and daily mutual aid.",
+    "projectsButton": "Learn how we work",
+    "contactButton": "Write to us directly",
+    "missionLabel": "Our commitment",
+    "mission": "That starting a new life in a new place is a path of dignity and rights for everyone."
   },
-
   "Home": {
     "values": {
       "eyebrow": "Our values",
-      "title": "People, community and opportunities",
-      "description": "We work alongside people and the community to build a more open and inclusive society.",
+      "title": "People, community, and opportunities",
+      "description": "We work alongside individuals and the community to build a more open and inclusive society.",
       "accompaniment": {
-        "title": "Support",
-        "description": "Social and cultural guidance and information to support integration and independence."
+        "title": "Support & Guidance",
+        "description": "We offer socio-cultural guidance and information to facilitate integration and independence."
       },
       "community": {
         "title": "Community",
-        "description": "We create support networks and spaces to share, participate and feel part of the community."
+        "description": "We create support networks, meeting spaces, exchange opportunities, and a sense of belonging."
       },
       "activities": {
         "title": "Activities",
-        "description": "Workshops, cultural gatherings and activities open to everyone in the community."
+        "description": "Workshops, cultural gatherings, and activities open to the entire public."
       }
     },
-
     "about": {
       "eyebrow": "About us",
-      "title": "Building bridges towards an inclusive society",
-      "description": "We are a non-profit association founded in Vitoria-Gasteiz with the aim of breaking down barriers and promoting intercultural coexistence.",
-      "description2": "We believe in the power of community to transform lives by providing tools, support and opportunities to people who are beginning a new journey in the Basque Country.",
+      "title": "Building bridges toward a more inclusive society",
+      "description": "We are a non-profit association founded in Vitoria-Gasteiz with the goal of breaking down barriers and promoting intercultural coexistence.",
+      "description2": "We believe in the power of community to transform lives, offering tools, guidance, and opportunities to those starting a new path in the Basque Country.",
       "empowerment": "Social empowerment",
-      "personalSupport": "Personal support",
-      "history": "Discover our history",
+      "personalSupport": "Personalized support",
+      "history": "Discover our story",
       "impact": "Our impact",
       "impactTitle": "Together we achieve more",
       "years": "Years of impact",
       "people": "People supported",
       "volunteers": "Active volunteers",
-      "projectsCompleted": "Projects completed"
+      "projectsCompleted": "Completed projects"
     },
-
     "projects": {
-      "eyebrow": "Our work",
-      "title": "Projects that create impact",
-      "description": "Initiatives designed to strengthen independence, participation and coexistence.",
+      "eyebrow": "What we do",
+      "title": "Projects that make an impact",
+      "description": "Initiatives focused on promoting independence, participation, and coexistence.",
       "viewAll": "View all"
     },
-
     "news": {
-      "eyebrow": "Latest updates",
-      "title": "Latest news",
+      "eyebrow": "Latest news",
+      "title": "Recent news",
       "description": "Discover our latest activities and updates.",
       "viewAll": "View all"
     },
-
     "communityCta": {
-      "title": "You can also be part of our community",
-      "description": "An inclusive society is built by everyone. Discover our work, collaborate with us or get in touch.",
+      "title": "You can also be part of this",
+      "description": "An inclusive society is built with everyone's participation. Learn about our work, collaborate, or get in touch with us.",
       "contact": "Contact us",
       "projects": "Discover our projects"
     }
   },
   "NewsPage": {
-  "hero": {
-    "badge": "Zubia Social News",
-    "title": "News and",
-    "titleHighlight": "Events",
-    "description": "Discover the latest news, activities and events from Asociación Zubia Social Euskadi."
-  },
-  "intro": {
-    "current": {
-      "title": "Latest updates",
-      "description": "Stay informed about the association's latest news and activities."
+    "hero": {
+      "badge": "Zubia Social news",
+      "title": "News &",
+      "titleHighlight": "Events",
+      "description": "Stay up to date with the latest news, activities, and events from Asociación Zubia Social Euskadi."
     },
-    "events": {
-      "title": "Events",
-      "description": "Discover the activities and events in which Zubia Social participates."
+    "intro": {
+      "current": {
+        "title": "Latest news",
+        "description": "Stay informed about the association's latest updates and activities."
+      },
+      "events": {
+        "title": "Events",
+        "description": "Discover the activities and gatherings Zubia Social participates in."
+      },
+      "stories": {
+        "title": "Stories",
+        "description": "We share experiences and stories connected to our community work."
+      }
     },
-    "stories": {
-      "title": "Stories",
-      "description": "We share experiences and stories related to our community work."
+    "latest": {
+      "eyebrow": "Latest publications",
+      "title": "Association news",
+      "description": "Information and updates regarding our activities.",
+      "publication": "post",
+      "publications": "posts"
+    },
+    "empty": {
+      "title": "No news available at the moment.",
+      "description": "If you added a new article in Strapi, make sure it is published and that the find permission for the Article content type is enabled for the Public role."
+    },
+    "cta": {
+      "eyebrow": "Want to know more?",
+      "title": "Be part of our community",
+      "description": "Learn about our projects and discover how you can collaborate with Zubia Social Euskadi.",
+      "button": "Contact us"
     }
   },
-  "latest": {
-    "eyebrow": "Latest publications",
-    "title": "Association news",
-    "description": "Information and updates about our activities.",
-    "publication": "publication",
-    "publications": "publications"
-  },
-  "empty": {
-    "title": "No news is currently available.",
-    "description": "If you have just added a news article in Strapi, make sure it is published and that the find permission for Article is enabled for the Public role."
-  },
-  "cta": {
-    "eyebrow": "Want to know more?",
-    "title": "Be part of our community",
-    "description": "Discover our projects and find out how you can collaborate with Zubia Social Euskadi.",
-    "button": "Contact us"
-  }
-},
-"AboutPage": {
-  "hero": {
-    "badge": "Zubia Social · Vitoria-Gasteiz",
-    "title": "About",
-    "titleHighlight": "Us",
-    "description": "Sociocultural association supporting migrants in Vitoria-Gasteiz."
-  },
-  "introduction": {
-    "eyebrow": "Who we are",
-    "title": "Building bridges towards a more inclusive society",
-    "description": "We are a sociocultural association committed to supporting and accompanying migrants in Vitoria-Gasteiz and the Historical Territory of Álava.",
-    "description2": "Our work aims to promote social inclusion, intercultural coexistence, and equal rights and opportunities.",
-    "points": {
-      "inclusion": "Promoting social inclusion.",
-      "coexistence": "Fostering intercultural coexistence.",
-      "equality": "Equal rights and opportunities."
+  "AboutPage": {
+    "hero": {
+      "badge": "Zubia Social · Vitoria-Gasteiz",
+      "title": "About",
+      "titleHighlight": "Us",
+      "description": "A socio-cultural association dedicated to supporting and guiding immigrants in Vitoria-Gasteiz."
     },
-    "visionLabel": "Our vision",
-    "vision": "A community where everyone can participate, grow and feel that they belong."
-  },
-  "missionValues": {
-    "eyebrow": "Our essence",
-    "title": "Mission and values",
-    "description": "The principles that guide our work and our relationship with people and the community.",
-    "mission": {
-      "title": "Our Mission",
-      "description": "To promote social inclusion, intercultural coexistence and comprehensive support for migrants in Vitoria-Gasteiz and the Historical Territory of Álava, ensuring equal rights and opportunities."
+    "introduction": {
+      "eyebrow": "Who we are",
+      "title": "Building bridges toward a more inclusive society",
+      "description": "We are a socio-cultural association committed to accompanying and supporting immigrants in Vitoria-Gasteiz and the Historical Territory of Álava.",
+      "description2": "Our work focuses on promoting social inclusion, intercultural coexistence, and equal rights and opportunities.",
+      "points": {
+        "inclusion": "Promotion of social inclusion.",
+        "coexistence": "Fostering intercultural coexistence.",
+        "equality": "Equal rights and opportunities."
+      },
+      "visionLabel": "Our vision",
+      "vision": "A society where everyone can participate, thrive, and feel a sense of belonging."
     },
-    "values": {
-      "title": "Our Values",
-      "description": "We base our work on solidarity, diversity, empathy and transparency. We work to create safe spaces and inclusive communities free from discrimination."
+    "missionValues": {
+      "eyebrow": "Our essence",
+      "title": "Mission & Values",
+      "description": "The principles guiding our daily work and our relationship with people and the community.",
+      "mission": {
+        "title": "Our Mission",
+        "description": "To promote social inclusion, intercultural coexistence, and comprehensive support for immigrants in Vitoria-Gasteiz and Álava, ensuring equal rights and opportunities."
+      },
+      "values": {
+        "title": "Our Values",
+        "description": "We base our work on solidarity, diversity, empathy, and transparency. We work to create safe spaces and inclusive communities free from discrimination."
+      }
+    },
+    "principles": {
+      "eyebrow": "What defines us",
+      "title": "Our Principles",
+      "solidarity": {
+        "title": "Solidarity",
+        "description": "Support and guidance built on closeness and mutual respect."
+      },
+      "diversity": {
+        "title": "Diversity",
+        "description": "We value different cultures, experiences, and perspectives."
+      },
+      "empathy": {
+        "title": "Empathy",
+        "description": "We listen and guide while remaining attentive to each person's needs."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "We act with responsibility, clarity, and dedication."
+      }
+    },
+    "commitment": {
+      "eyebrow": "Our commitment",
+      "title": "Commitment to Vitoria-Gasteiz",
+      "description": "Our work aims to provide support, participation, and integration spaces for both immigrants and the wider public.",
+      "stats": {
+        "people": "People supported",
+        "multilingualValue": "Multilingual",
+        "multilingualLabel": "Support available",
+        "commitment": "Social commitment"
+      }
+    },
+    "cta": {
+      "title": "Let's build a more inclusive society together",
+      "description": "Learn about our projects, discover our activities, or get in touch with us.",
+      "projectsButton": "View projects",
+      "contactButton": "Contact us"
     }
   },
-  "principles": {
-    "eyebrow": "What defines us",
-    "title": "Our principles",
-    "solidarity": {
-      "title": "Solidarity",
-      "description": "Support and accompaniment based on closeness and respect."
+  "ProjectsPage": {
+    "hero": {
+      "badge": "High-impact initiatives",
+      "title": "Our Projects",
+      "titleHighlight": "& Initiatives",
+      "description": "Community programs and initiatives designed to foster inclusion, participation, and intercultural coexistence."
     },
-    "diversity": {
-      "title": "Diversity",
-      "description": "We value different cultures, experiences and perspectives."
+    "intro": {
+      "people": {
+        "title": "People",
+        "description": "We place people and their needs at the heart of our initiatives."
+      },
+      "community": {
+        "title": "Community",
+        "description": "We create spaces for interaction, participation, and mutual support across cultures."
+      },
+      "inclusion": {
+        "title": "Inclusion",
+        "description": "We work to build a more open, participatory, and inclusive society."
+      }
     },
-    "empathy": {
-      "title": "Empathy",
-      "description": "We listen and provide support while taking each person's needs into account."
+    "projects": {
+      "eyebrow": "Initiatives",
+      "title": "Zubia Social Projects",
+      "description": "Explore the initiatives we develop in partnership with the community.",
+      "countSingular": "project available",
+      "countPlural": "projects available"
     },
-    "transparency": {
-      "title": "Transparency",
-      "description": "We work with responsibility, clarity and commitment."
+    "empty": {
+      "title": "No projects available currently",
+      "description": "We are designing new initiatives. Visit us again soon to learn about our upcoming activities."
+    },
+    "cta": {
+      "title": "Want to get involved?",
+      "description": "Inclusion is built together. Learn about our work or contact us to collaborate.",
+      "contactButton": "Contact us",
+      "aboutButton": "About us"
     }
   },
-  "commitment": {
-    "eyebrow": "Our commitment",
-    "title": "Our commitment to Vitoria-Gasteiz",
-    "description": "Our work is focused on creating spaces of support, participation and inclusion for migrants and the wider community.",
-    "stats": {
-      "people": "People supported",
-      "multilingualValue": "Multilingual",
-      "multilingualLabel": "Accessible support",
-      "commitment": "Social commitment"
+  "ContactPage": {
+    "hero": {
+      "badge": "We are here to help",
+      "title": "Get in",
+      "titleHighlight": "Touch",
+      "description": "Have a question, need guidance, or want to collaborate with Zubia Social? Drop us a line."
+    },
+    "info": {
+      "title": "We are here to listen",
+      "description": "You can contact us to ask questions, learn about our projects, or explore ways to collaborate with the association.",
+      "emailLabel": "Email address",
+      "locationLabel": "Location",
+      "attentionLabel": "Response",
+      "attentionDescription": "We will respond to your message as quickly as possible.",
+      "association": "Asociación Zubia Social Euskadi"
+    },
+    "form": {
+      "eyebrow": "Write to us",
+      "title": "Send us a message",
+      "description": "Fill out the form and let us know how we can assist you.",
+      "nameLabel": "Full name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "How can we help you?",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Type your message here...",
+      "privacy": "We will only use the information provided to respond to your inquiry.",
+      "submit": "Send message"
+    },
+    "success": {
+      "title": "Thank you for contacting us!",
+      "description": "We have received your message and will reach out to you as soon as possible.",
+      "button": "Send another message"
+    },
+    "bottom": {
+      "title": "Want to learn more about our work?",
+      "description": "Discover our projects and the initiatives we carry out to promote inclusion and coexistence.",
+      "button": "View projects"
     }
   },
-  "cta": {
-    "title": "Let's build a more inclusive community",
-    "description": "Discover our projects, explore our activities or get in touch with us.",
-    "projectsButton": "View our projects",
-    "contactButton": "Contact us"
-  }
-},
-"ContactPage": {
-  "hero": {
-    "badge": "We are here to help",
-    "title": "Contact",
-    "titleHighlight": "us",
-    "description": "Do you have a question, need guidance, or want to collaborate with Zubia Social? Write to us."
+  "ArticlePage": {
+    "hero": {
+      "back": "Back to news",
+      "category": "News & Events"
+    },
+    "article": {
+      "backToNews": "View all news"
+    },
+    "cta": {
+      "title": "Want to learn more about our work?",
+      "description": "Discover our projects and community-led initiatives.",
+      "projects": "View projects",
+      "contact": "Contact us"
+    },
+    "fallback": {
+      "title": "Untitled",
+      "content": "No content available."
+    }
   },
-  "info": {
-    "title": "We are here to listen",
-    "description": "You can contact us to answer your questions, learn about our projects, or explore ways to collaborate with the association.",
-    "emailLabel": "Email",
-    "locationLabel": "Location",
-    "attentionLabel": "Support",
-    "attentionDescription": "We will respond to your message as soon as possible.",
-    "association": "Asociación Zubia Social Euskadi"
+  "AccountPage": {
+    "hero": {
+      "title": "My Account",
+      "welcome": "Hello,"
+    },
+    "accountData": {
+      "title": "Your account details",
+      "username": "Username",
+      "email": "Email address"
+    },
+    "actions": {
+      "projects": "View projects",
+      "logout": "Log out"
+    },
+    "community": {
+      "title": "Thank you for being part of our community.",
+      "description": "From your account, you will be able to access upcoming features of Zubia Social Euskadi."
+    },
+    "fallback": {
+      "user": "User",
+      "unavailable": "Not available"
+    }
   },
-  "form": {
-    "eyebrow": "Write to us",
-    "title": "Send us a message",
-    "description": "Complete the form and tell us how we can help you.",
-    "nameLabel": "Full name",
-    "namePlaceholder": "Your name",
-    "emailLabel": "Email",
-    "emailPlaceholder": "your@email.com",
-    "subjectLabel": "Subject",
-    "subjectPlaceholder": "How can we help you?",
-    "messageLabel": "Message",
-    "messagePlaceholder": "Write your message here...",
-    "privacy": "We will use the information you provide only to respond to your enquiry.",
-    "submit": "Send message"
+  "LoginPage": {
+    "hero": {
+      "title": "Log In",
+      "description": "Access your account."
+    },
+    "form": {
+      "email": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "password": "Password",
+      "passwordPlaceholder": "Your password",
+      "loading": "Logging in...",
+      "submit": "Log in"
+    },
+    "errors": {
+      "required": "Please complete all fields.",
+      "invalidCredentials": "Incorrect email address or password.",
+      "unexpected": "An unexpected error occurred."
+    },
+    "register": {
+      "question": "Don't have an account?",
+      "button": "Create account"
+    }
   },
-  "success": {
-    "title": "Thank you for contacting us!",
-    "description": "We have received your message. We will get back to you as soon as possible.",
-    "button": "Send another message"
+  "RegisterPage": {
+    "hero": {
+      "title": "Create Account",
+      "description": "Join our community."
+    },
+    "form": {
+      "username": "Username",
+      "usernamePlaceholder": "Your name",
+      "email": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "password": "Password",
+      "passwordPlaceholder": "At least 6 characters",
+      "confirmPassword": "Confirm password",
+      "confirmPasswordPlaceholder": "Re-enter your password",
+      "loading": "Creating account...",
+      "submit": "Create account"
+    },
+    "errors": {
+      "required": "Please complete all fields.",
+      "passwordMismatch": "Passwords do not match.",
+      "passwordLength": "Password must be at least 6 characters long.",
+      "registrationFailed": "Could not create account.",
+      "unexpected": "An unexpected error occurred."
+    },
+    "success": "Account created successfully!",
+    "login": {
+      "question": "Already have an account?",
+      "button": "Log in"
+    }
   },
-  "bottom": {
-    "title": "Would you like to learn about our work?",
-    "description": "Discover our projects and the initiatives we develop to promote inclusion and coexistence.",
-    "button": "View our projects"
-  }
-},
-"ArticlePage": {
-  "hero": {
-    "back": "Back to News",
-    "category": "News and Events"
+  "CollaborationSection": {
+    "eyebrow": "Get Involved",
+    "title": "We build community together",
+    "description": "Learn about our work, join our activities, and discover the initiatives we develop with the community.",
+    "activities": {
+      "title": "Join our activities",
+      "description": "Discover the workshops and events we organize to promote inclusion and intercultural coexistence.",
+      "link": "Explore activities"
+    },
+    "volunteer": {
+      "title": "Volunteer with us",
+      "description": "If you would like to help as a volunteer, get in touch to discover available opportunities.",
+      "link": "More information"
+    },
+    "collaboration": {
+      "title": "Partner with us",
+      "description": "Organizations and institutions can connect with Zubia Social to learn about our work.",
+      "link": "Contact us"
+    },
+    "projects": {
+      "title": "Discover projects",
+      "description": "Explore the community initiatives we carry out alongside local citizens.",
+      "link": "View projects"
+    }
   },
-  "article": {
-    "backToNews": "View all news"
-  },
-  "cta": {
-    "title": "Would you like to learn more about our work?",
-    "description": "Discover our projects and the initiatives we develop together with the community.",
-    "projects": "View projects",
-    "contact": "Contact us"
-  },
-  "fallback": {
-    "title": "Untitled",
-    "content": "No content available."
-  }
-},
-"AccountPage": {
-  "hero": {
-    "title": "My account",
-    "welcome": "Welcome,"
-  },
-  "accountData": {
-    "title": "Your account details",
-    "username": "Username",
-    "email": "Email address"
-  },
-  "actions": {
-    "projects": "View projects",
-    "logout": "Log out"
-  },
-  "community": {
-    "title": "Thank you for being part of our community.",
-    "description": "From your account, you will be able to access upcoming Zubia Social Euskadi features."
-  },
-  "fallback": {
-    "user": "user",
-    "unavailable": "Not available"
-  }
-},
-"LoginPage": {
-  "hero": {
-    "title": "Log in",
-    "description": "Access your account."
-  },
-  "form": {
-    "email": "Email address",
-    "emailPlaceholder": "your@email.com",
-    "password": "Password",
-    "passwordPlaceholder": "Your password",
-    "loading": "Logging in...",
-    "submit": "Log in"
-  },
-  "errors": {
-    "required": "Please complete all fields.",
-    "invalidCredentials": "The email or password is incorrect.",
-    "unexpected": "An unexpected error occurred."
-  },
-  "register": {
-    "question": "Don't have an account?",
-    "button": "Create an account"
-  }
-},
-"RegisterPage": {
-  "hero": {
-    "title": "Create an account",
-    "description": "Join our community."
-  },
-  "form": {
-    "username": "Username",
-    "usernamePlaceholder": "Your name",
-    "email": "Email address",
-    "emailPlaceholder": "your@email.com",
-    "password": "Password",
-    "passwordPlaceholder": "Minimum 6 characters",
-    "confirmPassword": "Confirm password",
-    "confirmPasswordPlaceholder": "Repeat your password",
-    "loading": "Creating account...",
-    "submit": "Create account"
-  },
-  "errors": {
-    "required": "Please complete all fields.",
-    "passwordMismatch": "The passwords do not match.",
-    "passwordLength": "The password must be at least 6 characters long.",
-    "registrationFailed": "The account could not be created.",
-    "unexpected": "An unexpected error occurred."
-  },
-  "success": "Account created successfully!",
-  "login": {
-    "question": "Already have an account?",
-    "button": "Log in"
-  }
-},
-"CollaborationSection": {
-  "eyebrow": "Participation",
-  "title": "Together we build community",
-  "description": "Learn about our work, take part in our activities and discover the initiatives we develop together with the community.",
-  "activities": {
-    "title": "Take part in our activities",
-    "description": "Discover the activities and initiatives we develop to promote inclusion and intercultural coexistence.",
-    "link": "Discover our activities"
-  },
-  "volunteer": {
-    "title": "Become a volunteer",
-    "description": "If you would like to volunteer, contact us to learn about the available ways to participate.",
-    "link": "More information"
-  },
-  "collaboration": {
-    "title": "Collaborate with us",
-    "description": "Organizations, institutions and entities can contact Zubia Social to learn more about our work.",
-    "link": "Contact us"
-  },
-  "projects": {
-    "title": "Discover our projects",
-    "description": "Discover the initiatives and projects we develop together with the community.",
-    "link": "View projects"
-  }
-},
   "Footer": {
-    "description": "A sociocultural association committed to support, inclusion and intercultural coexistence in the Basque Country.",
-
+    "description": "A socio-cultural association committed to support, inclusion, and intercultural coexistence in the Basque Country.",
     "association": {
-      "title": "The association",
+      "title": "Association",
       "about": "About us",
       "projects": "Projects",
       "news": "News",
       "contact": "Contact"
     },
-
     "information": {
       "title": "Information",
       "privacy": "Privacy policy",
       "legal": "Legal notice",
       "cookies": "Cookie policy"
     },
-
     "contact": {
       "title": "Contact",
       "location": "Vitoria-Gasteiz, Basque Country",
       "phone": "Contact phone"
     },
-
     "copyright": "© 2026 Zubia Social. All rights reserved.",
     "rights": "Asociación Zubia Social Euskadi"
   }

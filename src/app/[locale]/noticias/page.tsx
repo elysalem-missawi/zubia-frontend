@@ -1,3 +1,5 @@
+// src/app/[locale]/noticias/page.tsx
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsCard from "@/components/NewsCard";
@@ -6,8 +8,11 @@ import { getTranslations } from "next-intl/server";
 import { CalendarDays, Newspaper, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/routing";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// ملاحظة: بما أننا قمنا بتفعيل الكاش الذكي في src/lib/strapi.ts،
+// لم نعد بحاجة لـ force-dynamic أو revalidate = 0 هنا،
+// حيث سيتم تحديث الصفحة تلقائياً كل 60 ثانية.
+// export const dynamic = "force-dynamic";
+// export const revalidate = 0;
 
 export interface StrapiItem {
   id: number | string;
@@ -16,16 +21,23 @@ export interface StrapiItem {
   [key: string]: any;
 }
 
-export default async function Noticias() {
+interface NoticiasProps {
+  params: { locale: string };
+}
+
+export default async function Noticias({ params: { locale } }: NoticiasProps) {
+  // جلب الترجمات الخاصة بصفحة الأخبار بناءً على اللغة الحالية
   const t = await getTranslations("NewsPage");
 
   let newsList: StrapiItem[] = [];
 
   try {
-    const response = await fetchFromStrapi("articles?populate=image");
+    // تمرير اللغة الحالية (locale) لدالة الجلب لضمان الحصول على المحتوى المترجم من Strapi
+    const response = await fetchFromStrapi("articles?populate=image", locale);
 
     console.log("NOTICIAS STRAPI RESPONSE:", response);
 
+    // التعامل مع هيكلية بيانات Strapi المختلفة (v4 و v5)
     newsList = Array.isArray(response?.data)
       ? response.data
       : Array.isArray(response)
@@ -40,7 +52,7 @@ export default async function Noticias() {
       <Header />
 
       <main className="flex-1">
-        {/* Hero */}
+        {/* Hero Section */}
         <section className="relative overflow-hidden bg-slate-950">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.18),transparent_35%)]" />
 
@@ -67,7 +79,7 @@ export default async function Noticias() {
           </div>
         </section>
 
-        {/* Intro */}
+        {/* Intro Cards Section */}
         <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -114,7 +126,7 @@ export default async function Noticias() {
           </div>
         </section>
 
-        {/* Noticias */}
+        {/* News List Section */}
         <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-20">
           <div className="mb-8 flex flex-col gap-4 border-b border-slate-200 pb-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -131,6 +143,7 @@ export default async function Noticias() {
               </p>
             </div>
 
+            {/* عدّاد المقالات */}
             {newsList.length > 0 && (
               <div className="inline-flex w-fit items-center rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600">
                 {newsList.length}{" "}
@@ -141,9 +154,11 @@ export default async function Noticias() {
             )}
           </div>
 
+          {/* عرض الأخبار أو رسالة "لا توجد أخبار" */}
           {newsList.length > 0 ? (
             <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
               {newsList.map((item, index) => {
+                // توحيد تنسيق البيانات لـ NewsCard (التعامل مع v4 attributes)
                 const data = item.attributes
                   ? { id: item.id, ...item.attributes }
                   : item;
@@ -154,12 +169,14 @@ export default async function Noticias() {
                   <NewsCard
                     key={itemKey}
                     news={data}
+                    // تمرير الخصائص بشكل منفصل أيضاً إذا كان الكرت يحتاجها هكذا
                     {...data}
                   />
                 );
               })}
             </div>
           ) : (
+            // حالة القائمة الفارغة (Empty State)
             <div className="rounded-3xl border border-dashed border-slate-300 bg-white px-6 py-16 text-center shadow-sm">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
                 <Newspaper className="h-8 w-8" />

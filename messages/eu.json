@@ -1,50 +1,47 @@
 {
   "Navigation": {
-    "about": "Nor gara",
+    "about": "Guri buruz",
     "projects": "Proiektuak",
     "news": "Albisteak",
     "contact": "Kontaktua",
     "login": "Saioa hasi",
-    "register": "Kontua sortu",
+    "register": "Kkontua sortu",
     "myAccount": "Nire kontua"
   },
-
   "Hero": {
-    "title": "Zubiak eraikitzen ditugu,",
-    "titleHighlight": "ez oztopoak.",
-    "description": "Euskadiko migratzaileei laguntzen diegu, inklusioa, autonomia eta elkartasunean oinarritutako kulturarteko bizikidetza sustatuz.",
-    "projectsButton": "Ezagutu gure proiektuak",
-    "contactButton": "Jarri gurekin harremanetan",
-    "missionLabel": "Gure misioa",
-    "mission": "Pertsona guztiek hazteko aukerak dituzten komunitatea."
+    "title": "Elkarrekin elkartzen gara,",
+    "titleHighlight": "muga berriak irekitzeko.",
+    "description": "Euskadiko auzoen eta tokiko komunitatearen bihotzetik lan egiten dugu oinarrizko eta eguneroko kontuetan laguntzeko: izapideak, enplegua, etxebizitza eta elkarren arteko laguntza egunero.",
+    "projectsButton": "Ezagutu nola egiten dugun lan",
+    "contactButton": "Idatzi diguzu zuzenean",
+    "missionLabel": "Gure konpromisoa",
+    "mission": "Toki berri batean bizitza berri bat hastea pertsona guztientzako duintasun eta eskubideen bidea izatea."
   },
-
   "Home": {
     "values": {
       "eyebrow": "Gure balioak",
       "title": "Pertsonak, komunitatea eta aukerak",
-      "description": "Pertsona eta komunitatearekin batera lan egiten dugu gizarte irekiago eta inklusiboago bat eraikitzeko.",
+      "description": "Pertsona eta ingurunearekin batera lan egiten dugu gizarte irekiago eta inklusiboago bat eraikitzeko.",
       "accompaniment": {
-        "title": "Laguntza",
-        "description": "Orientazio eta informazio sozial eta kulturala eskaintzen dugu integrazioa eta autonomia errazteko."
+        "title": "Bidelaguntza",
+        "description": "Gizarte eta kultura orientazioa eta informazioa eskaintzen dugu integrazioa eta autonomia errazteko."
       },
       "community": {
         "title": "Komunitatea",
-        "description": "Laguntza sareak eta partekatzeko, parte hartzeko eta komunitatearen parte sentitzeko guneak sortzen ditugu."
+        "description": "Laguntza sareak, topaguneak, trukerako espazioak eta kidetza sentimendua sortzen ditugu."
       },
       "activities": {
         "title": "Jarduerak",
-        "description": "Tailerrak, kultur topaketak eta herritar guztientzako jarduera irekiak."
+        "description": "Llantegiak, kultura topaketak eta herritar guztiei irekitako jarduerak."
       }
     },
-
     "about": {
-      "eyebrow": "Nor gara",
-      "title": "Gizarte inklusibo baterako zubiak eraikitzen",
-      "description": "Vitoria-Gasteizen sortutako irabazi-asmorik gabeko elkartea gara, oztopoak gainditzeko eta kulturarteko bizikidetza sustatzeko helburuarekin.",
-      "description2": "Komunitateak pertsonen bizitza eraldatzeko duen ahalmenean sinesten dugu, Euskadin bide berri bat hasten duten pertsonei tresnak, laguntza eta aukerak eskainiz.",
+      "eyebrow": "Nortzuk garen",
+      "title": "Gizarte inklusiboago baterantz zubiak eraikitzen",
+      "description": "Gasteizen sortutako irabazi-asmorik gabeko elkartea gara, mugak gainditzeko eta kulturen arteko bizikidetza sustatzeko helburuarekin.",
+      "description2": "Komunitateak pertsonen bizitza eraldatzeko duen boterean sinesten dugu, tresnak, bidelaguntza eta aukerak eskainiz Euskadin bide berri bat hasten dutenei.",
       "empowerment": "Gizarte ahalduntzea",
-      "personalSupport": "Laguntza pertsonala",
+      "personalSupport": "Arreta pertsonalizatua",
       "history": "Ezagutu gure historia",
       "impact": "Gure eragina",
       "impactTitle": "Elkarrekin gehiago lortzen dugu",
@@ -53,356 +50,353 @@
       "volunteers": "Boluntario aktiboak",
       "projectsCompleted": "Egindako proiektuak"
     },
-
     "projects": {
-      "eyebrow": "Gure lana",
+      "eyebrow": "Egiten duguna",
       "title": "Eragina sortzen duten proiektuak",
-      "description": "Autonomia, parte-hartzea eta bizikidetza indartzeko diseinatutako ekimenak.",
-      "viewAll": "Guztiak ikusi"
+      "description": "Autonomia, parte-hartzea eta bizikidetza sustatzera bideratutako ekimenak.",
+      "viewAll": "Ikusi guztiak"
     },
-
     "news": {
-      "eyebrow": "Azken berriak",
+      "eyebrow": "Gaurkotasuna",
       "title": "Azken albisteak",
-      "description": "Ezagutu gure azken jarduerak eta berriak.",
-      "viewAll": "Guztiak ikusi"
+      "description": "Ezagutu gure azken jarduera eta berrikuntzak.",
+      "viewAll": "Ikusi guztiak"
     },
-
     "communityCta": {
-      "title": "Zu ere gure parte izan zaitezke",
-      "description": "Gizarte inklusiboa guztion artean eraikitzen da. Ezagutu gure lana, lagundu gurekin edo jarri gurekin harremanetan.",
+      "title": "Zuk ere parte har dezakezu",
+      "description": "Gizarte inklusibo bat pertsona guztien parte-hartzearekin eraikitzen da. Ezagutu gure lana, parte hartu edo jarri gurekin harremanetan.",
       "contact": "Jarri gurekin harremanetan",
       "projects": "Ezagutu gure proiektuak"
     }
   },
   "NewsPage": {
-  "hero": {
-    "badge": "Zubia Socialen gaurkotasuna",
-    "title": "Albisteak eta",
-    "titleHighlight": "Ekitaldiak",
-    "description": "Ezagutu Zubia Social Euskadiren azken berriak, jarduerak eta ekitaldiak."
-  },
-  "intro": {
-    "current": {
-      "title": "Gaurkotasuna",
-      "description": "Elkartearen berrien eta ekintzen berri izan."
+    "hero": {
+      "badge": "Zubia Social gaurkotasuna",
+      "title": "Albisteak eta",
+      "titleHighlight": "Ekitaldiak",
+      "description": "Egon eguneratuta Zubia Social Euskadi Elkartearen azken berri, jarduera eta ekitaldiekin."
     },
-    "events": {
-      "title": "Ekitaldiak",
-      "description": "Ezagutu Zubia Socialek parte hartzen duen jarduerak eta ekitaldiak."
+    "intro": {
+      "current": {
+        "title": "Gaurkotasuna",
+        "description": "Jakin ezazu elkartearen azken berri eta jardueren berri."
+      },
+      "events": {
+        "title": "Ekitaldiak",
+        "description": "Ezagutu Zubia Social-ek parte hartzen duen jarduera eta topaketak."
+      },
+      "stories": {
+        "title": "Istorioak",
+        "description": "Gure komunitate lanari lotutako esperientziak eta kontakizunak partekatzen ditugu."
+      }
     },
-    "stories": {
-      "title": "Istorioak",
-      "description": "Gure komunitate-lanarekin lotutako esperientziak eta istorioak partekatzen ditugu."
+    "latest": {
+      "eyebrow": "Azken argitalpenak",
+      "title": "Elkartearen albisteak",
+      "description": "Gure jarduerei buruzko informazioa eta berrikuntzak.",
+      "publication": "argitalpena",
+      "publications": "argitalpenak"
+    },
+    "empty": {
+      "title": "Ez dago albisterik eskuragarri une honetan.",
+      "description": "Strapin albiste berri bat gehitu baduzu, ziurtatu argitaratuta dagoela eta Public rolerako Article eduki-motan find baimena aktibatu duzula."
+    },
+    "cta": {
+      "eyebrow": "Gehiago jakin nahi duzu?",
+      "title": "Izan zaitez gure komunitatearen parte",
+      "description": "Ezagutu gure proiektuak eta detektatu nola lagundu dezakezun Zubia Social Euskadirekin.",
+      "button": "Jarri gurekin harremanetan"
     }
   },
-  "latest": {
-    "eyebrow": "Azken argitalpenak",
-    "title": "Elkartearen albisteak",
-    "description": "Gure jarduerari buruzko informazioa eta berriak.",
-    "publication": "argitalpena",
-    "publications": "argitalpen"
-  },
-  "empty": {
-    "title": "Une honetan ez dago albisterik.",
-    "description": "Strapin albiste bat gehitu berri baduzu, ziurtatu argitaratuta dagoela eta Article eduki motaren find baimena Public rolari gaituta dagoela."
-  },
-  "cta": {
-    "eyebrow": "Gehiago jakin nahi duzu?",
-    "title": "Egin bat gure komunitatearekin",
-    "description": "Ezagutu gure proiektuak eta Zubia Social Euskadirekin nola lagun dezakezun.",
-    "button": "Jarri gurekin harremanetan"
-  }
-},
-"AboutPage": {
-  "hero": {
-    "badge": "Zubia Social · Vitoria-Gasteiz",
-    "title": "Guri",
-    "titleHighlight": "buruz",
-    "description": "Vitoria-Gasteizen migratzaileei laguntzeko elkarte soziokulturala."
-  },
-  "introduction": {
-    "eyebrow": "Nor gara",
-    "title": "Zubiak eraikitzen ditugu gizarte inklusiboago baterantz",
-    "description": "Vitoria-Gasteizen eta Arabako Lurralde Historikoan migratzaileei laguntzeko eta lagun egiteko konpromisoa duen elkarte soziokulturala gara.",
-    "description2": "Gure lanaren helburua gizarteratzea, kulturarteko bizikidetza eta eskubide eta aukera berdintasuna sustatzea da.",
-    "points": {
-      "inclusion": "Gizarteratzea sustatzea.",
-      "coexistence": "Kulturarteko bizikidetza bultzatzea.",
-      "equality": "Eskubide eta aukera berdintasuna."
+  "AboutPage": {
+    "hero": {
+      "badge": "Zubia Social · Vitoria-Gasteiz",
+      "title": "Guri",
+      "titleHighlight": "Buruz",
+      "description": "Gasteizen pertsona migratzaileei bidelaguntza eta laguntza ematen dien elkarte soziokulturala."
     },
-    "visionLabel": "Gure ikuspegia",
-    "vision": "Pertsona guztiek parte hartu, hazi eta komunitateko kide senti daitezkeen komunitatea."
-  },
-  "missionValues": {
-    "eyebrow": "Gure esentzia",
-    "title": "Misioa eta balioak",
-    "description": "Gure lana eta pertsonekin eta komunitatearekin dugun harremana gidatzen dituzten printzipioak.",
-    "mission": {
-      "title": "Gure Misioa",
-      "description": "Vitoria-Gasteizen eta Arabako Lurralde Historikoan migratzaileen gizarteratzea, kulturarteko bizikidetza eta laguntza integrala sustatzea, eskubide eta aukera berdintasuna bermatuz."
+    "introduction": {
+      "eyebrow": "Nortzuk garen",
+      "title": "Gizarte inklusiboago baterantz zubiak eraikitzen",
+      "description": "Gasteizen eta Arabako Lurralde Historikoan migratzaileei bidelaguntza eta laguntza emateko konpromisoa duen elkarte soziokulturala gara.",
+      "description2": "Gure lana gizarte inklusioa, kulturen arteko bizikidetza eta eskubide zein aukera berdintasuna sustatzean datza.",
+      "points": {
+        "inclusion": "Gizarte inklusioaren sustapena.",
+        "coexistence": "Kulturen arteko bizikidetza sustatzea.",
+        "equality": "Eskubide eta aukera berdintasuna."
+      },
+      "visionLabel": "Gure ikuspegia",
+      "vision": "Pertsona guztiek parte hartu, garatu eta komunitatearen parte sentitu daitezkeen gizarte bat."
     },
-    "values": {
-      "title": "Gure Balioak",
-      "description": "Gure lana elkartasunean, aniztasunean, enpatian eta gardentasunean oinarritzen dugu. Diskriminaziorik gabeko espazio seguruak eta komunitate inklusiboak sortzeko lan egiten dugu."
+    "missionValues": {
+      "eyebrow": "Gure izatea",
+      "title": "Misioa eta Balioak",
+      "description": "Eguneroko gure lana eta pertsonekin zein komunitatearekin dugun harremana gidatzen duten printzipioak.",
+      "mission": {
+        "title": "Gure Misioa",
+        "description": "Gizarte inklusioa, kulturen arteko bizikidetza eta Gasteizen zein Araban migratzaileei bidelaguntza integrala sustatzea, eskubide eta aukera berdintasuna bermatuz."
+      },
+      "values": {
+        "title": "Gure Balioak",
+        "description": "Gure lana elkartasunean, aniztasunean, enpatian eta gardentasunean oinarritzen dugu. Espazio seguruak eta diskriminaziorik gabeko komunitate inklusiboak sortzeko lan egiten dugu."
+      }
+    },
+    "principles": {
+      "eyebrow": "Definitzen gaituena",
+      "title": "Gure Printzipioak",
+      "solidarity": {
+        "title": "Elkartasuna",
+        "description": "Laguntza eta bidelaguntza gertutasunetik eta elkarrekiko errespetutik."
+      },
+      "diversity": {
+        "title": "Aniztasuna",
+        "description": "Kultura, esperientzia eta ikuspegi desberdinak baloratzen ditugu."
+      },
+      "empathy": {
+        "title": "Enpatia",
+        "description": "Pertsona bakoitzaren beharrei erantzunez entzuten eta laguntzen dugu."
+      },
+      "transparency": {
+        "title": "Gardentasuna",
+        "description": "Erantzukizunez, argitasunez eta konpromisoz jokatzen dugu."
+      }
+    },
+    "commitment": {
+      "eyebrow": "Gure konpromisoa",
+      "title": "Konpromisoa Gasteizekin",
+      "description": "Gure lanaren helburua laguntza, parte-hartze eta integrazio espazioak eskaintzea da, bai pertsona migratzaileentzat bai herritar guztientzat.",
+      "stats": {
+        "people": "Artatutako pertsonak",
+        "multilingualValue": "Multilinguea",
+        "multilingualLabel": "Arreta eskuragarri",
+        "commitment": "Gizarte konpromisoa"
+      }
+    },
+    "cta": {
+      "title": "Eraiki dezagun elkarrekin gizarte inklusiboago bat",
+      "description": "Ezagutu gure proiektuak, ezagutu gure jarduerak edo jarri gurekin harremanetan.",
+      "projectsButton": "Ikusi proiektuak",
+      "contactButton": "Harremanetan jarri"
     }
   },
-  "principles": {
-    "eyebrow": "Definitzen gaituztenak",
-    "title": "Gure printzipioak",
-    "solidarity": {
-      "title": "Elkartasuna",
-      "description": "Hurbiltasunetik eta errespetutik abiatutako laguntza eta babesa."
+  "ProjectsPage": {
+    "hero": {
+      "badge": "Eragina duten ekimenak",
+      "title": "Gure Proiektuak",
+      "titleHighlight": "eta Ekimenak",
+      "description": "Inklusioa, parte-hartzea eta kulturen arteko bizikidetza sustatzera bideratutako komunitate-ekimenak eta programak."
     },
-    "diversity": {
-      "title": "Aniztasuna",
-      "description": "Kultura, esperientzia eta ikuspegi desberdinak baloratzen ditugu."
+    "intro": {
+      "people": {
+        "title": "Pertsonak",
+        "description": "Pertsonak eta beren beharrak gure ekimenen erdigunean jartzen ditugu."
+      },
+      "community": {
+        "title": "Komunitatea",
+        "description": "Kultura desberdinen arteko topaketa, parte-hartze eta elkarren arteko laguntza espazioak sortzen ditugu."
+      },
+      "inclusion": {
+        "title": "Inklusioa",
+        "description": "Gizarte irekiagoa, parte-hartzaileagoa eta inklusiboagoa eraikitzeko lan egiten dugu."
+      }
     },
-    "empathy": {
-      "title": "Enpatia",
-      "description": "Pertsona bakoitzaren beharrak kontuan hartuta entzuten eta laguntzen dugu."
+    "projects": {
+      "eyebrow": "Ekimenak",
+      "title": "Zubia Social-en proiektuak",
+      "description": "Ezagutu komunitatearekin elkarlanean garatzen ditugun ekimenak.",
+      "countSingular": "proiektu eskuragarri",
+      "countPlural": "proiektu eskuragarri"
     },
-    "transparency": {
-      "title": "Gardentasuna",
-      "description": "Arduraz, argitasunez eta konpromisoz lan egiten dugu."
+    "empty": {
+      "title": "Ez dago proiekturik eskuragarri gaur egun",
+      "description": "Ekimen berriak diseinatzen ari gara. Bisita gaitzazu berriro laster gure jarduerak ezagutzeko."
+    },
+    "cta": {
+      "title": "Parte hartu nahi duzu?",
+      "description": "Inklusioa denon artean eraikitzen da. Ezagutu gure lana edo jarri harremanetan gurekin laguntzeko.",
+      "contactButton": "Harremanetan jarri",
+      "aboutButton": "Nortzuk garen"
     }
   },
-  "commitment": {
-    "eyebrow": "Gure konpromisoa",
-    "title": "Vitoria-Gasteizekin dugun konpromisoa",
-    "description": "Gure lana migratzaileentzat eta komunitate osoarentzat laguntza, parte-hartze eta inklusio espazioak sortzera bideratuta dago.",
-    "stats": {
-      "people": "Artatutako pertsonak",
-      "multilingualValue": "Eleanitza",
-      "multilingualLabel": "Arreta irisgarria",
-      "commitment": "Gizarte-konpromisoa"
+  "ContactPage": {
+    "hero": {
+      "badge": "Zu laguntzeko gaude",
+      "title": "Jarri gurekin",
+      "titleHighlight": "Harremanetan",
+      "description": "Galderarik al duzu, orientazioa behar duzu edo Zubia Social-ekin lagundu nahi duzu? Idatzi diguzu."
+    },
+    "info": {
+      "title": "Hemen gaude zuri entzuteko",
+      "description": "Gurekin harremanetan jar zaitezke zalantzak argitzeko, gure proiektuak ezagutzeko edo elkartearekin elkarlanean aritzeko bideak aztertzeko.",
+      "emailLabel": "Posta elektronikoa",
+      "locationLabel": "Kokalekua",
+      "attentionLabel": "Arreta",
+      "attentionDescription": "Zure mezuari ahalik eta azkieten erantzungo diogu.",
+      "association": "Asociación Zubia Social Euskadi"
+    },
+    "form": {
+      "eyebrow": "Idatzi diguzu",
+      "title": "Bidali mezu bat",
+      "description": "Bete inprimakia eta esan nola lagundu zaitzaketegun.",
+      "nameLabel": "Izen-abizenak",
+      "namePlaceholder": "Zure izena",
+      "emailLabel": "Posta elektronikoa",
+      "emailPlaceholder": "zure@email.com",
+      "subjectLabel": "Gaia",
+      "subjectPlaceholder": "Nola lagundu zaitzaketegu?",
+      "messageLabel": "Mezua",
+      "messagePlaceholder": "Idatzi zure mezua hemen...",
+      "privacy": "Emandako informazioa zure galderari erantzuteko bakarrik erabiliko dugu.",
+      "submit": "Bidali mezua"
+    },
+    "success": {
+      "title": "Eskerrik asko gurekin harremanetan jartzeagatik!",
+      "description": "Zure mezua jaso dugu. Ahalik eta azkien jarriko gara zurekin harremanetan.",
+      "button": "Bidali beste mezu bat"
+    },
+    "bottom": {
+      "title": "Gure lana ezagutu nahi duzu?",
+      "description": "Ezagutu gure proiektuak eta inklusioa zein bizikidetza sustatzeko garatzen ditugun ekimenak.",
+      "button": "Ikusi proiektuak"
     }
   },
-  "cta": {
-    "title": "Elkarrekin komunitate inklusiboagoa eraiki dezagun",
-    "description": "Ezagutu gure proiektuak, ezagutu gure jarduerak edo jarri gurekin harremanetan.",
-    "projectsButton": "Ikusi gure proiektuak",
-    "contactButton": "Jarri gurekin harremanetan"
-  }
-},
-"ProjectsPage": {
-  "hero": {
-    "badge": "Eragina sortzen duten ekimenak",
-    "title": "Gure",
-    "titleHighlight": "proiektuak",
-    "description": "Inklusioa, parte-hartzea eta kulturarteko bizikidetza sustatzera bideratutako ekimen eta komunitate-programak."
+  "ArticlePage": {
+    "hero": {
+      "back": "Itzuli albisteetara",
+      "category": "Albisteak eta Ekitaldiak"
+    },
+    "article": {
+      "backToNews": "Ikusi albiste guztiak"
+    },
+    "cta": {
+      "title": "Gure lanari buruz gehiago jakin nahi duzu?",
+      "description": "Ezagutu gure proiektuak eta komunitatearekin garatutako ekimenak.",
+      "projects": "Ikusi proiektuak",
+      "contact": "Harremanetan jarri"
+    },
+    "fallback": {
+      "title": "Izenbururik gabe",
+      "content": "Ez dago edukirik eskuragarri."
+    }
   },
-  "intro": {
-    "people": {
-      "title": "Pertsonak",
-      "description": "Pertsonak eta haien beharrak gure ekimenen erdigunean jartzen ditugu."
+  "AccountPage": {
+    "hero": {
+      "title": "Nire Kontua",
+      "welcome": "Kaixo,"
+    },
+    "accountData": {
+      "title": "Zure kontuaren datuak",
+      "username": "Erabiltzaile izena",
+      "email": "Posta elektronikoa"
+    },
+    "actions": {
+      "projects": "Ikusi proiektuak",
+      "logout": "Saioa itxi"
     },
     "community": {
-      "title": "Komunitatea",
-      "description": "Pertsona eta kultura ezberdinen arteko topaketa, parte-hartze eta laguntza guneak sortzen ditugu."
+      "title": "Eskerrik asko gure komunitatearen parte izateagatik.",
+      "description": "Zure kontutik Zubia Social Euskadiren hurrengo funtzionalitateetara sartu ahal izango zara."
     },
-    "inclusion": {
-      "title": "Inklusioa",
-      "description": "Gizarte irekiago, parte-hartzaileago eta inklusiboagoa eraikitzeko lan egiten dugu."
+    "fallback": {
+      "user": "Erabiltzailea",
+      "unavailable": "Ez dago eskuragarri"
     }
   },
-  "projects": {
-    "eyebrow": "Ekimenak",
-    "title": "Zubia Socialen proiektuak",
-    "description": "Ezagutu komunitatearekin batera garatzen ditugun ekimenak.",
-    "countSingular": "proiektu erabilgarri",
-    "countPlural": "proiektu erabilgarri"
+  "LoginPage": {
+    "hero": {
+      "title": "Saioa Hasi",
+      "description": "Sartu zure kontuan."
+    },
+    "form": {
+      "email": "Posta elektronikoa",
+      "emailPlaceholder": "zure@email.com",
+      "password": "Pasahitza",
+      "passwordPlaceholder": "Zure pasahitza",
+      "loading": "Saioa hasten...",
+      "submit": "Saioa hasi"
+    },
+    "errors": {
+      "required": "Mesedez, bete eremu guztiak.",
+      "invalidCredentials": "Posta elektronikoa edo pasahitza ez dira zuzenak.",
+      "unexpected": "Ustezko errorea gertatu da."
+    },
+    "register": {
+      "question": "Ez daukazu konturik?",
+      "button": "Kontua sortu"
+    }
   },
-  "empty": {
-    "title": "Une honetan ez dago proiekturik erabilgarri",
-    "description": "Ekimen berriak prestatzen ari gara. Itzuli laster gure jarduerak eta proiektuak ezagutzeko."
+  "RegisterPage": {
+    "hero": {
+      "title": "Kontua Sortu",
+      "description": "Batu gure komunitatera."
+    },
+    "form": {
+      "username": "Erabiltzaile izena",
+      "usernamePlaceholder": "Zure izena",
+      "email": "Posta elektronikoa",
+      "emailPlaceholder": "zure@email.com",
+      "password": "Pasahitza",
+      "passwordPlaceholder": "Gutxienez 6 karaktere",
+      "confirmPassword": "Berretsi pasahitza",
+      "confirmPasswordPlaceholder": "Sartu berriro zure pasahitza",
+      "loading": "Kontua sortzen...",
+      "submit": "Kontua sortu"
+    },
+    "errors": {
+      "required": "Mesedez, bete eremu guztiak.",
+      "passwordMismatch": "Pasahitzak ez datoz bat.",
+      "passwordLength": "Pasahitzak gutxienez 6 karaktere izan behar ditu.",
+      "registrationFailed": "Ezin izan da kontua sortu.",
+      "unexpected": "Ustezko errorea gertatu da."
+    },
+    "success": "Kontua ondo sortu da!",
+    "login": {
+      "question": "Baduzu kontu bat dagoeneko?",
+      "button": "Saioa hasi"
+    }
   },
-  "cta": {
-    "title": "Parte hartu nahi duzu?",
-    "description": "Inklusioa pertsona guztion artean eraikitzen da. Ezagutu gure lana edo jarri gurekin harremanetan nola lagun dezakezun jakiteko.",
-    "contactButton": "Jarri gurekin harremanetan",
-    "aboutButton": "Guri buruz"
-  }
-},
-"ContactPage": {
-  "hero": {
-    "badge": "Hemen gaude laguntzeko",
-    "title": "Jarri gurekin",
-    "titleHighlight": "harremanetan",
-    "description": "Galderarik duzu, orientazioa behar duzu edo Zubia Socialekin lankidetzan aritu nahi duzu? Idatzi iezaguzu."
+  "CollaborationSection": {
+    "eyebrow": "Parte-hartzea",
+    "title": "Elkarrekin eraikitzen dugu komunitatea",
+    "description": "Ezagutu gure lana, parte hartu gure jardueretan eta ezagutu komunitatearekin batera garatzen ditugun ekimenak.",
+    "activities": {
+      "title": "Parte hartu jardueretan",
+      "description": "Ezagutu inklusioa eta kulturen arteko bizikidetza sustatzeko antolatzen ditugun lantegi eta dinamikak.",
+      "link": "Ezagutu jarduerak"
+    },
+    "volunteer": {
+      "title": "Egin boluntariotza",
+      "description": "Boluntario gisa lagundu nahi baduzu, jarri gurekin harremanetan eskuragarri dauden aukerak ezagutzeko.",
+      "link": "Informazio gehiago"
+    },
+    "collaboration": {
+      "title": "Lagundu gurekin",
+      "description": "Erakunde, instituzio edo elkarteak Zubia Social-ekin harremanetan jar daitezke gure lana ezagutzeko.",
+      "link": "Jarri gurekin harremanetan"
+    },
+    "projects": {
+      "title": "Ezagutu proiektuak",
+      "description": "Arakatu herritarrekin batera aurrera eramaten ditugun komunitate-ekimenak.",
+      "link": "Ikusi proiektuak"
+    }
   },
-  "info": {
-    "title": "Entzuteko gaude",
-    "description": "Jarri gurekin harremanetan zure zalantzak argitzeko, gure proiektuak ezagutzeko edo elkartearekin lankidetzan aritzeko moduak aztertzeko.",
-    "emailLabel": "Helbide elektronikoa",
-    "locationLabel": "Kokapena",
-    "attentionLabel": "Arreta",
-    "attentionDescription": "Zure mezuari ahalik eta lasterren erantzungo diogu.",
-    "association": "Asociación Zubia Social Euskadi"
-  },
-  "form": {
-    "eyebrow": "Idatzi iezaguzu",
-    "title": "Bidali mezu bat",
-    "description": "Bete formularioa eta azaldu nola lagun zaitzakegun.",
-    "nameLabel": "Izen-abizenak",
-    "namePlaceholder": "Zure izena",
-    "emailLabel": "Helbide elektronikoa",
-    "emailPlaceholder": "zure@email.com",
-    "subjectLabel": "Gaia",
-    "subjectPlaceholder": "Nola lagun zaitzakegu?",
-    "messageLabel": "Mezua",
-    "messagePlaceholder": "Idatzi zure mezua hemen...",
-    "privacy": "Ematen diguzun informazioa zure kontsultari erantzuteko soilik erabiliko dugu.",
-    "submit": "Bidali mezua"
-  },
-  "success": {
-    "title": "Eskerrik asko idazteagatik!",
-    "description": "Zure mezua jaso dugu. Ahalik eta lasterren jarriko gara zurekin harremanetan.",
-    "button": "Bidali beste mezu bat"
-  },
-  "bottom": {
-    "title": "Gure lana ezagutu nahi duzu?",
-    "description": "Ezagutu gure proiektuak eta inklusioa eta bizikidetza sustatzeko garatzen ditugun ekimenak.",
-    "button": "Ikusi gure proiektuak"
-  }
-},
-"ArticlePage": {
-  "hero": {
-    "back": "Itzuli albisteetara",
-    "category": "Albisteak eta Ekitaldiak"
-  },
-  "article": {
-    "backToNews": "Ikusi albiste guztiak"
-  },
-  "cta": {
-    "title": "Gure lanari buruz gehiago jakin nahi duzu?",
-    "description": "Ezagutu gure proiektuak eta komunitatearekin batera garatzen ditugun ekimenak.",
-    "projects": "Ikusi proiektuak",
-    "contact": "Jarri gurekin harremanetan"
-  },
-  "fallback": {
-    "title": "Izenbururik gabe",
-    "content": "Ez dago edukirik eskuragarri."
-  }
-},
-"AccountPage": {
-  "hero": {
-    "title": "Nire kontua",
-    "welcome": "Ongi etorri,"
-  },
-  "accountData": {
-    "title": "Zure kontuaren datuak",
-    "username": "Erabiltzaile-izena",
-    "email": "Posta elektronikoa"
-  },
-  "actions": {
-    "projects": "Ikusi proiektuak",
-    "logout": "Saioa itxi"
-  },
-  "community": {
-    "title": "Eskerrik asko gure komunitateko kide izateagatik.",
-    "description": "Zure kontutik Zubia Social Euskadiren hurrengo funtzionalitateetara sartzeko aukera izango duzu."
-  },
-  "fallback": {
-    "user": "erabiltzailea",
-    "unavailable": "Ez dago eskuragarri"
-  }
-},
-"LoginPage": {
-  "hero": {
-    "title": "Saioa hasi",
-    "description": "Sartu zure kontura."
-  },
-  "form": {
-    "email": "Posta elektronikoa",
-    "emailPlaceholder": "zure@email.com",
-    "password": "Pasahitza",
-    "passwordPlaceholder": "Zure pasahitza",
-    "loading": "Saioa hasten...",
-    "submit": "Saioa hasi"
-  },
-  "errors": {
-    "required": "Mesedez, bete eremu guztiak.",
-    "invalidCredentials": "Posta elektronikoa edo pasahitza ez dira zuzenak.",
-    "unexpected": "Ustekabeko errore bat gertatu da."
-  },
-  "register": {
-    "question": "Ez duzu konturik?",
-    "button": "Kontu bat sortu"
-  }
-},
-"RegisterPage": {
-  "hero": {
-    "title": "Kontu bat sortu",
-    "description": "Bat egin gure komunitatearekin."
-  },
-  "form": {
-    "username": "Erabiltzaile-izena",
-    "usernamePlaceholder": "Zure izena",
-    "email": "Posta elektronikoa",
-    "emailPlaceholder": "zure@email.com",
-    "password": "Pasahitza",
-    "passwordPlaceholder": "Gutxienez 6 karaktere",
-    "confirmPassword": "Berretsi pasahitza",
-    "confirmPasswordPlaceholder": "Errepikatu zure pasahitza",
-    "loading": "Kontua sortzen...",
-    "submit": "Kontua sortu"
-  },
-  "errors": {
-    "required": "Mesedez, bete eremu guztiak.",
-    "passwordMismatch": "Pasahitzak ez datoz bat.",
-    "passwordLength": "Pasahitzak gutxienez 6 karaktere izan behar ditu.",
-    "registrationFailed": "Ezin izan da kontua sortu.",
-    "unexpected": "Ustekabeko errore bat gertatu da."
-  },
-  "success": "Kontua behar bezala sortu da!",
-  "login": {
-    "question": "Dagoeneko baduzu konturik?",
-    "button": "Saioa hasi"
-  }
-},
-"CollaborationSection": {
-  "eyebrow": "Parte-hartzea",
-  "title": "Elkarrekin komunitatea eraikitzen dugu",
-  "description": "Ezagutu gure lana, parte hartu gure jardueretan eta ezagutu komunitatearekin batera garatzen ditugun ekimenak.",
-  "activities": {
-    "title": "Parte hartu gure jardueretan",
-    "description": "Ezagutu inklusioa eta kulturarteko bizikidetza sustatzeko garatzen ditugun jarduerak eta ekimenak.",
-    "link": "Ezagutu gure jarduerak"
-  },
-  "volunteer": {
-    "title": "Egin zaitez boluntario",
-    "description": "Boluntario gisa parte hartu nahi baduzu, jar zaitez gurekin harremanetan parte hartzeko aukerak ezagutzeko.",
-    "link": "Informazio gehiago"
-  },
-  "collaboration": {
-    "title": "Elkarlanean aritu gurekin",
-    "description": "Erakundeek, instituzioek eta antolakundeek gurekin harremanetan jar daitezke Zubia Socialen lana ezagutzeko.",
-    "link": "Jarri gurekin harremanetan"
-  },
-  "projects": {
-    "title": "Ezagutu gure proiektuak",
-    "description": "Ezagutu komunitatearekin batera garatzen ditugun ekimenak eta proiektuak.",
-    "link": "Ikusi proiektuak"
-  }
-},
   "Footer": {
-    "description": "Euskadin laguntza, inklusioa eta kulturarteko bizikidetza sustatzeko konpromisoa duen elkarte soziokulturala.",
+    "description": "Euskadin bidelaguntza, inklusioa eta kulturen arteko bizikidetza sustatzeko konpromisoa duen elkarte soziokulturala.",
     "association": {
       "title": "Elkartea",
       "about": "Guri buruz",
       "projects": "Proiektuak",
       "news": "Albisteak",
-      "contact": "Harremana"
+      "contact": "Kontaktua"
     },
     "information": {
       "title": "Informazioa",
       "privacy": "Pribatutasun politika",
-      "legal": "Lege-oharra",
+      "legal": "Lege oharra",
       "cookies": "Cookie politika"
     },
     "contact": {
-      "title": "Harremana",
+      "title": "Kontaktua",
       "location": "Vitoria-Gasteiz, Euskadi",
       "phone": "Harremanetarako telefonoa"
     },

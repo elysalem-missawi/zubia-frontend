@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Image from "next/image"; // <--- استيراد Image من Next.js
 
 import {
-  HeartHandshake,
   Menu,
-  Sparkles,
   X,
   UserPlus,
   LogIn,
@@ -98,30 +97,21 @@ export default function Header() {
     >
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
-        {/* Logo */}
-        <Link
-          href="/"
-          className="group flex items-center gap-3 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-          aria-label="Zubia Social - Inicio"
-        >
-          <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/20 transition-transform duration-300 group-hover:scale-105">
-            <HeartHandshake className="h-6 w-6" />
-
-            <div className="absolute inset-0 rounded-xl bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-          </div>
-
-          <div className="hidden flex-col sm:flex">
-            <span className="text-xl font-black tracking-tight text-slate-900 transition-colors group-hover:text-emerald-700">
-              Zubia Social
-            </span>
-
-            <span className="flex items-center gap-1 text-[11px] font-semibold text-emerald-600">
-              <Sparkles className="h-3 w-3 text-amber-400" />
-              Euskadi · Vitoria-Gasteiz
-            </span>
-          </div>
-        </Link>
-
+{/* Logo */}
+<Link
+  href="/"
+  className="group flex items-center py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+  aria-label="Zubia Social - Inicio"
+>
+  <Image
+    src="/logozubia.svg"
+    alt="Zubia Social Logo"
+    width={220}
+    height={70}
+    priority
+    className="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+  />
+</Link>
         {/* Desktop navigation */}
         <nav
           className="hidden items-center gap-1 md:flex"
