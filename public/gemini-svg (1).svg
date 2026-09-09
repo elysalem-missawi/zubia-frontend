@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" className="w-full h-auto rounded-3xl shadow-xl">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="40%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+
+    <!-- Warm Golden Sunlight -->
+    <radialGradient id="sunGlow" cx="85%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Card Overlay Gradients -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <linearGradient id="emeraldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Soft Shadow Filter -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+  <rect width="1200" height="675" fill="url(#sunGlow)" />
+
+  <!-- Ambient Organic Bokeh / Leaves Shapes -->
+  <g opacity="0.12">
+    <circle cx="150" cy="120" r="180" fill="#10b981" />
+    <circle cx="1050" cy="550" r="220" fill="#34d399" />
+    <circle cx="900" cy="100" r="140" fill="#fef08a" />
+    <path d="M-50,300 Q200,150 450,350 T950,250 T1250,400 L1250,675 L-50,675 Z" fill="#047857" />
+  </g>
+
+  <!-- Central Glassmorphism Composition Frame -->
+  <rect x="100" y="70" width="1000" height="535" rx="32" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.5" filter="url(#softShadow)" />
+
+  <!-- Abstract Character Representations (Diverse Group Standing & Collaborating) -->
+  
+  <!-- Person 1: Left - Arab/North African Background (Male) -->
+  <g transform="translate(240, 210)">
+    <circle cx="45" cy="40" r="28" fill="#f3d5b5" />
+    <path d="M17,35 C17,15 35,12 45,12 C55,12 73,15 73,35 C73,42 65,48 45,48 C25,48 17,42 17,35 Z" fill="#2d3748" /> <!-- Hair -->
+    <path d="M10,140 Q12,85 45,85 Q78,85 80,140 Z" fill="#0284c7" /> <!-- Outfit -->
+    <!-- Smiling Expression -->
+    <path d="M36,48 Q45,56 54,48" stroke="#7c2d12" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Person 2: Center-Left - Sub-Saharan African Background (Female) -->
+  <g transform="translate(410, 175)">
+    <circle cx="45" cy="40" r="27" fill="#8d5b4c" />
+    <!-- High Afro Bun Hair -->
+    <circle cx="45" cy="18" r="32" fill="#1a202c" />
+    <path d="M10,175 Q12,80 45,80 Q78,80 80,175 Z" fill="url(#emeraldGlow)" /> <!-- Emerald Outfit -->
+    <!-- Smiling Expression -->
+    <path d="M35,48 Q45,58 55,48" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Person 3: Center-Right - European Background (Female) -->
+  <g transform="translate(620, 185)">
+    <circle cx="45" cy="40" r="27" fill="#ffdfc4" />
+    <path d="M15,25 Q45,-5 75,25 Q85,60 78,90 Q45,70 12,90 Z" fill="#d97706" /> <!-- Wavy Hair -->
+    <path d="M12,165 Q14,82 45,82 Q76,82 78,165 Z" fill="#f43f5e" /> <!-- Bright Warm Outfit -->
+    <!-- Smiling Expression -->
+    <path d="M36,47 Q45,55 54,47" stroke="#9a3412" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Person 4: Right - Latin/Asian Background (Male) -->
+  <g transform="translate(800, 215)">
+    <circle cx="45" cy="40" r="28" fill="#e0ac69" />
+    <path d="M20,25 Q45,10 70,25 Q75,18 45,14 Q15,18 20,25 Z" fill="#1e293b" /> <!-- Modern Hairstyle -->
+    <path d="M10,135 Q12,85 45,85 Q78,85 80,135 Z" fill="#6366f1" /> <!-- Outfit -->
+    <!-- Smiling Expression -->
+    <path d="M36,48 Q45,56 54,48" stroke="#78350f" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Communal Wooden Table & Work Items -->
+  <g transform="translate(180, 380)">
+    <!-- Table Surface -->
+    <rect x="0" y="40" width="840" height="24" rx="12" fill="#b45309" opacity="0.9" />
+    <rect x="10" y="64" width="820" height="12" rx="6" fill="#78350f" opacity="0.8" />
+    
+    <!-- Table Legs -->
+    <rect x="60" y="76" width="16" height="110" fill="#451a03" />
+    <rect x="764" y="76" width="16" height="110" fill="#451a03" />
+
+    <!-- Shared Laptop 1 -->
+    <rect x="180" y="18" width="90" height="24" rx="4" fill="#cbd5e1" />
+    <path d="M170,40 L280,40 L275,44 L175,44 Z" fill="#94a3b8" />
+
+    <!-- Shared Laptop 2 -->
+    <rect x="560" y="18" width="90" height="24" rx="4" fill="#334155" />
+    <path d="M550,40 L660,40 L655,44 L555,44 Z" fill="#1e293b" />
+
+    <!-- Coffee Cups & Notebooks -->
+    <rect x="340" y="26" width="45" height="16" rx="3" fill="#34d399" /> <!-- Green Notebook -->
+    <circle cx="440" cy="30" r="10" fill="#ffffff" /> <!-- Coffee Cup -->
+    <circle cx="440" cy="30" r="7" fill="#78350f" />
+  </g>
+
+  <!-- Motivational Floating Graphics (Unity & Growth Icons) -->
+  <!-- Heart Icon (Community) -->
+  <g transform="translate(570, 105)" filter="url(#softShadow)">
+    <circle cx="30" cy="30" r="28" fill="#10b981" />
+    <path d="M30,42 L26.5,38.8 C14,27.5 18,17 24.5,17 C28.1,17 30,19 30,19 C30,19 31.9,17 35.5,17 C42,17 46,27.5 33.5,38.8 L30,42 Z" fill="#ffffff" />
+  </g>
+
+  <!-- Plant/Growth Icon (Hope & Future) -->
+  <g transform="translate(320, 130)" filter="url(#softShadow)">
+    <circle cx="24" cy="24" r="22" fill="#f59e0b" />
+    <path d="M24,34 L24,22 M24,22 C24,16 16,16 16,16 C16,22 22,22 24,22 Z M24,26 C24,21 30,21 30,21 C30,26 26,26 24,26 Z" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+
+  <!-- Typography overlay / Tagline -->
+  <text x="600" y="555" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="3">
+    ZUBIA SOCIAL EUSKADI
+  </text>
+  <text x="600" y="582" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#6ee7b7" letter-spacing="1.5">
+    Construyendo Futuro • Inclusión • Comunidad
+  </text>
+</svg>

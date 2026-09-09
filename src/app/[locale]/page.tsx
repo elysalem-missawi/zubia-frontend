@@ -57,8 +57,7 @@ export default async function Home({ params }: HomeProps) {
       <main className="flex-1">
         {/* HERO */}
         <Hero />
-
-        {/* VALUES */}
+         {/* VALUES */}
         <section className="border-b border-slate-200 bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
@@ -124,6 +123,48 @@ export default async function Home({ params }: HomeProps) {
           </div>
         </section>
 
+        
+        {/* NEWS */}
+        {newsList.length > 0 && (
+          <section className="border-t border-slate-200 bg-slate-50 py-20">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+                <div>
+                  <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-600">
+                    {t("news.eyebrow")}
+                  </span>
+
+                  <h2 className="mt-2 text-3xl font-black text-slate-950 sm:text-4xl">
+                    {t("news.title")}
+                  </h2>
+
+                  <p className="mt-3 text-slate-600">
+                    {t("news.description")}
+                  </p>
+                </div>
+
+                <Link
+                  href="/noticias"
+                  className="inline-flex shrink-0 items-center gap-2 font-bold text-emerald-700 transition hover:text-emerald-800"
+                >
+                  {t("news.viewAll")}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+
+              <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+                {newsList.slice(0, 3).map((item, index) => {
+                  const data = item.attributes || item;
+                  const itemKey = item.documentId || item.id || index;
+
+                  return <NewsCard key={itemKey} news={data} />;
+                })}
+              </div>
+            </div>
+          </section>
+        )}
+
+       
         {/* ABOUT */}
         <section className="bg-slate-50 py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -176,6 +217,9 @@ export default async function Home({ params }: HomeProps) {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
+
+
+
 
               {/* Impact */}
               <div className="overflow-hidden rounded-3xl bg-slate-900 shadow-2xl">
@@ -267,45 +311,6 @@ export default async function Home({ params }: HomeProps) {
           </section>
         )}
 
-        {/* NEWS */}
-        {newsList.length > 0 && (
-          <section className="border-t border-slate-200 bg-slate-50 py-20">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-                <div>
-                  <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-600">
-                    {t("news.eyebrow")}
-                  </span>
-
-                  <h2 className="mt-2 text-3xl font-black text-slate-950 sm:text-4xl">
-                    {t("news.title")}
-                  </h2>
-
-                  <p className="mt-3 text-slate-600">
-                    {t("news.description")}
-                  </p>
-                </div>
-
-                <Link
-                  href="/noticias"
-                  className="inline-flex shrink-0 items-center gap-2 font-bold text-emerald-700 transition hover:text-emerald-800"
-                >
-                  {t("news.viewAll")}
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-
-              <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-                {newsList.slice(0, 3).map((item, index) => {
-                  const data = item.attributes || item;
-                  const itemKey = item.documentId || item.id || index;
-
-                  return <NewsCard key={itemKey} news={data} />;
-                })}
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* COMMUNITY / COLLABORATION */}
         <CollaborationSection />

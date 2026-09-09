@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
 import {
   Target,
   Heart,
@@ -10,6 +12,7 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 
@@ -32,11 +35,13 @@ export default async function SobreNosotros() {
             <div className="mx-auto max-w-4xl text-center">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm font-semibold text-emerald-300">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
+
                 {t("hero.badge")}
               </div>
 
               <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">
                 {t("hero.title")}
+
                 <span className="text-emerald-400">
                   {" "}
                   {t("hero.titleHighlight")}
@@ -58,6 +63,7 @@ export default async function SobreNosotros() {
         <section className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-2">
+              {/* Text */}
               <div>
                 <span className="text-sm font-bold uppercase tracking-widest text-emerald-600">
                   {t("introduction.eyebrow")}
@@ -76,22 +82,28 @@ export default async function SobreNosotros() {
                 </p>
 
                 <div className="mt-8 space-y-4">
+                  {/* Inclusion */}
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-emerald-600" />
+
                     <p className="text-slate-700">
                       {t("introduction.points.inclusion")}
                     </p>
                   </div>
 
+                  {/* Coexistence */}
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-emerald-600" />
+
                     <p className="text-slate-700">
                       {t("introduction.points.coexistence")}
                     </p>
                   </div>
 
+                  {/* Equality */}
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-emerald-600" />
+
                     <p className="text-slate-700">
                       {t("introduction.points.equality")}
                     </p>
@@ -99,37 +111,36 @@ export default async function SobreNosotros() {
                 </div>
               </div>
 
-              {/* Visual card */}
+              {/* =================================================
+                  MIGRANTS IMAGE
+              ================================================== */}
               <div className="relative">
+                {/* Decorative glow */}
                 <div className="absolute -inset-4 rounded-[2rem] bg-emerald-100/60 blur-2xl" />
 
-                <div className="relative overflow-hidden rounded-3xl bg-slate-900 p-8 shadow-2xl sm:p-10">
-                  <div className="flex h-full min-h-[350px] flex-col justify-between">
-                    <div className="flex items-center justify-between">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-400/15">
-                        <Heart className="h-7 w-7 text-emerald-400" />
-                      </div>
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                  <Image
+                    src="/migrantes.png"
+                    alt="Migrantes en Europa"
+                    width={1200}
+                    height={800}
+                    className="h-full min-h-[350px] w-full object-cover"
+                  />
 
-                      <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-slate-300">
-                        Euskadi
-                      </span>
-                    </div>
+                  {/* Image overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
 
-                    <div className="mt-12">
-                      <p className="text-sm font-bold uppercase tracking-widest text-emerald-400">
-                        {t("introduction.visionLabel")}
-                      </p>
+                  {/* Vision content */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                    <p className="text-sm font-bold uppercase tracking-widest text-emerald-300">
+                      {t("introduction.visionLabel")}
+                    </p>
 
-                      <p className="mt-4 text-2xl font-bold leading-snug text-white sm:text-3xl">
-                        {t("introduction.vision")}
-                      </p>
-                    </div>
+                    <p className="mt-3 text-2xl font-bold leading-snug text-white sm:text-3xl">
+                      {t("introduction.vision")}
+                    </p>
 
-                    <div className="mt-10 flex gap-2">
-                      <span className="h-2 w-20 rounded-full bg-emerald-400" />
-                      <span className="h-2 w-10 rounded-full bg-emerald-400/40" />
-                      <span className="h-2 w-5 rounded-full bg-emerald-400/20" />
-                    </div>
+                    <div className="mt-5 h-1 w-16 rounded-full bg-emerald-400" />
                   </div>
                 </div>
               </div>
@@ -157,7 +168,7 @@ export default async function SobreNosotros() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-2">
-              {/* Misión */}
+              {/* Mission */}
               <div className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-10">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700 transition group-hover:bg-emerald-600 group-hover:text-white">
                   <Target className="h-7 w-7" />
@@ -172,7 +183,7 @@ export default async function SobreNosotros() {
                 </p>
               </div>
 
-              {/* Valores */}
+              {/* Values */}
               <div className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-10">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700 transition group-hover:bg-emerald-600 group-hover:text-white">
                   <Heart className="h-7 w-7" />
@@ -206,7 +217,7 @@ export default async function SobreNosotros() {
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {/* Solidaridad */}
+              {/* Solidarity */}
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7 text-center transition hover:-translate-y-1 hover:bg-white hover:shadow-lg">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
                   <HandHeart className="h-6 w-6" />
@@ -221,7 +232,7 @@ export default async function SobreNosotros() {
                 </p>
               </div>
 
-              {/* Diversidad */}
+              {/* Diversity */}
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7 text-center transition hover:-translate-y-1 hover:bg-white hover:shadow-lg">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
                   <Globe2 className="h-6 w-6" />
@@ -236,7 +247,7 @@ export default async function SobreNosotros() {
                 </p>
               </div>
 
-              {/* Empatía */}
+              {/* Empathy */}
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7 text-center transition hover:-translate-y-1 hover:bg-white hover:shadow-lg">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
                   <Users className="h-6 w-6" />
@@ -251,11 +262,12 @@ export default async function SobreNosotros() {
                 </p>
               </div>
 
-              {/* Transparencia */}
+              {/* Transparency */}
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7 text-center transition hover:-translate-y-1 hover:bg-white hover:shadow-lg">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
                   <ShieldCheck className="h-6 w-6" />
                 </div>
+
                 <h3 className="mt-5 font-bold text-slate-900">
                   {t("principles.transparency.title")}
                 </h3>
@@ -286,6 +298,7 @@ export default async function SobreNosotros() {
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
+              {/* Projects */}
               <Link
                 href="/proyectos"
                 className="group inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 font-bold text-white shadow-lg shadow-emerald-600/20 transition hover:bg-emerald-700"
@@ -295,6 +308,7 @@ export default async function SobreNosotros() {
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
 
+              {/* Contact */}
               <Link
                 href="/contacto"
                 className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3.5 font-bold text-slate-800 transition hover:border-emerald-300 hover:text-emerald-700"
