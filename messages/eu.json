@@ -380,6 +380,31 @@
       "link": "Ikusi proiektuak"
     }
   },
+  "PrivacyPolicy": {
+    "title": "Pribatutasun Politika",
+    "description": "Zubia Social-ek zure datu pertsonalak nola biltzen, erabiltzen eta babesten dituen RGPDren arabera.",
+    "lastUpdated": "Azken eguneratzea: 2026ko irailaren 10a",
+    "section1": {
+      "title": "1. Tratamenduaren Erantzulea",
+      "content": "Zubia Social (Gasteiz, Euskadi) da zure datu pertsonalen tratamenduaren erantzulea, Datuen Babeserako Erregelamendu Orokorraren (RGPD) eta LOPDGDDren arabera."
+    },
+    "section2": {
+      "title": "2. Biltzen Ditugun Datuak",
+      "content": "Gure zerbitzuak eskaintzeko beharrezkoa den gutxieneko informazioa biltzen dugu: erregistro-datuak (izena, posta elektronikoa) eta nabigazioko datu teknikoak."
+    },
+    "section3": {
+      "title": "3. Tratamenduaren Helburua",
+      "content": "Zure datuak zure erabiltzaile-kontua kudeatzeko, zure interrogantei erantzuteko eta webgunearen segurtasuna mantentzeko soilik erabiltzen dira."
+    },
+    "section4": {
+      "title": "4. Zure Eskubideak (RGPD)",
+      "content": "Edozein unetan zure datu pertsonalak ikusteko, zuzentzeko edo ezabatzeko eskubidea duzu. Ez diegu zure datuak hirugarrenei saltzen edo lagatzen."
+    },
+    "contact": {
+      "title": "Zure datuei buruzko galderarik duzu?",
+      "content": "Zure eskubideak erabiltzeko edo pribatutasunari buruzko edozein kontsulta egiteko, idatzi guri contacto@zubiasocial.org helbidera."
+    }
+  },
   "Footer": {
     "description": "Euskadin bidelaguntza, inklusioa eta kulturen arteko bizikidetza sustatzeko konpromisoa duen elkarte soziokulturala.",
     "association": {

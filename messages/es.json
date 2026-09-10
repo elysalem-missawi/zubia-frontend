@@ -380,6 +380,31 @@
       "link": "Ver proyectos"
     }
   },
+  "PrivacyPolicy": {
+    "title": "Política de Privacidad",
+    "description": "Información sobre cómo Zubia Social recopila, utiliza y protege tus datos personales de acuerdo con el RGPD.",
+    "lastUpdated": "Última actualización: 10 de septiembre de 2026",
+    "section1": {
+      "title": "1. Responsable del Tratamiento",
+      "content": "Zubia Social (Vitoria-Gasteiz, Euskadi) es el responsable del tratamiento de tus datos personales, garantizando su protección de acuerdo con el Reglamento General de Protección de Datos (RGPD) y la LOPDGDD."
+    },
+    "section2": {
+      "title": "2. Datos que Recopilamos",
+      "content": "Recopilamos la información mínima necesaria para ofrecerte nuestros servicios: datos de registro (nombre, correo electrónico) y datos técnicos de navegación necesarios para la seguridad y el correcto funcionamiento de la plataforma."
+    },
+    "section3": {
+      "title": "3. Finalidad del Tratamiento",
+      "content": "Tus datos se utilizan exclusivamente para gestionar tu cuenta de usuario, responder a tus consultas, personalizar la experiencia según tu idioma preferido y mantener la seguridad del sitio web."
+    },
+    "section4": {
+      "title": "4. Tus Derechos (RGPD)",
+      "content": "Tienes derecho a acceder, rectificar, limitar o solicitar la eliminación total de tus datos personales en cualquier momento. No cedemos ni vendemos tus datos a terceros con fines comerciales."
+    },
+    "contact": {
+      "title": "¿Tienes preguntas sobre tus datos?",
+      "content": "Puedes ejercer tus derechos o realizar cualquier consulta sobre privacidad escribiéndonos directamente a contacto@zubiasocial.org."
+    }
+  },
   "Footer": {
     "description": "Asociación sociocultural comprometida con el acompañamiento, la inclusión y la convivencia intercultural en Euskadi.",
     "association": {

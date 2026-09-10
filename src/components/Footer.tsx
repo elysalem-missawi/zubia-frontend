@@ -1,6 +1,7 @@
 "use client";
 
-import { HeartHandshake, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
@@ -19,8 +20,16 @@ export default function Footer() {
               className="group inline-flex items-center gap-3"
               aria-label="Zubia Social - Inicio"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-lg shadow-emerald-900/30 transition-transform duration-300 group-hover:scale-105">
-                <HeartHandshake className="h-6 w-6" />
+              {/* Logo Zubia Social */}
+              <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-white/5 p-1 transition-transform duration-300 group-hover:scale-105">
+                <Image
+                  src="/logozubia.svg"
+                  alt="Zubia Social Logo"
+                  width={48}
+                  height={48}
+                  className="h-full w-full object-contain"
+                  priority
+                />
               </div>
 
               <div>
@@ -95,7 +104,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-3 text-sm">
               <li>
                 <Link
-                  href="/politica-privacidad"
+                  href="/politica-de-privacidad"
                   className="transition-colors hover:text-emerald-400"
                 >
                   {t("information.privacy")}

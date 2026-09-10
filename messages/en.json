@@ -380,6 +380,31 @@
       "link": "View projects"
     }
   },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "description": "Information on how Zubia Social collects, uses, and protects your personal data in compliance with the GDPR.",
+    "lastUpdated": "Last updated: September 10, 2026",
+    "section1": {
+      "title": "1. Data Controller",
+      "content": "Zubia Social (Vitoria-Gasteiz, Euskadi) is the controller responsible for processing your personal data, ensuring its protection in accordance with the General Data Protection Regulation (GDPR) and LOPDGDD."
+    },
+    "section2": {
+      "title": "2. Data We Collect",
+      "content": "We collect the minimum necessary information to provide you with our services: registration details (name, email) and technical navigation data necessary for platform security and functionality."
+    },
+    "section3": {
+      "title": "3. Purpose of Processing",
+      "content": "Your data is used exclusively to manage your user account, respond to your inquiries, customize your experience based on your preferred language, and maintain website security."
+    },
+    "section4": {
+      "title": "4. Your Rights (GDPR)",
+      "content": "You have the right to access, rectify, limit, or request the complete deletion of your personal data at any time. We do not sell or transfer your data to third parties for commercial purposes."
+    },
+    "contact": {
+      "title": "Have questions about your data?",
+      "content": "You can exercise your rights or make any privacy-related inquiry by writing directly to us at contacto@zubiasocial.org."
+    }
+  },
   "Footer": {
     "description": "A socio-cultural association committed to support, inclusion, and intercultural coexistence in the Basque Country.",
     "association": {
